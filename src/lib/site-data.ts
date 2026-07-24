@@ -46,7 +46,7 @@ export type DocResource = {
   id: string;
   title: string;
   description: string;
-  fileType: string;
+  fileType?: string;
   size?: string;
   date?: string;
   url?: string;
