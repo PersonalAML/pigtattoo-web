@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { PageHeader } from "@/components/PageHeader";
+import { ImageFrame } from "@/components/ImageFrame";
 import { getDict, isLang, type Lang } from "@/i18n/dictionaries";
 import { getNoticias, type Noticia } from "@/lib/contentful.functions";
 
