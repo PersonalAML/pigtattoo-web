@@ -30,7 +30,7 @@ export default function Home() {
       <section className="border-b border-border bg-secondary/40">
         <div className="container-narrow grid gap-10 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,460px)] md:items-center md:py-20">
           <div>
-            <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {d.home.heroKicker}
             </p>
             <h1 className="text-4xl md:text-5xl">{d.home.heroTitle}</h1>
