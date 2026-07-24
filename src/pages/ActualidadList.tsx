@@ -55,7 +55,7 @@ export default function ActualidadList() {
                   rounded="rounded-none"
                 />
                 <div className="p-6 md:p-8">
-                  <p className="text-xs uppercase tracking-wider text-accent">
+                  <p className="text-xs uppercase tracking-wider font-semibold text-primary">
                     Destacada · {destacada.categoria ?? "Noticia"}
                   </p>
                   <h2 className="mt-2 text-2xl">{destacada.titulo}</h2>
