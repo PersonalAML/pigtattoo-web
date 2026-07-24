@@ -39,7 +39,17 @@ function HomePage() {
     <>
       {/* HERO */}
       <section className="relative overflow-hidden border-b border-border bg-gradient-to-br from-secondary via-background to-secondary/40">
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-5 md:py-28">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-40"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, var(--color-accent) 1px, transparent 0)",
+            backgroundSize: "22px 22px",
+            maskImage: "radial-gradient(ellipse at top right, black, transparent 70%)",
+          }}
+        />
+        <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-20 md:grid-cols-5 md:items-center md:py-24">
           <div className="md:col-span-3">
             <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               {d.home.heroKicker}
@@ -54,42 +64,49 @@ function HomePage() {
               <Link
                 to="/$lang/proyecto"
                 params={{ lang }}
-                className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                className="cta text-xs"
               >
                 {d.home.heroCta}
               </Link>
               <Link
                 to="/$lang/actividades"
                 params={{ lang }}
-                className="inline-flex items-center justify-center rounded-md border border-input bg-background px-5 py-3 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                className="cta-outline text-xs"
               >
                 {d.home.heroCtaSecondary}
               </Link>
             </div>
+            <dl className="mt-10 grid max-w-lg grid-cols-4 gap-4 border-t border-border pt-6">
+              <div>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground">Socios</dt>
+                <dd className="font-display text-2xl font-bold text-primary">6</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground">Actividades</dt>
+                <dd className="font-display text-2xl font-bold text-primary">8</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground">CCAA</dt>
+                <dd className="font-display text-2xl font-bold text-primary">4</dd>
+              </div>
+              <div>
+                <dt className="text-[10px] uppercase tracking-wider text-muted-foreground">Años</dt>
+                <dd className="font-display text-2xl font-bold text-primary">24–26</dd>
+              </div>
+            </dl>
           </div>
           <div className="md:col-span-2">
-            <div className="relative rounded-2xl border border-border bg-card p-6 shadow-sm">
-              <div className="absolute -right-3 -top-3 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-accent-foreground">
+            <div className="relative">
+              <div className="absolute -right-3 -top-3 z-10 rounded-full bg-accent px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-accent-foreground shadow">
                 AEI-AGRI
               </div>
-              <dl className="grid grid-cols-2 gap-4">
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">Socios</dt>
-                  <dd className="font-display text-3xl font-bold text-primary">6</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">Actividades</dt>
-                  <dd className="font-display text-3xl font-bold text-primary">8</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">CCAA</dt>
-                  <dd className="font-display text-3xl font-bold text-primary">4</dd>
-                </div>
-                <div>
-                  <dt className="text-xs uppercase tracking-wider text-muted-foreground">Duración</dt>
-                  <dd className="font-display text-3xl font-bold text-primary">2024–26</dd>
-                </div>
-              </dl>
+              <ImageFrame
+                aspect="4/5"
+                label="Imagen hero pendiente"
+                alt="Fotografía representativa del proyecto PIGTATTOO"
+                rounded="rounded-2xl"
+                className="shadow-sm"
+              />
             </div>
           </div>
         </div>
@@ -97,13 +114,21 @@ function HomePage() {
 
       {/* QUÉ ES */}
       <section className="border-b border-border py-16">
-        <div className="mx-auto max-w-6xl px-4">
-          <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
-            {d.home.whatTitle}
-          </h2>
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground">
-            {d.home.whatBody}
-          </p>
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 md:grid-cols-2 md:items-center">
+          <ImageFrame
+            aspect="4/3"
+            label="Foto explotación / laboratorio"
+            alt="Contexto del sector porcino y la trazabilidad"
+            rounded="rounded-2xl"
+          />
+          <div>
+            <h2 className="font-display text-3xl font-bold text-primary md:text-4xl">
+              {d.home.whatTitle}
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-muted-foreground">
+              {d.home.whatBody}
+            </p>
+          </div>
         </div>
       </section>
 
