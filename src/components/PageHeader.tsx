@@ -58,9 +58,9 @@ export function PageHeader({
                     alt={imageAlt ?? imageLabel ?? "Imagen"}
                     aria-describedby={imageDescribedBy}
                     loading="lazy"
-                    className="w-full rounded-2xl object-cover"
-                    style={{ aspectRatio: "4/3" }}
+                    className="w-full h-auto rounded-2xl object-contain bg-secondary/30"
                   />
+
                   {imageDescription && imageDescribedBy && (
                     <div id={imageDescribedBy} className="sr-only">
                       {imageDescription}
