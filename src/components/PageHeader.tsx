@@ -8,6 +8,9 @@ export function PageHeader({
   children,
   imageLabel,
   imageAlt,
+  imageSrc,
+  imageDescribedBy,
+  imageDescription,
 }: {
   kicker?: string;
   title: string;
@@ -15,8 +18,11 @@ export function PageHeader({
   children?: ReactNode;
   imageLabel?: string;
   imageAlt?: string;
+  imageSrc?: string;
+  imageDescribedBy?: string;
+  imageDescription?: ReactNode;
 }) {
-  const hasImage = Boolean(imageLabel || imageAlt);
+  const hasImage = Boolean(imageLabel || imageAlt || imageSrc);
   return (
     <section className="border-b border-border bg-secondary/40">
       <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
@@ -45,12 +51,30 @@ export function PageHeader({
           </div>
           {hasImage && (
             <div className="w-full">
-              <ImageFrame
-                aspect="4/3"
-                label={imageLabel ?? "Imagen"}
-                alt={imageAlt ?? imageLabel ?? "Imagen"}
-                rounded="rounded-2xl"
-              />
+              {imageSrc ? (
+                <>
+                  <img
+                    src={imageSrc}
+                    alt={imageAlt ?? imageLabel ?? "Imagen"}
+                    aria-describedby={imageDescribedBy}
+                    loading="lazy"
+                    className="w-full rounded-2xl object-cover"
+                    style={{ aspectRatio: "4/3" }}
+                  />
+                  {imageDescription && imageDescribedBy && (
+                    <div id={imageDescribedBy} className="sr-only">
+                      {imageDescription}
+                    </div>
+                  )}
+                </>
+              ) : (
+                <ImageFrame
+                  aspect="4/3"
+                  label={imageLabel ?? "Imagen"}
+                  alt={imageAlt ?? imageLabel ?? "Imagen"}
+                  rounded="rounded-2xl"
+                />
+              )}
             </div>
           )}
         </div>
