@@ -161,11 +161,15 @@
     font-family: var(--font-sans);
     font-feature-settings: "kern", "liga";
     -webkit-font-smoothing: antialiased;
+    /* Regla B: interlineado 1.6 para bloques de texto Open Sans */
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
+    /* Regla B: interlineado 1.2 para titulares Poppins */
+    line-height: 1.2;
   }
 
   :focus-visible {
@@ -180,4 +184,64 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+@layer components {
+  /* Regla C: CTAs en Poppins Medium 500, MAYÚSCULAS, Azul Cerceta */
+  .cta {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+    border-radius: var(--radius);
+    padding: 0.6rem 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 150ms ease;
+  }
+  .cta:hover { filter: brightness(0.95); }
+  .cta-outline {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: transparent;
+    color: var(--color-foreground);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.55rem 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease;
+  }
+  .cta-outline:hover { background-color: var(--color-secondary); }
+
+  /* Regla F: tablas PIGTATTOO — cabecera Azul Medianoche + Blanco (Poppins SemiBold),
+     filas cebra Blanco/Gris Piedra, texto Open Sans en Azul Medianoche */
+  table.pig {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    color: var(--color-foreground);
+  }
+  table.pig thead th {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  table.pig tbody td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+  table.pig tbody tr:nth-child(odd) td { background-color: var(--color-card); }
+  table.pig tbody tr:nth-child(even) td { background-color: var(--color-background); }
 }
