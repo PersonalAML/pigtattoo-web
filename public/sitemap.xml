@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- BASE_URL vacío hasta que el dominio pigtattoo.es esté activo. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>/es</loc></url>
+  <url><loc>/es/proyecto</loc></url>
+  <url><loc>/es/consorcio</loc></url>
+  <url><loc>/es/actividades</loc></url>
+  <url><loc>/es/actualidad</loc></url>
+  <url><loc>/es/resultados</loc></url>
+  <url><loc>/es/contacto</loc></url>
+  <url><loc>/es/accesibilidad</loc></url>
+  <url><loc>/es/aviso-legal</loc></url>
+  <url><loc>/es/privacidad</loc></url>
+  <url><loc>/es/cookies</loc></url>
+</urlset>

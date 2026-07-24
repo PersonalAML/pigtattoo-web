@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Self-hosted RGPD-safe fonts (no calls to fonts.googleapis.com / gstatic) */
+@import "@fontsource/poppins/latin-500.css";
+@import "@fontsource/poppins/latin-600.css";
+@import "@fontsource/poppins/latin-700.css";
+@import "@fontsource/open-sans/latin-400.css";
+@import "@fontsource/open-sans/latin-600.css";
+@import "@fontsource/open-sans/latin-700.css";
+
+/*
+ * PIGTATTOO — design tokens (HSL, doc V2)
+ *  - Azul Medianoche   HSL(220,20%,21%)
+ *  - Azul Cerceta      HSL(186,42%,53%)
+ *  - Rosa Salmón       HSL(4,66%,84%) — decorativo, nunca texto/CTA
+ *  - Gris Piedra       HSL(60,14%,95%)
+ *  - Blanco Puro       HSL(0,0%,100%)
+ */
+@layer base {
+  :root {
+    --radius: 0.5rem;
+
+    --background: 60 14% 95%;
+    --foreground: 220 20% 21%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 21%;
+
+    --primary: 220 20% 21%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 60 14% 92%;
+    --secondary-foreground: 220 20% 21%;
+
+    --muted: 60 10% 90%;
+    --muted-foreground: 220 10% 40%;
+
+    --accent: 186 42% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --salmon: 4 66% 84%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 10% 88%;
+    --input: 220 10% 88%;
+    --ring: 186 42% 53%;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    line-height: 1.6;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display font-semibold text-primary;
+    line-height: 1.2;
+  }
+  :focus-visible {
+    outline: 2px solid hsl(var(--accent));
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.001ms !important;
+      transition-duration: 0.001ms !important;
+    }
+  }
+}
+
+@layer components {
+  /* CTA — Regla C: Poppins 500 UPPERCASE sobre Azul Cerceta */
+  .cta {
+    @apply inline-flex items-center justify-center rounded-md bg-accent px-5 py-2.5 font-display text-sm font-medium uppercase tracking-wider text-accent-foreground transition-colors hover:bg-accent/90 focus-visible:ring-2 focus-visible:ring-ring;
+  }
+  .cta-outline {
+    @apply inline-flex items-center justify-center rounded-md border border-accent bg-transparent px-5 py-2.5 font-display text-sm font-medium uppercase tracking-wider text-accent transition-colors hover:bg-accent/10 focus-visible:ring-2 focus-visible:ring-ring;
+  }
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl px-4;
+  }
+
+  /* Regla F — table.pig */
+  table.pig {
+    @apply w-full border-collapse text-sm;
+  }
+  table.pig thead th {
+    @apply bg-primary text-white font-display font-semibold px-4 py-3 text-left uppercase tracking-wider text-xs;
+  }
+  table.pig tbody td {
+    @apply px-4 py-3 border-b border-border text-primary;
+  }
+  table.pig tbody tr:nth-child(even) {
+    @apply bg-secondary/60;
+  }
+  table.pig tbody tr:nth-child(odd) {
+    @apply bg-white;
+  }
+}
