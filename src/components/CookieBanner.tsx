@@ -87,18 +87,10 @@ export function CookieBanner() {
           .
         </p>
         <div className="flex flex-wrap gap-2">
-          <button
-            type="button"
-            onClick={reject}
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
-          >
+          <button type="button" onClick={reject} className="cta-outline text-xs">
             Rechazar
           </button>
-          <button
-            type="button"
-            onClick={accept}
-            className="inline-flex items-center justify-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-accent-foreground transition-colors hover:brightness-95"
-          >
+          <button type="button" onClick={accept} className="cta text-xs">
             Aceptar
           </button>
         </div>
