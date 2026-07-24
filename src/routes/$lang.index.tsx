@@ -3,6 +3,7 @@ import { useSuspenseQuery, queryOptions } from "@tanstack/react-query";
 import { getDict, isLang, type Lang } from "@/i18n/dictionaries";
 import { getNoticias, type Noticia } from "@/lib/contentful.functions";
 import { PARTNERS } from "@/lib/site-data";
+import { ImageFrame, LogoFrame } from "@/components/ImageFrame";
 
 const noticiasQuery = queryOptions({
   queryKey: ["noticias"],
