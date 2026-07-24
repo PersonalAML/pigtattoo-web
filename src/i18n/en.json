@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "siteName": "PIGTATTOO",
+    "tagline": "Pig traceability through tattoo identification"
+  },
+  "nav": {
+    "home": "Home",
+    "project": "Project",
+    "consortium": "Consortium",
+    "activities": "Activities",
+    "news": "News",
+    "results": "Results",
+    "materials": "Materials",
+    "contact": "Contact"
+  }
+}

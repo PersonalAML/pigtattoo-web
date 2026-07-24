@@ -1,0 +1,16 @@
+{
+  "meta": {
+    "siteName": "PIGTATTOO",
+    "tagline": "Traçabilitat porcina mitjançant identificació per tatuatge"
+  },
+  "nav": {
+    "home": "Inici",
+    "project": "Projecte",
+    "consortium": "Consorci",
+    "activities": "Activitats",
+    "news": "Actualitat",
+    "results": "Resultats",
+    "materials": "Materials",
+    "contact": "Contacte"
+  }
+}

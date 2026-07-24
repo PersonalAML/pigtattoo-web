@@ -1,0 +1,133 @@
+{
+  "meta": {
+    "siteName": "PIGTATTOO",
+    "tagline": "Trazabilidad porcina mediante identificación por tatuaje"
+  },
+  "nav": {
+    "home": "Inicio",
+    "project": "Proyecto",
+    "consortium": "Consorcio",
+    "activities": "Actividades",
+    "news": "Actualidad",
+    "results": "Resultados",
+    "materials": "Materiales",
+    "contact": "Contacto"
+  },
+  "home": {
+    "heroKicker": "Grupo Operativo Supraautonómico",
+    "heroTitle": "Innovación en trazabilidad e identificación porcina",
+    "heroSubtitle": "PIGTATTOO desarrolla soluciones tecnológicas de identificación por tatuaje para la mejora de la trazabilidad, el bienestar animal y la sostenibilidad del sector porcino.",
+    "heroCta": "Conoce el proyecto",
+    "heroCtaSecondary": "Ver actividades",
+    "whatTitle": "¿Qué es PIGTATTOO?",
+    "whatBody": "PIGTATTOO es un Grupo Operativo Supraautonómico enmarcado en la Asociación Europea para la Innovación (AEI-AGRI) que reúne a productores, industria, centros tecnológicos y universidades para desarrollar y validar un sistema innovador de identificación porcina mediante tatuaje. El objetivo es mejorar la trazabilidad a lo largo de toda la cadena, reducir estrés animal y ofrecer datos fiables a productores, mataderos y consumidores.",
+    "pillarsTitle": "Ejes del proyecto",
+    "pillar1Title": "Trazabilidad",
+    "pillar1Body": "Sistemas de identificación fiables y verificables en cada eslabón de la cadena de valor porcina.",
+    "pillar2Title": "Bienestar animal",
+    "pillar2Body": "Métodos menos invasivos y menos estresantes que alternativas convencionales de identificación.",
+    "pillar3Title": "Sostenibilidad",
+    "pillar3Body": "Reducción de residuos plásticos y mejora de la eficiencia productiva del sector.",
+    "newsTitle": "Últimas noticias",
+    "newsCta": "Ver todas las noticias",
+    "partnersTitle": "Consorcio",
+    "contactCtaTitle": "¿Interesado en el proyecto?",
+    "contactCtaBody": "Ponte en contacto con el equipo de PIGTATTOO para más información.",
+    "contactCtaButton": "Contactar"
+  },
+  "project": {
+    "title": "El proyecto",
+    "kicker": "Sobre PIGTATTOO",
+    "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "objectivesTitle": "Objetivos",
+    "objectivesBody": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "methodologyTitle": "Metodología",
+    "methodologyBody": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+    "timelineTitle": "Cronograma",
+    "timelineBody": "El proyecto se desarrolla en fases sucesivas entre 2024 y 2026, cubriendo desde el diseño técnico hasta la validación en campo y la difusión de resultados."
+  },
+  "consortium": {
+    "title": "Consorcio",
+    "kicker": "Quiénes somos",
+    "intro": "El consorcio de PIGTATTOO reúne a socios beneficiarios y entidades subcontratadas complementarias en el ámbito de la producción, la tecnología y la investigación aplicada.",
+    "partnersTitle": "Socios beneficiarios",
+    "subcontractedTitle": "Entidades subcontratadas"
+  },
+  "activities": {
+    "title": "Actividades",
+    "kicker": "Plan de trabajo",
+    "intro": "El plan de trabajo del Grupo Operativo se estructura en las siguientes actividades, con distinto grado de avance en el momento actual.",
+    "statusPlanned": "Planificada",
+    "statusInProgress": "En curso",
+    "statusCompleted": "Completada"
+  },
+  "news": {
+    "title": "Actualidad",
+    "kicker": "Noticias y notas de prensa",
+    "intro": "Novedades, hitos y comunicaciones del proyecto PIGTATTOO.",
+    "empty": "Aún no hay noticias publicadas.",
+    "error": "No ha sido posible cargar las noticias en este momento.",
+    "readMore": "Leer más",
+    "backToList": "Volver a Actualidad",
+    "byAuthor": "Por",
+    "notFound": "Noticia no encontrada"
+  },
+  "results": {
+    "title": "Resultados",
+    "kicker": "Entregables del proyecto",
+    "intro": "Documentación técnica y entregables generados por el proyecto PIGTATTOO. Los enlaces se irán actualizando conforme avancen las actividades.",
+    "download": "Descargar",
+    "comingSoon": "Próximamente disponible"
+  },
+  "materials": {
+    "title": "Materiales de difusión",
+    "kicker": "Comunicación y divulgación",
+    "intro": "Materiales divulgativos, fichas técnicas y recursos gráficos generados por PIGTATTOO.",
+    "download": "Descargar",
+    "comingSoon": "Próximamente disponible"
+  },
+  "contact": {
+    "title": "Contacto",
+    "kicker": "Ponte en contacto",
+    "intro": "Escríbenos para más información sobre el proyecto, colaboración o difusión.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "subject": "Asunto",
+    "message": "Mensaje",
+    "consent": "Acepto la política de privacidad y el tratamiento de mis datos con la finalidad de responder a mi consulta.",
+    "submit": "Enviar mensaje",
+    "successNote": "El formulario se activará tras la publicación del sitio en Netlify.",
+    "requiredHint": "Los campos marcados con * son obligatorios."
+  },
+  "cookies": {
+    "title": "Política de cookies",
+    "banner": "Este sitio utiliza cookies analíticas (Google Analytics 4) sólo si aceptas su uso. Puedes cambiar tu decisión en cualquier momento desde esta página.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "manage": "Gestionar preferencias",
+    "current": "Preferencia actual",
+    "granted": "Aceptadas",
+    "denied": "Rechazadas",
+    "unset": "Sin decidir",
+    "resetButton": "Restablecer preferencias",
+    "body": "PIGTATTOO utiliza cookies estrictamente necesarias para el funcionamiento del sitio y, previa aceptación expresa, cookies analíticas de Google Analytics 4 con finalidad estadística agregada. No se utilizan cookies publicitarias ni de perfilado. Puedes revocar tu consentimiento en cualquier momento mediante el botón situado en esta página."
+  },
+  "legal": {
+    "noticeTitle": "Aviso legal",
+    "noticeBody": "En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se informa a los usuarios de los datos identificativos del titular del sitio web. [Datos pendientes de completar por el consorcio].",
+    "privacyTitle": "Política de privacidad",
+    "privacyBody": "En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la LOPDGDD, PIGTATTOO informa del tratamiento de los datos personales facilitados a través del formulario de contacto, cuya única finalidad es dar respuesta a la consulta remitida. [Detalles pendientes de completar por el consorcio]."
+  },
+  "footer": {
+    "financingTitle": "Financiación",
+    "financingBody": "Proyecto financiado por el Ministerio de Agricultura, Pesca y Alimentación y por el Fondo Europeo Agrícola de Desarrollo Rural (FEADER) en el marco del Programa Nacional de Desarrollo Rural 2014-2022. [Texto oficial pendiente de confirmar por el consorcio.]",
+    "linksTitle": "Enlaces",
+    "socialTitle": "Síguenos",
+    "rights": "Todos los derechos reservados."
+  },
+  "misc": {
+    "backHome": "Volver al inicio",
+    "loading": "Cargando…",
+    "skipToContent": "Saltar al contenido principal"
+  }
+}
