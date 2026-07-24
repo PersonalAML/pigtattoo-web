@@ -107,7 +107,7 @@ export default function Home() {
                 <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
                 <Link
                   to={`${base}/actualidad/${n.slug}`}
-                  className="mt-3 inline-block text-sm font-bold text-primary hover:text-accent hover:underline"
+                  className="mt-3 inline-block text-sm font-bold text-primary hover:underline"
                 >
                   {d.news.readMore} →
                 </Link>
