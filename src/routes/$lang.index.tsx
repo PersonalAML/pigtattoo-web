@@ -186,12 +186,8 @@ function HomePage() {
           <h2 className="font-display text-3xl font-bold text-primary">{d.home.partnersTitle}</h2>
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
             {PARTNERS.map((p) => (
-              <li
-                key={p.id}
-                className="flex aspect-video items-center justify-center rounded-lg border border-dashed border-border bg-card px-3 text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground"
-                title={p.name}
-              >
-                {p.short}
+              <li key={p.id} title={p.name}>
+                <LogoFrame alt={`Logotipo de ${p.name}`} label={p.short} />
               </li>
             ))}
           </ul>
@@ -203,11 +199,7 @@ function HomePage() {
         <div className="mx-auto max-w-4xl rounded-2xl border border-border bg-primary px-8 py-12 text-center text-primary-foreground shadow-sm">
           <h2 className="font-display text-3xl font-bold">{d.home.contactCtaTitle}</h2>
           <p className="mx-auto mt-3 max-w-xl text-primary-foreground/80">{d.home.contactCtaBody}</p>
-          <Link
-            to="/$lang/contacto"
-            params={{ lang }}
-            className="mt-6 inline-flex items-center justify-center rounded-md bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground transition-colors hover:brightness-95"
-          >
+          <Link to="/$lang/contacto" params={{ lang }} className="cta mt-6 text-xs">
             {d.home.contactCtaButton}
           </Link>
         </div>
@@ -215,6 +207,19 @@ function HomePage() {
     </>
   );
 }
+
+function NewsCard({ n, lang }: { n: Noticia; lang: Lang }) {
+  const d = getDict(lang);
+  const date = n.fecha ? new Date(n.fecha).toLocaleDateString(lang === "en" ? "en-GB" : "es-ES") : null;
+  return (
+    <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
+      <ImageFrame
+        src={n.imagenDestacada?.url}
+        alt={n.imagenDestacada?.title ?? n.titulo}
+        label="Imagen de la noticia"
+        aspect="16/9"
+        rounded="rounded-none"
+      />
 
 function NewsCard({ n, lang }: { n: Noticia; lang: Lang }) {
   const d = getDict(lang);
