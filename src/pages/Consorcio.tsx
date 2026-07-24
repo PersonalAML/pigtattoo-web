@@ -4,6 +4,23 @@ import { LogoFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 import { PARTNERS, SUBCONTRACTED } from "@/lib/site-data";
+import mapaAsset from "@/assets/mapa-consorcio.png.asset.json";
+
+const MAPA_DESC_ID = "mapa-desc";
+
+const MapaDescription = () => (
+  <ul>
+    <li>i+Porc (Zaragoza, Aragón)</li>
+    <li>GEEZAR (Zaragoza, Aragón)</li>
+    <li>CEVA (Barcelona, Cataluña)</li>
+    <li>EQTIC (Sant Cugat, Cataluña)</li>
+    <li>AGROCAT (Sant Fruitós de Bages, Cataluña)</li>
+    <li>GUCO (Valderrobres, Aragón)</li>
+    <li>IRTA (Caldes de Montbui, Cataluña)</li>
+    <li>ITENE (Paterna, Comunidad Valenciana)</li>
+    <li>ANPROGAPOR (Madrid, Madrid)</li>
+  </ul>
+);
 
 export default function Consorcio() {
   const lang = useLang();
@@ -19,8 +36,10 @@ export default function Consorcio() {
         kicker={d.consortium.kicker}
         title={d.consortium.title}
         intro={d.consortium.intro}
-        imageLabel="Imagen consorcio"
-        imageAlt="Consorcio PIGTATTOO"
+        imageSrc={mapaAsset.url}
+        imageAlt="Mapa de España mostrando la distribución geográfica y las conexiones de las entidades del consorcio Pigtattoo."
+        imageDescribedBy={MAPA_DESC_ID}
+        imageDescription={<MapaDescription />}
       />
       <div className="container-narrow space-y-16 py-14">
         <section>
