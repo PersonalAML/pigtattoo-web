@@ -15,7 +15,6 @@ import { Route as LangIndexRouteImport } from './routes/$lang.index'
 import { Route as LangResultadosRouteImport } from './routes/$lang.resultados'
 import { Route as LangProyectoRouteImport } from './routes/$lang.proyecto'
 import { Route as LangPrivacidadRouteImport } from './routes/$lang.privacidad'
-import { Route as LangMaterialesRouteImport } from './routes/$lang.materiales'
 import { Route as LangCookiesRouteImport } from './routes/$lang.cookies'
 import { Route as LangContactoRouteImport } from './routes/$lang.contacto'
 import { Route as LangConsorcioRouteImport } from './routes/$lang.consorcio'
@@ -52,11 +51,6 @@ const LangProyectoRoute = LangProyectoRouteImport.update({
 const LangPrivacidadRoute = LangPrivacidadRouteImport.update({
   id: '/privacidad',
   path: '/privacidad',
-  getParentRoute: () => LangRoute,
-} as any)
-const LangMaterialesRoute = LangMaterialesRouteImport.update({
-  id: '/materiales',
-  path: '/materiales',
   getParentRoute: () => LangRoute,
 } as any)
 const LangCookiesRoute = LangCookiesRouteImport.update({
@@ -103,7 +97,6 @@ export interface FileRoutesByFullPath {
   '/$lang/consorcio': typeof LangConsorcioRoute
   '/$lang/contacto': typeof LangContactoRoute
   '/$lang/cookies': typeof LangCookiesRoute
-  '/$lang/materiales': typeof LangMaterialesRoute
   '/$lang/privacidad': typeof LangPrivacidadRoute
   '/$lang/proyecto': typeof LangProyectoRoute
   '/$lang/resultados': typeof LangResultadosRoute
@@ -118,7 +111,6 @@ export interface FileRoutesByTo {
   '/$lang/consorcio': typeof LangConsorcioRoute
   '/$lang/contacto': typeof LangContactoRoute
   '/$lang/cookies': typeof LangCookiesRoute
-  '/$lang/materiales': typeof LangMaterialesRoute
   '/$lang/privacidad': typeof LangPrivacidadRoute
   '/$lang/proyecto': typeof LangProyectoRoute
   '/$lang/resultados': typeof LangResultadosRoute
@@ -135,7 +127,6 @@ export interface FileRoutesById {
   '/$lang/consorcio': typeof LangConsorcioRoute
   '/$lang/contacto': typeof LangContactoRoute
   '/$lang/cookies': typeof LangCookiesRoute
-  '/$lang/materiales': typeof LangMaterialesRoute
   '/$lang/privacidad': typeof LangPrivacidadRoute
   '/$lang/proyecto': typeof LangProyectoRoute
   '/$lang/resultados': typeof LangResultadosRoute
@@ -153,7 +144,6 @@ export interface FileRouteTypes {
     | '/$lang/consorcio'
     | '/$lang/contacto'
     | '/$lang/cookies'
-    | '/$lang/materiales'
     | '/$lang/privacidad'
     | '/$lang/proyecto'
     | '/$lang/resultados'
@@ -168,7 +158,6 @@ export interface FileRouteTypes {
     | '/$lang/consorcio'
     | '/$lang/contacto'
     | '/$lang/cookies'
-    | '/$lang/materiales'
     | '/$lang/privacidad'
     | '/$lang/proyecto'
     | '/$lang/resultados'
@@ -184,7 +173,6 @@ export interface FileRouteTypes {
     | '/$lang/consorcio'
     | '/$lang/contacto'
     | '/$lang/cookies'
-    | '/$lang/materiales'
     | '/$lang/privacidad'
     | '/$lang/proyecto'
     | '/$lang/resultados'
@@ -240,13 +228,6 @@ declare module '@tanstack/react-router' {
       path: '/privacidad'
       fullPath: '/$lang/privacidad'
       preLoaderRoute: typeof LangPrivacidadRouteImport
-      parentRoute: typeof LangRoute
-    }
-    '/$lang/materiales': {
-      id: '/$lang/materiales'
-      path: '/materiales'
-      fullPath: '/$lang/materiales'
-      preLoaderRoute: typeof LangMaterialesRouteImport
       parentRoute: typeof LangRoute
     }
     '/$lang/cookies': {
@@ -307,7 +288,6 @@ interface LangRouteChildren {
   LangConsorcioRoute: typeof LangConsorcioRoute
   LangContactoRoute: typeof LangContactoRoute
   LangCookiesRoute: typeof LangCookiesRoute
-  LangMaterialesRoute: typeof LangMaterialesRoute
   LangPrivacidadRoute: typeof LangPrivacidadRoute
   LangProyectoRoute: typeof LangProyectoRoute
   LangResultadosRoute: typeof LangResultadosRoute
@@ -322,7 +302,6 @@ const LangRouteChildren: LangRouteChildren = {
   LangConsorcioRoute: LangConsorcioRoute,
   LangContactoRoute: LangContactoRoute,
   LangCookiesRoute: LangCookiesRoute,
-  LangMaterialesRoute: LangMaterialesRoute,
   LangPrivacidadRoute: LangPrivacidadRoute,
   LangProyectoRoute: LangProyectoRoute,
   LangResultadosRoute: LangResultadosRoute,
