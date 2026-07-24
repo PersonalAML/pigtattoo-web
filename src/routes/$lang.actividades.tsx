@@ -28,8 +28,9 @@ function statusLabel(s: ActivityStatus, lang: Lang): string {
 }
 
 function statusClasses(s: ActivityStatus): string {
-  if (s === "completed") return "bg-primary/10 text-primary border-primary/20";
-  if (s === "in-progress") return "bg-accent/15 text-accent border-accent/30";
+  // Regla F#3: Azul Cerceta para "Finalizadas", Rosa Salmón para <100% ("próximos pasos")
+  if (s === "completed") return "bg-accent/15 text-accent border-accent/40";
+  if (s === "in-progress") return "bg-[var(--color-salmon)]/40 text-primary border-[var(--color-salmon)]";
   return "bg-muted text-muted-foreground border-border";
 }
 

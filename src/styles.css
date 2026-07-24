@@ -4,6 +4,7 @@
 
 /* Self-hosted RGPD-safe fonts (no calls to fonts.googleapis.com / gstatic) */
 @import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
 @import "@fontsource/poppins/latin-600.css";
 @import "@fontsource/poppins/latin-700.css";
 @import "@fontsource/open-sans/latin-400.css";
@@ -64,36 +65,37 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-salmon: var(--salmon);
   --font-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Poppins", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
   --radius: 0.5rem;
-  /* Gris Piedra */
-  --background: oklch(0.965 0.005 90);
-  /* Azul Medianoche */
-  --foreground: oklch(0.24 0.04 260);
+  /* Gris Piedra Claro — HSL(60,14%,95%) */
+  --background: oklch(0.965 0.008 100);
+  /* Azul Medianoche — HSL(220,20%,21%) */
+  --foreground: oklch(0.30 0.032 255);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.04 260);
+  --card-foreground: oklch(0.30 0.032 255);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.04 260);
-  --primary: oklch(0.24 0.04 260);
-  --primary-foreground: oklch(0.99 0.003 90);
-  --secondary: oklch(0.94 0.008 90);
-  --secondary-foreground: oklch(0.24 0.04 260);
-  --muted: oklch(0.94 0.008 90);
-  --muted-foreground: oklch(0.45 0.02 260);
-  /* Azul Cerceta (Teal) — CTAs, interacción */
-  --accent: oklch(0.7 0.09 205);
-  --accent-foreground: oklch(0.99 0.003 90);
-  /* Rosa Salmón — solo decoración sutil, nunca texto ni CTA */
-  --salmon: oklch(0.83 0.055 15);
+  --popover-foreground: oklch(0.30 0.032 255);
+  --primary: oklch(0.30 0.032 255);
+  --primary-foreground: oklch(0.99 0.003 100);
+  --secondary: oklch(0.94 0.008 100);
+  --secondary-foreground: oklch(0.30 0.032 255);
+  --muted: oklch(0.94 0.008 100);
+  --muted-foreground: oklch(0.48 0.02 255);
+  /* Azul Cerceta — HSL(186,42%,53%) — CTAs, interacción */
+  --accent: oklch(0.72 0.075 208);
+  --accent-foreground: oklch(0.99 0.003 100);
+  /* Rosa Salmón — HSL(4,66%,84%) — decoración sutil, nunca texto/CTA */
+  --salmon: oklch(0.84 0.055 25);
   --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.99 0.003 90);
-  --border: oklch(0.9 0.008 90);
-  --input: oklch(0.9 0.008 90);
-  --ring: oklch(0.7 0.09 205);
+  --destructive-foreground: oklch(0.99 0.003 100);
+  --border: oklch(0.9 0.01 100);
+  --input: oklch(0.9 0.01 100);
+  --ring: oklch(0.72 0.075 208);
   --chart-1: oklch(0.24 0.04 260);
   --chart-2: oklch(0.7 0.09 205);
   --chart-3: oklch(0.6 0.04 260);
@@ -159,11 +161,15 @@
     font-family: var(--font-sans);
     font-feature-settings: "kern", "liga";
     -webkit-font-smoothing: antialiased;
+    /* Regla B: interlineado 1.6 para bloques de texto Open Sans */
+    line-height: 1.6;
   }
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
+    /* Regla B: interlineado 1.2 para titulares Poppins */
+    line-height: 1.2;
   }
 
   :focus-visible {
@@ -178,4 +184,64 @@
       scroll-behavior: auto !important;
     }
   }
+}
+
+@layer components {
+  /* Regla C: CTAs en Poppins Medium 500, MAYÚSCULAS, Azul Cerceta */
+  .cta {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+    border-radius: var(--radius);
+    padding: 0.6rem 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: filter 150ms ease;
+  }
+  .cta:hover { filter: brightness(0.95); }
+  .cta-outline {
+    font-family: var(--font-display);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background-color: transparent;
+    color: var(--color-foreground);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 0.55rem 1.05rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 150ms ease;
+  }
+  .cta-outline:hover { background-color: var(--color-secondary); }
+
+  /* Regla F: tablas PIGTATTOO — cabecera Azul Medianoche + Blanco (Poppins SemiBold),
+     filas cebra Blanco/Gris Piedra, texto Open Sans en Azul Medianoche */
+  table.pig {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sans);
+    color: var(--color-foreground);
+  }
+  table.pig thead th {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
+  }
+  table.pig tbody td {
+    padding: 0.6rem 0.85rem;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.9rem;
+  }
+  table.pig tbody tr:nth-child(odd) td { background-color: var(--color-card); }
+  table.pig tbody tr:nth-child(even) td { background-color: var(--color-background); }
 }
