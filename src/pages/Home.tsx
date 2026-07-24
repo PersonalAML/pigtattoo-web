@@ -102,7 +102,7 @@ export default function Home() {
                 rounded="rounded-none"
               />
               <div className="p-5">
-                <p className="text-xs uppercase tracking-wider text-accent">{n.categoria ?? "Noticia"}</p>
+                <p className="text-xs uppercase tracking-wider font-semibold text-primary">{n.categoria ?? "Noticia"}</p>
                 <h3 className="mt-2 text-lg">{n.titulo}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
                 <Link
