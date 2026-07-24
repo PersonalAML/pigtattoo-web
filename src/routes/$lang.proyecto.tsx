@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
+import { ImageFrame } from "@/components/ImageFrame";
 import { getDict, isLang, type Lang } from "@/i18n/dictionaries";
 
 export const Route = createFileRoute("/$lang/proyecto")({
@@ -25,14 +26,26 @@ function ProjectPage() {
   return (
     <>
       <PageHeader kicker={d.project.kicker} title={d.project.title} intro={d.project.intro} />
-      <div className="mx-auto max-w-4xl space-y-14 px-4 py-14">
-        <section id="objetivos">
-          <h2 className="font-display text-2xl font-bold text-primary">{d.project.objectivesTitle}</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.objectivesBody}</p>
+      <div className="mx-auto max-w-5xl space-y-16 px-4 py-14">
+        <ImageFrame
+          aspect="21/9"
+          label="Imagen cabecera del proyecto"
+          alt="Diagrama o fotografía del sistema PIGTATTOO"
+          rounded="rounded-2xl"
+        />
+        <section id="objetivos" className="grid gap-8 md:grid-cols-3 md:items-start">
+          <div className="md:col-span-2">
+            <h2 className="font-display text-2xl font-bold text-primary">{d.project.objectivesTitle}</h2>
+            <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.objectivesBody}</p>
+          </div>
+          <ImageFrame aspect="1/1" label="Imagen objetivos" alt="Objetivos del proyecto" />
         </section>
-        <section id="metodologia">
-          <h2 className="font-display text-2xl font-bold text-primary">{d.project.methodologyTitle}</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.methodologyBody}</p>
+        <section id="metodologia" className="grid gap-8 md:grid-cols-3 md:items-start">
+          <ImageFrame aspect="1/1" label="Esquema metodología" alt="Metodología del proyecto" />
+          <div className="md:col-span-2">
+            <h2 className="font-display text-2xl font-bold text-primary">{d.project.methodologyTitle}</h2>
+            <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.methodologyBody}</p>
+          </div>
         </section>
         <section id="cronograma">
           <h2 className="font-display text-2xl font-bold text-primary">{d.project.timelineTitle}</h2>

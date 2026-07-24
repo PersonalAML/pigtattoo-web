@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
+import { LogoFrame } from "@/components/ImageFrame";
 import { getDict, isLang, type Lang } from "@/i18n/dictionaries";
 import { PARTNERS, SUBCONTRACTED, type Partner } from "@/lib/site-data";
 
@@ -23,13 +24,10 @@ export const Route = createFileRoute("/$lang/consorcio")({
 function PartnerCard({ p }: { p: Partner }) {
   return (
     <article className="flex gap-4 rounded-xl border border-border bg-card p-5 shadow-sm">
-      <div
-        className="flex h-16 w-16 flex-shrink-0 items-center justify-center rounded-lg border border-dashed border-border bg-secondary text-xs font-bold uppercase tracking-widest text-muted-foreground"
-        title="Logo pendiente"
-      >
-        {p.short}
+      <div className="w-20 flex-shrink-0">
+        <LogoFrame alt={`Logotipo de ${p.name}`} label={p.short} />
       </div>
-      <div>
+      <div className="min-w-0">
         <h3 className="font-display text-base font-semibold text-primary">{p.name}</h3>
         <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
       </div>

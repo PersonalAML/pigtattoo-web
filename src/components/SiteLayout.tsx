@@ -25,12 +25,18 @@ function Header({ lang }: { lang: Lang }) {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-        <Link to={`/${lang}` as string} className="flex items-baseline gap-2">
-          <span className="font-display text-xl font-bold tracking-tight text-primary">
-            PIGTATTOO
+        <Link to={`/${lang}` as string} className="flex items-center gap-3">
+          <span
+            aria-label="Logotipo PIGTATTOO (pendiente)"
+            className="flex h-10 w-10 items-center justify-center rounded-md border-2 border-dashed border-accent/50 bg-gradient-to-br from-secondary to-[var(--color-salmon)]/30 font-display text-[9px] font-bold uppercase tracking-tight text-accent"
+          >
+            LOGO
           </span>
-          <span className="hidden text-xs uppercase tracking-wider text-muted-foreground sm:inline">
-            Grupo Operativo
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-xl font-bold tracking-tight text-primary">PIGTATTOO</span>
+            <span className="hidden text-[10px] uppercase tracking-wider text-muted-foreground sm:inline">
+              Grupo Operativo
+            </span>
           </span>
         </Link>
         <nav aria-label={d.nav.home} className="hidden lg:block">
@@ -101,10 +107,16 @@ function Footer({ lang }: { lang: Lang }) {
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
             {d.footer.financingBody}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo MAPA</span>
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo FEADER</span>
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo UE</span>
+          <div className="mt-4 grid grid-cols-3 gap-2">
+            {["MAPA", "FEADER", "UE"].map((l) => (
+              <div
+                key={l}
+                aria-label={`Logo ${l} (pendiente)`}
+                className="flex aspect-[3/2] items-center justify-center rounded-md border-2 border-dashed border-accent/40 bg-secondary text-[10px] font-bold uppercase tracking-widest text-accent"
+              >
+                {l}
+              </div>
+            ))}
           </div>
         </div>
       </div>
