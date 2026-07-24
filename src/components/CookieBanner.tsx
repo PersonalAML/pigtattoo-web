@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const CONSENT_KEY = "pigtattoo.consent.v1";
 const PRODUCTION_HOST = "pigtattoo.es";
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // TODO: replace with real GA4 ID at go-live
+const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // TODO: sustituir por el ID real de GA4 al ir a producción
 
 type Consent = "granted" | "denied" | null;
 
@@ -11,16 +12,13 @@ function readConsent(): Consent {
   const v = window.localStorage.getItem(CONSENT_KEY);
   return v === "granted" || v === "denied" ? v : null;
 }
-
 function writeConsent(v: Exclude<Consent, null>) {
   window.localStorage.setItem(CONSENT_KEY, v);
 }
-
 function isProductionHost(): boolean {
   if (typeof window === "undefined") return false;
   return window.location.hostname === PRODUCTION_HOST;
 }
-
 function loadGA() {
   if (typeof window === "undefined") return;
   const w = window as unknown as {
@@ -53,9 +51,7 @@ export function CookieBanner() {
     const v = readConsent();
     setConsent(v);
     setReady(true);
-    if (v === "granted" && isProductionHost()) {
-      loadGA();
-    }
+    if (v === "granted" && isProductionHost()) loadGA();
   }, []);
 
   if (!ready || consent !== null) return null;
@@ -75,15 +71,15 @@ export function CookieBanner() {
       role="dialog"
       aria-live="polite"
       aria-label="Aviso de cookies"
-      className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 backdrop-blur supports-[backdrop-filter]:bg-card/80"
+      className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 backdrop-blur"
     >
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-4 text-sm text-foreground sm:flex-row sm:items-center sm:justify-between">
+      <div className="container-narrow flex flex-col gap-3 py-4 text-sm text-foreground sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-3xl leading-relaxed">
-          Utilizamos cookies analíticas (Google Analytics 4) sólo si aceptas su uso.
-          Puedes revisar los detalles en la{" "}
-          <a href="/es/cookies" className="underline underline-offset-2 hover:text-accent">
+          Utilizamos cookies analíticas (Google Analytics 4) sólo si aceptas su uso. Puedes revisar
+          los detalles en la{" "}
+          <Link to="/es/cookies" className="underline underline-offset-2 hover:text-accent">
             política de cookies
-          </a>
+          </Link>
           .
         </p>
         <div className="flex flex-wrap gap-2">
