@@ -10,7 +10,7 @@ function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getD
   return (
     <article className="flex h-full flex-col rounded-lg border border-border bg-card p-5 shadow-sm">
       <div className="flex items-start gap-3">
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent/10 text-accent">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-accent/10 text-primary">
           <FileText className="h-5 w-5" />
         </div>
         <div className="min-w-0">
