@@ -50,7 +50,7 @@ export function SiteHeader() {
                   to={n.to}
                   end={n.end}
                   className={({ isActive }) =>
-                    `rounded-md px-3 py-2 text-sm font-medium transition-colors ${
+                    `rounded-md px-3 py-2 text-sm font-bold transition-colors ${
                       isActive
                         ? "bg-secondary text-foreground"
                         : "text-foreground/80 hover:bg-secondary hover:text-foreground"
@@ -70,7 +70,7 @@ export function SiteHeader() {
           ) : null}
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-3 py-2 text-sm font-medium lg:hidden"
+            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-3 py-2 text-sm font-bold lg:hidden"
             aria-label="Abrir menú"
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}

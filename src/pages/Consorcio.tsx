@@ -64,7 +64,7 @@ export default function Consorcio() {
                     <LogoFrame label={p.short} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-semibold text-primary">{p.name}</h3>
+                    <h3 className="text-sm font-bold text-primary">{p.name}</h3>
                     <p className="mt-1 text-xs text-muted-foreground">{p.role}</p>
                   </div>
                 </div>

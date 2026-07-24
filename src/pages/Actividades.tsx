@@ -12,7 +12,7 @@ function StatusBadge({ status, dict }: { status: ActivityStatus; dict: ReturnTyp
   } as const;
   const s = map[status];
   return (
-    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${s.cls}`}>
+    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-bold ${s.cls}`}>
       {s.label}
     </span>
   );
@@ -52,7 +52,7 @@ export default function Actividades() {
               <div className="mt-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>Progreso</span>
-                  <span className="font-medium text-primary">{a.progress}%</span>
+                  <span className="font-bold text-primary">{a.progress}%</span>
                 </div>
                 <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-secondary">
                   <div
