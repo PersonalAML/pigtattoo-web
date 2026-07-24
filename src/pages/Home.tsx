@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* Pilares */}
-      <section className="border-y border-border bg-white/50 py-20">
+      <section className="border-y border-border bg-card/50 py-20">
         <div className="container-narrow">
           <h2 className="text-3xl">{d.home.pillarsTitle}</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">

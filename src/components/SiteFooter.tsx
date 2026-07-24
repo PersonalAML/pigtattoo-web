@@ -10,18 +10,18 @@ export function SiteFooter() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-16 border-t border-border bg-primary text-white">
+    <footer className="mt-16 border-t border-border bg-primary text-primary-foreground">
       <div className="container-narrow py-12">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h2 className="font-display text-lg font-semibold">PIGTATTOO</h2>
-            <p className="mt-2 text-sm text-white/80">{d.meta.tagline}</p>
+            <p className="mt-2 text-sm text-primary-foreground/80">{d.meta.tagline}</p>
           </div>
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white/70">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
               {d.footer.financingTitle}
             </h3>
-            <p className="mt-2 text-xs leading-relaxed text-white/75">
+            <p className="mt-2 text-xs leading-relaxed text-primary-foreground/75">
               {d.footer.financingBody}
             </p>
             <div className="mt-4 grid grid-cols-4 gap-2">
@@ -33,34 +33,34 @@ export function SiteFooter() {
             </div>
           </div>
           <div>
-            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-white/70">
+            <h3 className="font-display text-sm font-semibold uppercase tracking-wider text-primary-foreground/70">
               {d.footer.linksTitle}
             </h3>
             <ul className="mt-2 space-y-1 text-sm">
               <li>
-                <Link to={`${base}/aviso-legal`} className="text-white/85 hover:text-accent">
+                <Link to={`${base}/aviso-legal`} className="text-primary-foreground/85 hover:text-accent">
                   {d.legal.noticeTitle}
                 </Link>
               </li>
               <li>
-                <Link to={`${base}/privacidad`} className="text-white/85 hover:text-accent">
+                <Link to={`${base}/privacidad`} className="text-primary-foreground/85 hover:text-accent">
                   {d.legal.privacyTitle}
                 </Link>
               </li>
               <li>
-                <Link to={`${base}/cookies`} className="text-white/85 hover:text-accent">
+                <Link to={`${base}/cookies`} className="text-primary-foreground/85 hover:text-accent">
                   {d.cookies.title}
                 </Link>
               </li>
               <li>
-                <Link to={`${base}/accesibilidad`} className="text-white/85 hover:text-accent">
+                <Link to={`${base}/accesibilidad`} className="text-primary-foreground/85 hover:text-accent">
                   {d.legal.accessibilityTitle}
                 </Link>
               </li>
             </ul>
           </div>
         </div>
-        <div className="mt-10 border-t border-white/15 pt-4 text-xs text-white/70">
+        <div className="mt-10 border-t border-primary-foreground/15 pt-4 text-xs text-primary-foreground/70">
           © {year} PIGTATTOO — {d.footer.rights}
         </div>
       </div>
