@@ -4,6 +4,7 @@
 
 /* Self-hosted RGPD-safe fonts (no calls to fonts.googleapis.com / gstatic) */
 @import "@fontsource/poppins/latin-400.css";
+@import "@fontsource/poppins/latin-500.css";
 @import "@fontsource/poppins/latin-600.css";
 @import "@fontsource/poppins/latin-700.css";
 @import "@fontsource/open-sans/latin-400.css";
