@@ -30,7 +30,7 @@ export default function Home() {
       <section className="border-b border-border bg-secondary/40">
         <div className="container-narrow grid gap-10 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,460px)] md:items-center md:py-20">
           <div>
-            <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {d.home.heroKicker}
             </p>
             <h1 className="text-4xl md:text-5xl">{d.home.heroTitle}</h1>
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="container-narrow py-20">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-3xl">{d.home.newsTitle}</h2>
-          <Link to={`${base}/actualidad`} className="text-sm font-bold text-primary hover:text-accent hover:underline">
+          <Link to={`${base}/actualidad`} className="text-sm font-bold text-primary hover:underline">
             {d.home.newsCta} →
           </Link>
         </div>
@@ -102,12 +102,12 @@ export default function Home() {
                 rounded="rounded-none"
               />
               <div className="p-5">
-                <p className="text-xs uppercase tracking-wider text-accent">{n.categoria ?? "Noticia"}</p>
+                <p className="text-xs uppercase tracking-wider font-semibold text-primary">{n.categoria ?? "Noticia"}</p>
                 <h3 className="mt-2 text-lg">{n.titulo}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
                 <Link
                   to={`${base}/actualidad/${n.slug}`}
-                  className="mt-3 inline-block text-sm font-bold text-primary hover:text-accent hover:underline"
+                  className="mt-3 inline-block text-sm font-bold text-primary hover:underline"
                 >
                   {d.news.readMore} →
                 </Link>

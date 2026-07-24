@@ -55,7 +55,7 @@ export default function ActualidadList() {
                   rounded="rounded-none"
                 />
                 <div className="p-6 md:p-8">
-                  <p className="text-xs uppercase tracking-wider text-accent">
+                  <p className="text-xs uppercase tracking-wider font-semibold text-primary">
                     Destacada · {destacada.categoria ?? "Noticia"}
                   </p>
                   <h2 className="mt-2 text-2xl">{destacada.titulo}</h2>
@@ -80,14 +80,14 @@ export default function ActualidadList() {
                     rounded="rounded-none"
                   />
                   <div className="p-5">
-                    <p className="text-xs uppercase tracking-wider text-accent">
+                    <p className="text-xs uppercase tracking-wider font-semibold text-primary">
                       {n.categoria ?? "Noticia"}
                     </p>
                     <h3 className="mt-2 text-lg">{n.titulo}</h3>
                     <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
                     <Link
                       to={`${base}/actualidad/${n.slug}`}
-                      className="mt-3 inline-block text-sm font-bold text-primary hover:text-accent hover:underline"
+                      className="mt-3 inline-block text-sm font-bold text-primary hover:underline"
                     >
                       {d.news.readMore} →
                     </Link>

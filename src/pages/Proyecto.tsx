@@ -47,7 +47,7 @@ export default function Proyecto() {
             ].map((m) => (
               <li key={m.y} className="relative">
                 <span className="absolute -left-[31px] flex h-4 w-4 items-center justify-center rounded-full border-2 border-accent bg-background" />
-                <p className="font-display text-sm font-semibold text-accent">{m.y}</p>
+                <p className="font-display text-sm font-semibold text-primary">{m.y}</p>
                 <p className="text-sm text-muted-foreground">{m.t}</p>
               </li>
             ))}

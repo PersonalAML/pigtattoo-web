@@ -66,12 +66,13 @@ export default function ActualidadDetalle() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <article className="container-narrow py-14">
-        <Link to={`${base}/actualidad`} className="text-sm text-primary hover:text-accent hover:underline">
+        <Link to={`${base}/actualidad`} className="text-sm text-primary hover:underline">
+
           ← {d.news.backToList}
         </Link>
         <header className="mt-4">
           {noticia.categoria && (
-            <p className="text-xs uppercase tracking-wider text-accent">{noticia.categoria}</p>
+            <p className="text-xs uppercase tracking-wider font-semibold text-primary">{noticia.categoria}</p>
           )}
           <h1 className="mt-2 text-4xl">{noticia.titulo}</h1>
           <p className="mt-3 text-sm text-muted-foreground">
