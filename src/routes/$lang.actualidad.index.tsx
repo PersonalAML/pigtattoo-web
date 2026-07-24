@@ -39,6 +39,13 @@ function NewsListPage() {
     <>
       <PageHeader kicker={d.news.kicker} title={d.news.title} intro={d.news.intro} />
       <div className="mx-auto max-w-6xl px-4 py-14">
+        <ImageFrame
+          aspect="21/9"
+          label="Imagen cabecera actualidad"
+          alt="Cabecera de la sección de actualidad"
+          rounded="rounded-2xl"
+          className="mb-10"
+        />
         {!data.configured && (
           <div className="mb-8 rounded-lg border border-dashed border-accent/50 bg-accent/5 p-5 text-sm text-foreground">
             La conexión con Contentful aún no está configurada. Añade <code>CONTENTFUL_SPACE_ID</code> y{" "}
