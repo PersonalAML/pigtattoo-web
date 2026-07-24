@@ -99,21 +99,29 @@ function ContactPage() {
             <p className="text-xs italic text-muted-foreground">{d.contact.successNote}</p>
           </form>
         </div>
-        <aside className="rounded-2xl border border-border bg-secondary/50 p-6">
-          <h2 className="font-display text-lg font-semibold text-primary">PIGTATTOO</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Consorcio del Grupo Operativo Supraautonómico PIGTATTOO.
-          </p>
-          <dl className="mt-4 space-y-2 text-sm">
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-muted-foreground">Correo</dt>
-              <dd className="text-foreground">info@pigtattoo.es</dd>
-            </div>
-            <div>
-              <dt className="text-xs uppercase tracking-wider text-muted-foreground">Web</dt>
-              <dd className="text-foreground">pigtattoo.es</dd>
-            </div>
-          </dl>
+        <aside className="space-y-6">
+          <div className="rounded-2xl border border-border bg-secondary/50 p-6">
+            <h2 className="font-display text-lg font-semibold text-primary">PIGTATTOO</h2>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Consorcio del Grupo Operativo Supraautonómico PIGTATTOO.
+            </p>
+            <dl className="mt-4 space-y-2 text-sm">
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-muted-foreground">Correo</dt>
+                <dd className="text-foreground">info@pigtattoo.es</dd>
+              </div>
+              <div>
+                <dt className="text-xs uppercase tracking-wider text-muted-foreground">Web</dt>
+                <dd className="text-foreground">pigtattoo.es</dd>
+              </div>
+            </dl>
+          </div>
+          <ImageFrame
+            aspect="4/3"
+            label="Mapa / ubicación pendiente"
+            alt="Mapa con ubicación del consorcio"
+            rounded="rounded-2xl"
+          />
         </aside>
       </div>
     </>
