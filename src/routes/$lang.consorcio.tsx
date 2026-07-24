@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/PageHeader";
+import { LogoFrame } from "@/components/ImageFrame";
 import { getDict, isLang, type Lang } from "@/i18n/dictionaries";
 import { PARTNERS, SUBCONTRACTED, type Partner } from "@/lib/site-data";
 
