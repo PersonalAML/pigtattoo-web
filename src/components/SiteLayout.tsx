@@ -14,7 +14,6 @@ function useNav(lang: Lang): NavItem[] {
     { to: `/${lang}/actividades`, label: d.nav.activities },
     { to: `/${lang}/actualidad`, label: d.nav.news },
     { to: `/${lang}/resultados`, label: d.nav.results },
-    { to: `/${lang}/materiales`, label: d.nav.materials },
     { to: `/${lang}/contacto`, label: d.nav.contact },
   ];
 }
