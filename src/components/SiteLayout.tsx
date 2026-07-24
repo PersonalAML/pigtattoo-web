@@ -107,10 +107,16 @@ function Footer({ lang }: { lang: Lang }) {
           <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
             {d.footer.financingBody}
           </p>
-          <div className="mt-3 flex flex-wrap gap-2 text-[10px] uppercase tracking-wider text-muted-foreground">
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo MAPA</span>
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo FEADER</span>
-            <span className="rounded border border-dashed border-border px-2 py-1">Logo UE</span>
+          <div className="mt-4 grid grid-cols-3 gap-2">
+            {["MAPA", "FEADER", "UE"].map((l) => (
+              <div
+                key={l}
+                aria-label={`Logo ${l} (pendiente)`}
+                className="flex aspect-[3/2] items-center justify-center rounded-md border-2 border-dashed border-accent/40 bg-secondary text-[10px] font-bold uppercase tracking-widest text-accent"
+              >
+                {l}
+              </div>
+            ))}
           </div>
         </div>
       </div>
