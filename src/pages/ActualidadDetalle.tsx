@@ -72,7 +72,7 @@ export default function ActualidadDetalle() {
         </Link>
         <header className="mt-4">
           {noticia.categoria && (
-            <p className="text-xs uppercase tracking-wider text-accent">{noticia.categoria}</p>
+            <p className="text-xs uppercase tracking-wider font-semibold text-primary">{noticia.categoria}</p>
           )}
           <h1 className="mt-2 text-4xl">{noticia.titulo}</h1>
           <p className="mt-3 text-sm text-muted-foreground">
