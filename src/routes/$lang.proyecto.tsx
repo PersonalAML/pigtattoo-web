@@ -25,14 +25,14 @@ function ProjectPage() {
   const d = getDict(lang);
   return (
     <>
-      <PageHeader kicker={d.project.kicker} title={d.project.title} intro={d.project.intro} />
+      <PageHeader
+        kicker={d.project.kicker}
+        title={d.project.title}
+        intro={d.project.intro}
+        imageLabel="Imagen del proyecto"
+        imageAlt="Diagrama o fotografía del sistema PIGTATTOO"
+      />
       <div className="mx-auto max-w-5xl space-y-16 px-4 py-14">
-        <ImageFrame
-          aspect="21/9"
-          label="Imagen cabecera del proyecto"
-          alt="Diagrama o fotografía del sistema PIGTATTOO"
-          rounded="rounded-2xl"
-        />
         <section id="objetivos" className="grid gap-8 md:grid-cols-3 md:items-start">
           <div className="md:col-span-2">
             <h2 className="font-display text-2xl font-bold text-primary">{d.project.objectivesTitle}</h2>
