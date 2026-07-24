@@ -72,18 +72,13 @@
     "notFound": "Noticia no encontrada"
   },
   "results": {
-    "title": "Resultados",
-    "kicker": "Entregables del proyecto",
-    "intro": "Documentación técnica y entregables generados por el proyecto PIGTATTOO. Los enlaces se irán actualizando conforme avancen las actividades.",
+    "title": "Resultados y materiales",
+    "kicker": "Entregables y difusión",
+    "intro": "Documentación técnica, entregables del proyecto y materiales divulgativos generados por PIGTATTOO. Los enlaces se irán actualizando conforme avancen las actividades.",
     "download": "Descargar",
-    "comingSoon": "Próximamente disponible"
-  },
-  "materials": {
-    "title": "Materiales de difusión",
-    "kicker": "Comunicación y divulgación",
-    "intro": "Materiales divulgativos, fichas técnicas y recursos gráficos generados por PIGTATTOO.",
-    "download": "Descargar",
-    "comingSoon": "Próximamente disponible"
+    "comingSoon": "Próximamente disponible",
+    "deliverablesTitle": "Entregables técnicos",
+    "materialsTitle": "Materiales de difusión"
   },
   "contact": {
     "title": "Contacto",
