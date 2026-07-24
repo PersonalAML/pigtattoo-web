@@ -1,115 +1,194 @@
+# Reconstrucción total — Vite + React SPA (sin SSR)
 
-# Plan v1 — pigtattoo.es
+Restricciones innegociables asumidas:
 
-Objetivo: entregar la v1 pública en español con esqueleto multilingüe listo, diseño sobrio institucional, integración Contentful sólo en Actualidad, GA4 con consentimiento y formulario preparado para Netlify Forms. Contenidos, logos y textos definitivos entran después como reemplazo de mocks.
+1. **Vite + React** como SPA pura (renderizado en cliente).
+2. **Prohibido** TanStack Start, Next.js, Remix, Server Functions y cualquier SSR.
+3. **Enrutado 100% cliente** con React Router v6 (`BrowserRouter`).
+4. **Contentful directo desde el navegador** con CDA (token público de solo lectura). Sin proxies ni backend.
 
-## 1. Stack y fundamentos
+Se descarta por completo el código y la arquitectura anteriores.
 
-- TanStack Start (ya provisto). File-based routing bajo `src/routes/`.
-- Tailwind v4 vía `src/styles.css` con tokens semánticos.
-- Fuentes self-hosted RGPD-safe: `@fontsource/poppins` y `@fontsource/open-sans`, subconjunto latin, importadas desde `styles.css`. Cero llamadas a Google Fonts.
-- Contentful vía conector estándar de Lovable (Content Delivery API), solo en Actualidad.
-- Netlify Forms: formulario con `data-netlify="true"` y honeypot; sin backend en v1.
+## 1. Purga previa
 
-## 2. Sistema de diseño (tokens oklch en `src/styles.css`)
+Eliminar del proyecto todo rastro de TanStack Start y su ecosistema:
 
-- `--background` Gris Piedra · `--foreground` Azul Medianoche · `--card` Blanco
-- `--primary` Azul Medianoche · `--accent` Ocre para CTAs
-- `--muted`, `--border`, `--ring`, `--destructive` estándar shadcn
-- Tipografía: Poppins 600/700 para titulares, Open Sans 400/600 para cuerpo
-- Contenedor máx. 1200px, secciones `py-20`, radios 0.5rem, sombras sutiles
-- Accesibilidad: focus visible, contraste AA, `prefers-reduced-motion`
+- `src/routes/`, `src/router.tsx`, `src/routeTree.gen.ts`, `src/server.ts`, `src/start.ts`.
+- `src/lib/contentful.functions.ts` y cualquier `*.functions.ts` / `*.server.ts`.
+- Dependencias en `package.json`: `@tanstack/react-start`, `@tanstack/react-router`, `@tanstack/router-plugin`, `@tanstack/react-router-devtools`.
+- `vite.config.ts` reescrito como config Vite + React estándar (plugin `@vitejs/plugin-react`, sin plugins de TanStack).
+- Limpieza de `tsconfig.json` (rutas y tipos de TanStack).
 
-## 3. Rutas e i18n
+Se conservan y reutilizan: `src/i18n/{es,ca,en}.json`, `src/lib/site-data.ts` (socios, actividades, docs) y los textos ya redactados.
 
-Estructura obligatoria `/es/`, `/ca/`, `/en/` con redirección `/ → /es/`. Switcher visual oculto en v1.
+## 2. Stack técnico definitivo
+
+- **Vite 5 + React 18** (CSR).
+- **React Router v6** (`BrowserRouter`, `Routes`, `Route`, `Navigate`, `useParams`, `useLocation`).
+- **react-helmet-async** para metadatos dinámicos por página (title, description, OG, canonical, hreflang, JSON-LD).
+- **Tailwind CSS v3** + configuración `tailwind.config.js` / `postcss.config.js` clásicos.
+- **shadcn/ui** compatible con Tailwind v3 (solo los componentes que necesitemos).
+- **@fontsource/poppins** y **@fontsource/open-sans** self-hosted (RGPD).
+- **`contentful`** (SDK JS oficial) llamado directo desde el navegador.
+- **`@contentful/rich-text-react-renderer`** + **`@contentful/rich-text-types`** para el cuerpo de noticias.
+- **Netlify Forms** (`data-netlify="true"` + honeypot) — sin envío en v1.
+
+## 3. Estructura de carpetas
 
 ```
-src/routes/
-  __root.tsx              layout global (header, footer, cookie banner)
-  index.tsx               redirect a /es/
-  $lang.tsx               layout de idioma (valida es|ca|en)
-  $lang.index.tsx         Home
-  $lang.proyecto.tsx
-  $lang.consorcio.tsx
-  $lang.actividades.tsx
-  $lang.actualidad.index.tsx        Listado (Contentful)
-  $lang.actualidad.$slug.tsx        Detalle (head dinámico OG)
-  $lang.resultados.tsx    Descargas estáticas
-  $lang.materiales.tsx    Descargas estáticas
-  $lang.contacto.tsx      Netlify Forms-ready
-  $lang.aviso-legal.tsx
-  $lang.privacidad.tsx
-  $lang.cookies.tsx
+src/
+  main.tsx                  ReactDOM + BrowserRouter + HelmetProvider
+  App.tsx                   Layout + <Routes>
+  index.css                 Tailwind base + tokens
+  components/
+    SiteHeader.tsx
+    SiteFooter.tsx
+    CookieBanner.tsx
+    PageHeader.tsx
+    ImageFrame.tsx
+    SEO.tsx                 wrapper Helmet (title/desc/OG/canonical/hreflang)
+    LangGuard.tsx           valida :lang ∈ {es,ca,en} y expone contexto
+  i18n/
+    dictionaries.ts
+    es.json / ca.json / en.json
+  lib/
+    contentful.ts           createClient con VITE_CONTENTFUL_*
+    site-data.ts
+    consent.ts              lógica GA4 (consent + hostname)
+    slug.ts                 derivar slug desde título
+  pages/
+    RedirectHome.tsx        "/" → "/es"
+    Home.tsx
+    Proyecto.tsx
+    Consorcio.tsx
+    Actividades.tsx
+    ActualidadList.tsx
+    ActualidadDetalle.tsx
+    Resultados.tsx
+    Contacto.tsx
+    Accesibilidad.tsx
+    AvisoLegal.tsx
+    Privacidad.tsx
+    Cookies.tsx
+    NotFound.tsx
+public/
+  robots.txt
+  sitemap.xml               v1 escrito a mano
+  _redirects                "/* /index.html 200" (SPA fallback en Netlify)
+netlify.toml                forms + redirects + headers básicos
+tailwind.config.js
+postcss.config.js
 ```
 
-- Diccionarios en `src/i18n/{es,ca,en}.json`. ES completo; CA/EN con TODOs y fallback a ES.
-- `hreflang` en `<head>` de cada ruta.
+## 4. Enrutado (React Router v6)
 
-## 4. Secciones
+```
+/               → <Navigate to="/es" replace />
+/:lang          → <LangGuard><Layout><Outlet/></Layout></LangGuard>
+  index          → Home
+  proyecto
+  consorcio
+  actividades
+  actualidad
+  actualidad/:slug
+  resultados
+  contacto
+  accesibilidad
+  aviso-legal
+  privacidad
+  cookies
+*               → NotFound
+```
 
-- **Header**: logo, nav, switcher idioma oculto.
-- **Home**: hero + CTA, "Qué es PIGTATTOO", 3 pilares, últimas 3 noticias (Contentful con fallback), franja socios, CTA contacto.
-- **Proyecto**: descripción, objetivos, metodología, cronograma.
-- **Consorcio**: grid de 6 socios + 3 subcontratados.
-- **Actividades**: 8 tarjetas con estado y % progreso.
-- **Actualidad**: listado paginado desde Contentful, destacada arriba si `noticiaDestacada`. Detalle con rich text, galería, autor, fecha, categoría; `head()` dinámico con OG derivado del entry.
-- **Resultados** y **Materiales**: cuadrícula estática de tarjetas de documento (título, descripción, tipo de archivo, tamaño, fecha, enlace de descarga placeholder). Datos en arrays locales para que el consorcio sustituya solo URLs y metadatos sin rediseñar.
-- **Contacto**: formulario Netlify-ready (nombre, email, asunto, mensaje, consentimiento) con honeypot; no envía en v1.
-- **Footer**: logos institucionales (placeholders), declaración de financiación (placeholder), enlaces legales, RRSS.
+- `LangGuard` valida el idioma; si no es válido, redirige a `/es`.
+- Switcher de idioma implementado pero oculto (`SHOW_LANG_SWITCHER = false`).
+- Enlaces con `<Link to>`; navegación dependiente del idioma actual.
 
-## 5. Contentful (solo Actualidad)
+## 5. SEO por página
 
-- Conexión con `standard_connectors--connect` (`contentful`) cuando llegue el momento.
-- Server functions `getNoticias` y `getNoticia` en `src/lib/contentful.functions.ts`, llamando al gateway con `LOVABLE_API_KEY` + `X-Connection-Api-Key`; resolución de links y assets antes de devolver.
-- Content type `contenidoPigtattoo` con campos: `titulo`, `extracto`, `fecha`, `autor`, `categoria`, `imagenDestacada`, `cuerpo` (rich text), `galeria`, `noticiaDestacada`.
-- Rich text con `@contentful/rich-text-react-renderer` + `@contentful/rich-text-types`.
-- Slug derivado de `titulo`.
+Componente `<SEO title description path lang ogImage? type?/>` que emite vía Helmet:
+
+- `<title>`, `meta description`.
+- `og:title`, `og:description`, `og:type`, `og:url`, `og:image` (opcional), `twitter:card`.
+- `<link rel="canonical">` autoreferencial (relativo).
+- `<link rel="alternate" hreflang="es|ca|en|x-default">` para las tres variantes de la misma ruta.
+
+JSON-LD:
+
+- `Organization` global en `App.tsx`.
+- `Article` en detalle de noticia (a partir de la entry Contentful).
+
+Detalle de noticia: título/descripcion/OG derivados de `titulo`, `extracto`, `imagenDestacada`.
+
+## 6. Contentful desde el navegador
+
+```ts
+// src/lib/contentful.ts
+import { createClient } from "contentful";
+export const cf = createClient({
+  space: import.meta.env.VITE_CONTENTFUL_SPACE_ID,
+  accessToken: import.meta.env.VITE_CONTENTFUL_TOKEN,
+});
+```
+
+- `VITE_CONTENTFUL_SPACE_ID` y `VITE_CONTENTFUL_TOKEN` en `.env` (públicas, CDA de solo lectura).
+- Sin backend, sin proxy, sin gateway.
+- Content type `contenidoPigtattoo` con los campos ya acordados.
+- Funciones cliente `getNoticias({limit, skip})` y `getNoticiaBySlug(slug)`; slug derivado del título.
+- Estado de carga y fallback UI si la API falla o el token no está aún configurado (se muestran datos mock para poder ver la sección).
+- Rich text con `@contentful/rich-text-react-renderer`.
 - Sin caché en v1.
-- Fallback UI si la API falla o no hay entradas.
 
-## 6. Preparación para futuro Netlify
+## 7. Diseño y CSS (doc V2)
 
-- Server functions autocontenidas, sin dependencias propietarias más allá del gateway.
-- Comentario/README con el punto de migración: reemplazar `createServerFn` por Netlify Edge Functions si se decide.
-- Aviso registrado: TanStack Start apunta por defecto al runtime Lovable/Cloudflare Workers; el despliegue en Netlify requerirá adaptador específico posterior.
+- Tokens CSS: Azul Medianoche, Azul Cerceta, Rosa Salmón (solo decorativo), Gris Piedra, Blanco.
+- Poppins 500/600 (titulares y CTAs UPPERCASE) + Open Sans 400/700 (cuerpo).
+- Interlineado 1.2 titulares / 1.6 texto.
+- Media queries clásicas (Opción 1 del doc). Sin `clamp()`.
+- Estilos `table.pig` para vistas tabulares de Actividades/Resultados.
+- Sin modo noche.
 
-## 7. GA4 + banner de consentimiento
+## 8. Legales y cumplimiento
 
-- `<CookieBanner>` en `__root.tsx`: aceptar/rechazar, persiste en `localStorage` (`pigtattoo.consent`), reabrible desde `/es/cookies`.
-- `gtag.js` se carga **solo si** `consent === "granted"` **Y** `hostname === "pigtattoo.es"`. Bloqueado siempre en localhost, `*.lovable.app` y previews.
-- `GA_MEASUREMENT_ID` como placeholder `G-XXXXXXX`.
-- Página `/cookies` explicando finalidad, base legal y revocación.
+- Páginas: Aviso legal, Privacidad, **Política de cookies**, **Declaración de accesibilidad (RD 1112/2018)**.
+- Footer: enlaces a las 4 legales + copyright plano + declaración de financiación (placeholder MAPA/FEADER/PEPAC 2025).
+- Banner de cookies (aceptar/rechazar/gestionar); consentimiento en `localStorage` (`pigtattoo.consent`), revocable desde `/es/cookies`.
+- GA4 solo si `consent === "granted" && hostname === "pigtattoo.es"`. Bloqueado en localhost y previews.
 
-## 8. SEO
+## 9. Formulario Netlify
 
-- `head()` por ruta con title/description/og únicos.
-- Noticias con `og:image = imagenDestacada`. Home sin `og:image` (hosting lo inyecta).
-- `canonical` y `og:url` autorreferenciales relativos.
-- `robots.txt` permitiendo todo salvo `/api/`. `sitemap.xml` como server route con `BASE_URL=""` (TODO) para todas las rutas idioma × sección.
-- JSON-LD `Organization` en `__root`, `Article` en detalle de noticia.
+Formulario en Contacto:
+- `name="contacto"`, `data-netlify="true"`, `netlify-honeypot="bot-field"`.
+- Campos: nombre, email, asunto, mensaje, consentimiento explícito.
+- Sin envío real en v1. Se activará automáticamente al desplegar en Netlify.
 
-## 9. Assets y placeholders
+## 10. Publicación futura en Netlify
 
-- Logo: SVG placeholder minimal.
-- Logos socios/institucionales: cuadros grises con siglas.
-- Imagen hero: generada con `imagegen`; resto rectángulos de color.
-- Textos: mock realista tipo Lorem ipsum.
+- `public/_redirects` con `/*    /index.html   200` para el fallback SPA.
+- `netlify.toml` con build (`bun run build` → `dist/`) y detección de formularios.
 
-## 10. Orden de entrega
+## 11. Orden de ejecución
 
-1. Tokens de diseño + fuentes self-hosted + `__root` con header/footer/banner.
-2. Enrutado `/`, `$lang`, redirección y páginas con contenido mock.
-3. Sistema i18n + diccionarios ES completos, CA/EN con TODOs, switcher oculto.
-4. Actualidad: server functions Contentful + listado + detalle + rich text.
-5. Resultados y Materiales: estructura de descargas estática.
-6. Formulario contacto Netlify-ready.
-7. GA4 condicional + banner + cookies + legales.
-8. SEO por ruta, sitemap, robots, JSON-LD.
-9. Verificación: build, navegación y screenshots.
+1. Purga total del stack TanStack + reset de `vite.config.ts`, `package.json`, `tsconfig.json`, `index.html`.
+2. Bootstrap Vite + React + Router + Helmet + Tailwind v3 + tokens + fuentes.
+3. Layout raíz (Header, Footer, CookieBanner) + `LangGuard`.
+4. Páginas con contenido mock ya redactado y `<SEO>` en cada una.
+5. Cliente Contentful + Actualidad (listado y detalle) con fallback.
+6. Resultados unificados (entregables + materiales).
+7. Formulario Netlify-ready.
+8. Legales completas + accesibilidad + robots + sitemap + `_redirects` + `netlify.toml`.
+9. Verificación (build, navegación, screenshots).
+
+## Notas técnicas honestas
+
+- La plantilla actual del sandbox Lovable está pensada para TanStack Start. Forzar Vite + React SPA implica:
+  - Renunciar a integraciones automáticas de plataforma (server functions, Lovable Cloud, previews con SSR).
+  - Todo lo dinámico que requiera un secreto real deberá vivir en Netlify Functions post-despliegue.
+- El CDA token de Contentful está diseñado para exponerse en clientes (solo lectura), por lo que su uso en `VITE_*` es adecuado.
+- Tailwind v3 exige `tailwind.config.js` + `postcss.config.js` clásicos (adiós al `@theme` de v4).
 
 ## Pendiente por tu parte (no bloquea)
 
-- Space ID + Delivery Token de Contentful (al conectar).
-- `G-XXXXXXX` de GA4.
-- Logos definitivos, textos reales, declaración de financiación, datos de socios/actividades, documentos reales.
+- Space ID + CDA token de Contentful.
+- GA4 Measurement ID.
+- Logos, imágenes reales, textos oficiales, datos reales de socios y actividades, documentos.
