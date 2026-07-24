@@ -1,33 +1,59 @@
 import type { ReactNode } from "react";
+import { ImageFrame } from "@/components/ImageFrame";
 
 export function PageHeader({
   kicker,
   title,
   intro,
   children,
+  imageLabel,
+  imageAlt,
 }: {
   kicker?: string;
   title: string;
   intro?: string;
   children?: ReactNode;
+  imageLabel?: string;
+  imageAlt?: string;
 }) {
+  const hasImage = Boolean(imageLabel || imageAlt);
   return (
     <section className="border-b border-border bg-secondary/40">
-      <div className="mx-auto max-w-6xl px-4 py-14 md:py-20">
-        {kicker && (
-          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
-            {kicker}
-          </p>
-        )}
-        <h1 className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
-          {title}
-        </h1>
-        {intro && (
-          <p className="mt-4 max-w-3xl text-base leading-relaxed text-muted-foreground md:text-lg">
-            {intro}
-          </p>
-        )}
-        {children}
+      <div className="mx-auto max-w-6xl px-4 py-12 md:py-16">
+        <div
+          className={
+            hasImage
+              ? "grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,420px)] md:gap-12"
+              : ""
+          }
+        >
+          <div className="min-w-0">
+            {kicker && (
+              <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+                {kicker}
+              </p>
+            )}
+            <h1 className="font-display text-4xl font-bold tracking-tight text-primary md:text-5xl">
+              {title}
+            </h1>
+            {intro && (
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
+                {intro}
+              </p>
+            )}
+            {children}
+          </div>
+          {hasImage && (
+            <div className="w-full">
+              <ImageFrame
+                aspect="4/3"
+                label={imageLabel ?? "Imagen"}
+                alt={imageAlt ?? imageLabel ?? "Imagen"}
+                rounded="rounded-2xl"
+              />
+            </div>
+          )}
+        </div>
       </div>
     </section>
   );
