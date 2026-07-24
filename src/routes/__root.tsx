@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "PIGTATTOO — Trazabilidad porcina por tatuaje" },
+      { name: "description", content: "PIGTATTOO es un Grupo Operativo Supraautonómico para el desarrollo de sistemas de identificación porcina por tatuaje: trazabilidad, bienestar animal y sostenibilidad." },
+      { name: "author", content: "Consorcio PIGTATTOO" },
+      { property: "og:site_name", content: "PIGTATTOO" },
+      { property: "og:title", content: "PIGTATTOO — Trazabilidad porcina por tatuaje" },
+      { property: "og:description", content: "Grupo Operativo Supraautonómico para la identificación porcina por tatuaje." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
@@ -102,7 +102,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>
