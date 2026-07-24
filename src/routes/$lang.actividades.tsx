@@ -40,15 +40,14 @@ function ActivitiesPage() {
   const d = getDict(lang);
   return (
     <>
-      <PageHeader kicker={d.activities.kicker} title={d.activities.title} intro={d.activities.intro} />
+      <PageHeader
+        kicker={d.activities.kicker}
+        title={d.activities.title}
+        intro={d.activities.intro}
+        imageLabel="Imagen de actividades"
+        imageAlt="Panorámica del plan de trabajo"
+      />
       <div className="mx-auto max-w-6xl px-4 py-14">
-        <ImageFrame
-          aspect="21/9"
-          label="Imagen cabecera actividades"
-          alt="Panorámica del plan de trabajo"
-          rounded="rounded-2xl"
-          className="mb-10"
-        />
         <div className="grid gap-5 md:grid-cols-2">
           {ACTIVITIES.map((a) => (
             <article key={a.id} className="flex gap-5 rounded-xl border border-border bg-card p-5 shadow-sm">
