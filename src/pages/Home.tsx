@@ -87,7 +87,7 @@ export default function Home() {
       <section className="container-narrow py-20">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-3xl">{d.home.newsTitle}</h2>
-          <Link to={`${base}/actualidad`} className="text-sm font-bold text-primary hover:text-accent hover:underline">
+          <Link to={`${base}/actualidad`} className="text-sm font-bold text-primary hover:underline">
             {d.home.newsCta} →
           </Link>
         </div>
