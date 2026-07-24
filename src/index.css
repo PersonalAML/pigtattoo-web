@@ -1,14 +1,12 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* Self-hosted RGPD-safe fonts (no calls to fonts.googleapis.com / gstatic) */
 @import "@fontsource/poppins/latin-500.css";
 @import "@fontsource/poppins/latin-600.css";
-@import "@fontsource/poppins/latin-700.css";
 @import "@fontsource/open-sans/latin-400.css";
-@import "@fontsource/open-sans/latin-600.css";
 @import "@fontsource/open-sans/latin-700.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /*
  * PIGTATTOO — design tokens (HSL, doc V2)
@@ -38,7 +36,7 @@
     --muted-foreground: 220 10% 40%;
 
     --accent: 186 42% 53%;
-    --accent-foreground: 0 0% 100%;
+    --accent-foreground: 220 20% 21%;
 
     --salmon: 4 66% 84%;
 

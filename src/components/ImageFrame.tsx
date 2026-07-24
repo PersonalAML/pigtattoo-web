@@ -42,7 +42,7 @@ export function ImageFrame({
       role="img"
       aria-label={alt || label}
       style={style}
-      className={`relative flex w-full items-center justify-center overflow-hidden border-2 border-dashed border-accent/40 bg-gradient-to-br from-secondary to-[var(--color-salmon)]/25 ${rounded} ${className}`}
+      className={`relative flex w-full items-center justify-center overflow-hidden border-2 border-dashed border-accent/40 bg-gradient-to-br from-secondary to-salmon/25 ${rounded} ${className}`}
     >
       {/* Retícula sutil como guiño a la matriz de puntos del logo */}
       <div
@@ -68,7 +68,7 @@ export function ImageFrame({
           <circle cx="9" cy="10" r="1.6" />
           <path d="M21 16l-5-5-8 8" />
         </svg>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
+        <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-foreground">
           {label}
         </span>
       </div>

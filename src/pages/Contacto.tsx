@@ -37,7 +37,7 @@ export default function Contacto() {
             <p className="text-xs text-muted-foreground">{d.contact.requiredHint}</p>
             <div className="grid gap-4 md:grid-cols-2">
               <label className="block text-sm">
-                <span className="font-medium text-primary">{d.contact.name} *</span>
+                <span className="font-bold text-primary">{d.contact.name} *</span>
                 <input
                   required
                   type="text"
@@ -46,7 +46,7 @@ export default function Contacto() {
                 />
               </label>
               <label className="block text-sm">
-                <span className="font-medium text-primary">{d.contact.email} *</span>
+                <span className="font-bold text-primary">{d.contact.email} *</span>
                 <input
                   required
                   type="email"
@@ -56,7 +56,7 @@ export default function Contacto() {
               </label>
             </div>
             <label className="block text-sm">
-              <span className="font-medium text-primary">{d.contact.subject} *</span>
+              <span className="font-bold text-primary">{d.contact.subject} *</span>
               <input
                 required
                 type="text"
@@ -65,7 +65,7 @@ export default function Contacto() {
               />
             </label>
             <label className="block text-sm">
-              <span className="font-medium text-primary">{d.contact.message} *</span>
+              <span className="font-bold text-primary">{d.contact.message} *</span>
               <textarea
                 required
                 rows={6}
@@ -84,7 +84,7 @@ export default function Contacto() {
           </form>
           <aside className="space-y-4 text-sm">
             <div className="rounded-lg border border-border bg-secondary/60 p-4">
-              <h2 className="text-base font-semibold text-primary">PIGTATTOO</h2>
+              <h2 className="text-base font-bold text-primary">PIGTATTOO</h2>
               <p className="mt-1 text-muted-foreground">
                 Coordinación del Grupo Operativo. Datos de contacto pendientes de aportar por el
                 consorcio.

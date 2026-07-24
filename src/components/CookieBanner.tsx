@@ -116,7 +116,7 @@ export function ConsentControls() {
       <button
         type="button"
         onClick={reset}
-        className="mt-3 inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+        className="mt-3 inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-secondary"
       >
         Restablecer preferencias
       </button>
