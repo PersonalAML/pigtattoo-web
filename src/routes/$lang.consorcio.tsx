@@ -40,7 +40,13 @@ function ConsortiumPage() {
   const d = getDict(lang);
   return (
     <>
-      <PageHeader kicker={d.consortium.kicker} title={d.consortium.title} intro={d.consortium.intro} />
+      <PageHeader
+        kicker={d.consortium.kicker}
+        title={d.consortium.title}
+        intro={d.consortium.intro}
+        imageLabel="Imagen del consorcio"
+        imageAlt="Miembros del consorcio PIGTATTOO"
+      />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-14">
         <section>
           <h2 className="font-display text-2xl font-bold text-primary">{d.consortium.partnersTitle}</h2>
