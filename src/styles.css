@@ -72,30 +72,30 @@
 
 :root {
   --radius: 0.5rem;
-  /* Gris Piedra */
-  --background: oklch(0.965 0.005 90);
-  /* Azul Medianoche */
-  --foreground: oklch(0.24 0.04 260);
+  /* Gris Piedra Claro — HSL(60,14%,95%) */
+  --background: oklch(0.965 0.008 100);
+  /* Azul Medianoche — HSL(220,20%,21%) */
+  --foreground: oklch(0.30 0.032 255);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.04 260);
+  --card-foreground: oklch(0.30 0.032 255);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.04 260);
-  --primary: oklch(0.24 0.04 260);
-  --primary-foreground: oklch(0.99 0.003 90);
-  --secondary: oklch(0.94 0.008 90);
-  --secondary-foreground: oklch(0.24 0.04 260);
-  --muted: oklch(0.94 0.008 90);
-  --muted-foreground: oklch(0.45 0.02 260);
-  /* Azul Cerceta (Teal) — CTAs, interacción */
-  --accent: oklch(0.7 0.09 205);
-  --accent-foreground: oklch(0.99 0.003 90);
-  /* Rosa Salmón — solo decoración sutil, nunca texto ni CTA */
-  --salmon: oklch(0.83 0.055 15);
+  --popover-foreground: oklch(0.30 0.032 255);
+  --primary: oklch(0.30 0.032 255);
+  --primary-foreground: oklch(0.99 0.003 100);
+  --secondary: oklch(0.94 0.008 100);
+  --secondary-foreground: oklch(0.30 0.032 255);
+  --muted: oklch(0.94 0.008 100);
+  --muted-foreground: oklch(0.48 0.02 255);
+  /* Azul Cerceta — HSL(186,42%,53%) — CTAs, interacción */
+  --accent: oklch(0.72 0.075 208);
+  --accent-foreground: oklch(0.99 0.003 100);
+  /* Rosa Salmón — HSL(4,66%,84%) — decoración sutil, nunca texto/CTA */
+  --salmon: oklch(0.84 0.055 25);
   --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.99 0.003 90);
-  --border: oklch(0.9 0.008 90);
-  --input: oklch(0.9 0.008 90);
-  --ring: oklch(0.7 0.09 205);
+  --destructive-foreground: oklch(0.99 0.003 100);
+  --border: oklch(0.9 0.01 100);
+  --input: oklch(0.9 0.01 100);
+  --ring: oklch(0.72 0.075 208);
   --chart-1: oklch(0.24 0.04 260);
   --chart-2: oklch(0.7 0.09 205);
   --chart-3: oklch(0.6 0.04 260);
