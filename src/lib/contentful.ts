@@ -48,15 +48,16 @@ const client = contentfulConfigured
 
 function assetUrl(asset?: Asset<undefined, string> | { fields: Asset["fields"] }): Noticia["imagen"] {
   if (!asset) return undefined;
-  const file = (asset.fields as Asset["fields"]).file;
+  const file = (asset.fields as Asset["fields"]).file as
+    | { url?: string; details?: { image?: { width: number; height: number } } }
+    | undefined;
   if (!file || !file.url) return undefined;
   const url = file.url.startsWith("//") ? `https:${file.url}` : file.url;
-  const details = file.details as { image?: { width: number; height: number } } | undefined;
   return {
     url,
     alt: ((asset.fields as Asset["fields"]).description as string) ?? "",
-    width: details?.image?.width,
-    height: details?.image?.height,
+    width: file.details?.image?.width,
+    height: file.details?.image?.height,
   };
 }
 
