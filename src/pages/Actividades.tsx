@@ -41,7 +41,7 @@ export default function Actividades() {
             <article key={a.id} className="rounded-lg border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start justify-between gap-3">
                 <div>
-                  <p className="font-display text-xs font-semibold uppercase tracking-wider text-accent">
+                  <p className="font-display text-xs font-semibold uppercase tracking-wider text-primary">
                     {a.code}
                   </p>
                   <h3 className="mt-1 text-lg">{a.title}</h3>
