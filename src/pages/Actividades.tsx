@@ -8,7 +8,7 @@ function StatusBadge({ status, dict }: { status: ActivityStatus; dict: ReturnTyp
   const map = {
     planned: { label: dict.activities.statusPlanned, cls: "bg-secondary text-primary border border-border" },
     "in-progress": { label: dict.activities.statusInProgress, cls: "bg-salmon/30 text-primary border border-salmon" },
-    completed: { label: dict.activities.statusCompleted, cls: "bg-accent/15 text-accent border border-accent/40" },
+    completed: { label: dict.activities.statusCompleted, cls: "bg-accent/15 text-primary border border-accent/40" },
   } as const;
   const s = map[status];
   return (
