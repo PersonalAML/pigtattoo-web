@@ -11,6 +11,10 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as LangRouteImport } from './routes/$lang'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as LangIndexRouteImport } from './routes/$lang.index'
+import { Route as LangProyectoRouteImport } from './routes/$lang.proyecto'
+import { Route as LangConsorcioRouteImport } from './routes/$lang.consorcio'
+import { Route as LangActividadesRouteImport } from './routes/$lang.actividades'
 
 const LangRoute = LangRouteImport.update({
   id: '/$lang',
@@ -22,31 +26,80 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const LangIndexRoute = LangIndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangProyectoRoute = LangProyectoRouteImport.update({
+  id: '/proyecto',
+  path: '/proyecto',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangConsorcioRoute = LangConsorcioRouteImport.update({
+  id: '/consorcio',
+  path: '/consorcio',
+  getParentRoute: () => LangRoute,
+} as any)
+const LangActividadesRoute = LangActividadesRouteImport.update({
+  id: '/actividades',
+  path: '/actividades',
+  getParentRoute: () => LangRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/$lang': typeof LangRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/actividades': typeof LangActividadesRoute
+  '/$lang/consorcio': typeof LangConsorcioRoute
+  '/$lang/proyecto': typeof LangProyectoRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/$lang': typeof LangRoute
+  '/$lang/actividades': typeof LangActividadesRoute
+  '/$lang/consorcio': typeof LangConsorcioRoute
+  '/$lang/proyecto': typeof LangProyectoRoute
+  '/$lang': typeof LangIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/$lang': typeof LangRoute
+  '/$lang': typeof LangRouteWithChildren
+  '/$lang/actividades': typeof LangActividadesRoute
+  '/$lang/consorcio': typeof LangConsorcioRoute
+  '/$lang/proyecto': typeof LangProyectoRoute
+  '/$lang/': typeof LangIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$lang'
+  fullPaths:
+    | '/'
+    | '/$lang'
+    | '/$lang/actividades'
+    | '/$lang/consorcio'
+    | '/$lang/proyecto'
+    | '/$lang/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$lang'
-  id: '__root__' | '/' | '/$lang'
+  to:
+    | '/'
+    | '/$lang/actividades'
+    | '/$lang/consorcio'
+    | '/$lang/proyecto'
+    | '/$lang'
+  id:
+    | '__root__'
+    | '/'
+    | '/$lang'
+    | '/$lang/actividades'
+    | '/$lang/consorcio'
+    | '/$lang/proyecto'
+    | '/$lang/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  LangRoute: typeof LangRoute
+  LangRoute: typeof LangRouteWithChildren
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +118,56 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/$lang/': {
+      id: '/$lang/'
+      path: '/'
+      fullPath: '/$lang/'
+      preLoaderRoute: typeof LangIndexRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/proyecto': {
+      id: '/$lang/proyecto'
+      path: '/proyecto'
+      fullPath: '/$lang/proyecto'
+      preLoaderRoute: typeof LangProyectoRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/consorcio': {
+      id: '/$lang/consorcio'
+      path: '/consorcio'
+      fullPath: '/$lang/consorcio'
+      preLoaderRoute: typeof LangConsorcioRouteImport
+      parentRoute: typeof LangRoute
+    }
+    '/$lang/actividades': {
+      id: '/$lang/actividades'
+      path: '/actividades'
+      fullPath: '/$lang/actividades'
+      preLoaderRoute: typeof LangActividadesRouteImport
+      parentRoute: typeof LangRoute
+    }
   }
 }
 
+interface LangRouteChildren {
+  LangActividadesRoute: typeof LangActividadesRoute
+  LangConsorcioRoute: typeof LangConsorcioRoute
+  LangProyectoRoute: typeof LangProyectoRoute
+  LangIndexRoute: typeof LangIndexRoute
+}
+
+const LangRouteChildren: LangRouteChildren = {
+  LangActividadesRoute: LangActividadesRoute,
+  LangConsorcioRoute: LangConsorcioRoute,
+  LangProyectoRoute: LangProyectoRoute,
+  LangIndexRoute: LangIndexRoute,
+}
+
+const LangRouteWithChildren = LangRoute._addFileChildren(LangRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  LangRoute: LangRoute,
+  LangRoute: LangRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
