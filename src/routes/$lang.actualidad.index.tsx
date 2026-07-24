@@ -66,11 +66,13 @@ function NewsCard({ n, lang }: { n: Noticia; lang: Lang }) {
   const date = n.fecha ? new Date(n.fecha).toLocaleDateString(lang === "en" ? "en-GB" : "es-ES") : null;
   return (
     <article className="flex flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-shadow hover:shadow-md">
-      {n.imagenDestacada ? (
-        <img src={n.imagenDestacada.url} alt={n.imagenDestacada.title ?? n.titulo} loading="lazy" className="aspect-video w-full object-cover" />
-      ) : (
-        <div className="aspect-video w-full bg-gradient-to-br from-secondary to-accent/20" />
-      )}
+      <ImageFrame
+        src={n.imagenDestacada?.url}
+        alt={n.imagenDestacada?.title ?? n.titulo}
+        label="Imagen de la noticia"
+        aspect="16/9"
+        rounded="rounded-none"
+      />
       <div className="flex flex-1 flex-col p-5">
         {n.categoria && (
           <span className="mb-2 inline-block w-fit rounded-full bg-accent/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-accent">
