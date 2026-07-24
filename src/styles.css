@@ -88,7 +88,7 @@
   --accent: oklch(0.7 0.09 205);
   --accent-foreground: oklch(0.99 0.003 90);
   /* Rosa Salmón — solo decoración sutil, nunca texto ni CTA */
-  --salmon: oklch(0.85 0.05 25);
+  --salmon: oklch(0.83 0.055 15);
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.99 0.003 90);
   --border: oklch(0.9 0.008 90);
