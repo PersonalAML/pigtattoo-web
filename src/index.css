@@ -93,7 +93,7 @@
     @apply w-full border-collapse text-sm;
   }
   table.pig thead th {
-    @apply bg-primary text-white font-display font-semibold px-4 py-3 text-left uppercase tracking-wider text-xs;
+    @apply bg-primary text-primary-foreground font-display font-semibold px-4 py-3 text-left uppercase tracking-wider text-xs;
   }
   table.pig tbody td {
     @apply px-4 py-3 border-b border-border text-primary;
@@ -102,6 +102,6 @@
     @apply bg-secondary/60;
   }
   table.pig tbody tr:nth-child(odd) {
-    @apply bg-white;
+    @apply bg-card;
   }
 }
