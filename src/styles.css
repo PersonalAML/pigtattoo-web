@@ -84,18 +84,20 @@
   --secondary-foreground: oklch(0.24 0.04 260);
   --muted: oklch(0.94 0.008 90);
   --muted-foreground: oklch(0.45 0.02 260);
-  /* Salmón */
-  --accent: oklch(0.72 0.15 30);
+  /* Azul Cerceta (Teal) — CTAs, interacción */
+  --accent: oklch(0.7 0.09 205);
   --accent-foreground: oklch(0.99 0.003 90);
+  /* Rosa Salmón — solo decoración sutil, nunca texto ni CTA */
+  --salmon: oklch(0.85 0.05 25);
   --destructive: oklch(0.58 0.22 27);
   --destructive-foreground: oklch(0.99 0.003 90);
   --border: oklch(0.9 0.008 90);
   --input: oklch(0.9 0.008 90);
-  --ring: oklch(0.72 0.15 30);
+  --ring: oklch(0.7 0.09 205);
   --chart-1: oklch(0.24 0.04 260);
-  --chart-2: oklch(0.72 0.15 30);
+  --chart-2: oklch(0.7 0.09 205);
   --chart-3: oklch(0.6 0.04 260);
-  --chart-4: oklch(0.82 0.1 30);
+  --chart-4: oklch(0.85 0.05 25);
   --chart-5: oklch(0.4 0.06 260);
   --sidebar: oklch(0.99 0.003 90);
   --sidebar-foreground: oklch(0.24 0.04 260);
@@ -104,7 +106,7 @@
   --sidebar-accent: oklch(0.94 0.008 90);
   --sidebar-accent-foreground: oklch(0.24 0.04 260);
   --sidebar-border: oklch(0.9 0.008 90);
-  --sidebar-ring: oklch(0.72 0.15 30);
+  --sidebar-ring: oklch(0.7 0.09 205);
 }
 
 .dark {
