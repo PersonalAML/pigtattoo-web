@@ -72,14 +72,14 @@ function ResultsPage() {
   const materialsTitle = (d.results as { materialsTitle?: string }).materialsTitle ?? "Materiales de difusión";
   return (
     <>
-      <PageHeader kicker={d.results.kicker} title={d.results.title} intro={d.results.intro} />
+      <PageHeader
+        kicker={d.results.kicker}
+        title={d.results.title}
+        intro={d.results.intro}
+        imageLabel="Imagen de resultados"
+        imageAlt="Recopilación de entregables y materiales del proyecto"
+      />
       <div className="mx-auto max-w-6xl space-y-14 px-4 py-14">
-        <ImageFrame
-          aspect="21/9"
-          label="Imagen cabecera resultados"
-          alt="Recopilación de entregables y materiales del proyecto"
-          rounded="rounded-2xl"
-        />
         <section>
           <h2 className="mb-6 font-display text-2xl font-bold text-primary">{deliverablesTitle}</h2>
           <DocGrid docs={RESULTS_DOCS} downloadLabel={d.results.download} comingSoonLabel={d.results.comingSoon} />
