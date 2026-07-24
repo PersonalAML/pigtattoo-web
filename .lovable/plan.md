@@ -1,49 +1,36 @@
-# Plan: Revisión de tipografías y colores
 
-## Objetivo
-Alinear el sistema de diseño actual con el documento `Directrices_y_esquemas_Web_V2.md` y corregir los problemas de contraste y carga tipográfica detectados.
+# Plan: Cumplir contraste AA usando Azul Medianoche en textos sobre fondo claro
 
-## Hallazgos confirmados tras lectura del código y del documento V2
+## Contexto
+En la revisión previa quedó pendiente que el Azul Cerceta (`#5cbdb9`) sobre fondos claros (Blanco / Gris Piedra / `secondary`) no cumple WCAG AA (~2.5:1). Confirmas que en esos fondos el texto debe ir siempre en Azul Medianoche, reservando el Cerceta para fondos (CTAs, acentos gráficos) y elementos decorativos no textuales.
 
-### 1. Colores
-- Los tokens HSL en `src/index.css` coinciden con la paleta V2 (Azul Medianoche, Azul Cerceta, Rosa Salmón, Gris Piedra, Blanco).
-- **Problema de contraste crítico**: el botón CTA usa `bg-accent` (Azul Cerceta HSL 186,42%,53%) con texto blanco. El ratio es ~2,3:1, inferior al mínimo WCAG AA (4,5:1) para texto de ese tamaño.
-- **Color hardcodeado residual**: `src/components/ui/dialog.tsx` y `sheet.tsx` usan `bg-black/80` para fondos de overlay.
-- **Bug en degradado decorativo**: `ImageFrame.tsx` referencia `var(--color-salmon)`, variable que no existe en `index.css`.
+## Cambios
 
-### 2. Tipografías
-- Las fuentes se cargan vía `@fontsource` (cumple Regla G de self-hosting RGPD).
-- **Pesos cargados vs. pesos exigidos por V2**:
-  - Actual: Poppins 500/600/700 + Open Sans 400/600/700.
-  - V2 (Regla A + Regla C): Poppins 500 (CTAs) y 600 (H1/H2); Open Sans 400 (cuerpo) y 700 (énfasis).
-- **Uso inconsistente de pesos**:
-  - `PageHeader.tsx` aplica `font-bold` (700) al H1; V2 exige SemiBold (600).
-  - `SiteHeader.tsx` aplica `font-medium` (500) a los enlaces de navegación, pero Open Sans 500 no está cargado; el navegador renderizará un peso sintético o caerá a 400.
+### 1. Kickers y etiquetas de categoría
+Sustituir `text-accent` por `text-primary` (Azul Medianoche) en:
+- `src/components/PageHeader.tsx` — kicker superior del H1.
+- `src/pages/Home.tsx` — kicker del hero y etiqueta "categoría" en tarjetas de noticias.
+- Cualquier otro uso residual de `text-accent` como texto sobre fondo claro (auditar `Actividades`, `ActualidadList`, `ActualidadDetalle`, `Proyecto`, `Resultados`, `Contacto`).
 
-## Acciones propuestas
+Se mantiene la jerarquía visual con `uppercase tracking-[0.2em] font-semibold text-xs`, que ya diferencia el kicker del H1 sin necesidad de color.
 
-### A. Correcciones de color
-1. **CTA accesible**: mantener el Azul Cerceta exacto del V2 como fondo y cambiar el texto a Azul Medianoche (`text-primary`) para alcanzar >7:1. Esto cumple Regla C (Poppins 500 mayúsculas sobre Azul Cerceta) sin alterar el color corporativo. El hover pasará a un Cerceta ligeramente más oscuro (`bg-accent/90` con texto oscuro).
-2. **CTA outline**: ajustar para que el estado hover no dependa de un fondo translúcido que pueda reducir contraste.
-3. **Overlays**: reemplazar `bg-black/80` en `dialog.tsx` y `sheet.tsx` por `bg-primary/80` (Azul Medianoche al 80%) o por un token semántico `--overlay`.
-4. **Degradado ImageFrame**: corregir `var(--color-salmon)` a `hsl(var(--salmon))` / `to-salmon/25`.
-5. **Auditoría de `text-accent`**: verificar que todos los usos de Azul Cerceta sobre fondo claro cumplan 4,5:1; ajustar opacidades o fondos si es necesario.
+### 2. Botón outline (`cta-outline`)
+En `src/index.css`, cambiar el texto del `cta-outline` de `text-accent` a `text-primary`, y el borde puede mantenerse en Cerceta (elemento gráfico, no texto) o pasarse también a Azul Medianoche para coherencia. Propuesta: borde Cerceta + texto Azul Medianoche (el borde como elemento decorativo cumple; el texto pasa a ~11:1).
 
-### B. Correcciones tipográficas
-1. **Ajustar pesos cargados** en `src/index.css`:
-   - Poppins: 500 y 600.
-   - Open Sans: 400 y 700.
-2. **Homogeneizar headings**: cambiar `font-bold` a `font-semibold` en `PageHeader.tsx` y cualquier otro H1/H2.
-3. **Corregir navegación**: cambiar `font-medium` a `font-semibold` o `font-normal` en los enlaces de `SiteHeader.tsx` para que use un peso realmente cargado (Open Sans 600 se eliminará; se prefiere `font-semibold` mapeado a 600 o `font-bold` a 700; se decidirá en la ejecución para mantener coherencia visual).
-4. **Revisar componentes shadcn/ui**: asegurar que no usen pesos no cargados (p. ej. `font-medium` sobre Open Sans sin 500 cargado).
+### 3. Hover de enlaces
+Enlaces tipo "Leer más → " y "Ver todas → " actualmente hacen `hover:text-accent`. Al pasar el ratón el texto se vuelve ilegible sobre fondo claro. Cambiar el hover a `hover:text-primary/70` o `hover:underline` sin cambio de color, en:
+- `src/pages/Home.tsx`
+- `src/pages/ActualidadList.tsx` y `ActualidadDetalle.tsx` si aplica.
 
-### C. Verificación
-1. Ejecutar `bun run lint` y `tsgo` / `tsc --noEmit`.
-2. Ejecutar `vite build` para comprobar que no hay errores de CSS.
-3. Revisar visualmente la preview en `/es/consorcio` y `/es` para confirmar que los CTAs, headings y navegación se ven nítidos.
+### 4. Elementos que SÍ mantienen Cerceta
+- Fondos de CTA (`.cta`) — el texto encima ya es Azul Medianoche (arreglado previamente).
+- Bordes decorativos (`border-accent`, `border-accent/40` en `ImageFrame`).
+- Retícula radial decorativa del `ImageFrame`.
+- `--ring` de focus (elemento gráfico, no texto).
 
-## Decisión pendiente incluida en el plan
-- **CTA**: se propone texto Azul Medianoche sobre Azul Cerceta. Si prefieres mantener texto blanco, deberíamos oscurecer el Azul Cerceta del CTA a ~HSL(186,42%,38%), lo que rompería el color exacto del V2. Recomiendo la opción de texto oscuro.
+### 5. Verificación
+- `bun run build` y `tsgo`.
+- Playwright: captura de `/es`, `/es/consorcio`, `/es/actualidad` para confirmar que ningún texto queda en Cerceta sobre fondo claro.
 
-## Límite del plan
-- Este plan no modifica imágenes, contenidos legales ni la estructura de secciones; se centra exclusivamente en tokens de color, fuentes y su aplicación en componentes.
+## Fuera de alcance
+No se toca la paleta (los HSL del V2 se mantienen intactos). Solo se reasigna qué token usa cada texto.
