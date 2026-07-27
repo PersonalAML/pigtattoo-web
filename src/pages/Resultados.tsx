@@ -57,17 +57,17 @@ export default function Resultados() {
       />
       <div className="container-narrow space-y-16 py-14">
         <section>
-          <h2 className="text-2xl">{d.results.deliverablesTitle}</h2>
+          <h2 className="text-2xl">{d.results.materialsTitle}</h2>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {RESULTS_DOCS.map((doc) => (
+            {MATERIALS_DOCS.map((doc) => (
               <DocCard key={doc.id} doc={doc} dict={d} />
             ))}
           </div>
         </section>
         <section>
-          <h2 className="text-2xl">{d.results.materialsTitle}</h2>
+          <h2 className="text-2xl">{d.results.deliverablesTitle}</h2>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {MATERIALS_DOCS.map((doc) => (
+            {RESULTS_DOCS.map((doc) => (
               <DocCard key={doc.id} doc={doc} dict={d} />
             ))}
           </div>
