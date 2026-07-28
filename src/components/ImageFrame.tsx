@@ -85,6 +85,7 @@ export function LogoFrame({
   alt = "",
   label = "Logo pendiente",
   className = "",
+  fit = "contain",
 }: Omit<ImageFrameProps, "aspect">) {
   return (
     <ImageFrame
@@ -93,6 +94,7 @@ export function LogoFrame({
       label={label}
       aspect="1/1"
       rounded="rounded-lg"
+      fit={fit}
       className={className}
     />
   );
