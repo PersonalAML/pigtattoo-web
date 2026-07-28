@@ -61,7 +61,7 @@ export default function Consorcio() {
               <article key={p.id} className="rounded-lg border border-border bg-card p-4 shadow-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-16 shrink-0">
-                    <LogoFrame label={p.short} />
+                    <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-primary">{p.name}</h3>
