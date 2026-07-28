@@ -12,7 +12,7 @@ function StatusBadge({ status, dict }: { status: ActivityStatus; dict: ReturnTyp
   } as const;
   const s = map[status];
   return (
-    <span className={`inline-flex items-center rounded-full px-2 py-0.5 text-xs font-bold ${s.cls}`}>
+    <span className={`inline-flex items-center whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-bold ${s.cls}`}>
       {s.label}
     </span>
   );
