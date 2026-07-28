@@ -38,7 +38,7 @@ export default function Actividades() {
       <div className="container-narrow py-14">
         <div className="grid gap-6 md:grid-cols-2">
           {ACTIVITIES.map((a) => (
-            <article key={a.id} className="rounded-lg border border-border bg-card p-6 shadow-sm">
+            <article key={a.id} className="flex h-full flex-col rounded-lg border border-border bg-card p-6 shadow-sm">
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="font-display text-xs font-semibold uppercase tracking-wider text-primary">
@@ -48,8 +48,8 @@ export default function Actividades() {
                 </div>
                 <StatusBadge status={a.status} dict={d} />
               </div>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{a.body}</p>
-              <div className="mt-4">
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{a.body}</p>
+              <div className="mt-auto pt-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
                   <span>Progreso</span>
                   <span className="font-bold text-primary">{a.progress}%</span>
