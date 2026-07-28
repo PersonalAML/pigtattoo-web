@@ -1,24 +1,35 @@
+import iporcAsset from "@/assets/logo-iporc.webp.asset.json";
+import geezarAsset from "@/assets/logo-geezar.webp.asset.json";
+import cevaAsset from "@/assets/logo-ceva.webp.asset.json";
+import eqticAsset from "@/assets/logo-eqtic.webp.asset.json";
+import agrocatAsset from "@/assets/logo-agrocat.webp.asset.json";
+import gucoAsset from "@/assets/logo-guco.webp.asset.json";
+import irtaAsset from "@/assets/logo-irta.webp.asset.json";
+import iteneAsset from "@/assets/logo-itene.webp.asset.json";
+import anprogaporAsset from "@/assets/logo-anprogapor.webp.asset.json";
+
 export type Partner = {
   id: string;
   name: string;
   short: string;
   role: string;
   url?: string;
+  logo?: string;
 };
 
 export const PARTNERS: Partner[] = [
-  { id: "p1", name: "Socio Beneficiario 1", short: "SB1", role: "Coordinador — cooperativa productora" },
-  { id: "p2", name: "Socio Beneficiario 2", short: "SB2", role: "Industria cárnica / matadero" },
-  { id: "p3", name: "Socio Beneficiario 3", short: "SB3", role: "Centro tecnológico agroalimentario" },
-  { id: "p4", name: "Socio Beneficiario 4", short: "SB4", role: "Universidad — Facultad de Veterinaria" },
-  { id: "p5", name: "Socio Beneficiario 5", short: "SB5", role: "Empresa tecnológica de identificación" },
-  { id: "p6", name: "Socio Beneficiario 6", short: "SB6", role: "Asociación sectorial porcina" },
+  { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", logo: iporcAsset.url },
+  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "Zaragoza (Aragón)", logo: geezarAsset.url },
+  { id: "p3", name: "CEVA Animal Health", short: "CEVA", role: "Barcelona (Cataluña)", logo: cevaAsset.url },
+  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sant Cugat (Cataluña)", logo: eqticAsset.url },
+  { id: "p5", name: "Agrocat", short: "Agrocat", role: "Sant Fruitós de Bages (Cataluña)", logo: agrocatAsset.url },
+  { id: "p6", name: "GUCO — Ganadería Unida Comarcal", short: "GUCO", role: "Valderrobres (Aragón)", logo: gucoAsset.url },
 ];
 
 export const SUBCONTRACTED: Partner[] = [
-  { id: "s1", name: "Entidad Subcontratada 1", short: "ES1", role: "Consultoría técnica especializada" },
-  { id: "s2", name: "Entidad Subcontratada 2", short: "ES2", role: "Comunicación y difusión" },
-  { id: "s3", name: "Entidad Subcontratada 3", short: "ES3", role: "Análisis de laboratorio" },
+  { id: "s1", name: "IRTA", short: "IRTA", role: "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", logo: irtaAsset.url },
+  { id: "s2", name: "ITENE", short: "ITENE", role: "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", logo: iteneAsset.url },
+  { id: "s3", name: "ANPROGAPOR", short: "ANPROGAPOR", role: "Asociación Nacional de Productores de Ganado Porcino — Madrid", logo: anprogaporAsset.url },
 ];
 
 export type ActivityStatus = "planned" | "in-progress" | "completed";
