@@ -44,7 +44,7 @@ export type Activity = {
 
 export const ACTIVITIES: Activity[] = [
   { id: "a1", code: "A1", title: "Pruebas iniciales de elementos", body: "Validación preliminar de los componentes tecnológicos que conforman el sistema de identificación por tatuaje.", status: "completed", progress: 100 },
-  { id: "a2", code: "A2", title: "Requisitos, control y verificación de las actuaciones en cuanto a bienestar animal y seguridad alimentaria", body: "Definición de criterios y protocolos para garantizar el bienestar animal y la seguridad alimentaria en todas las actuaciones del proyecto.", status: "in-progress", progress: 60 },
+  { id: "a2", code: "A2", title: "Definición de requisitos, control y verificación de los sistemas", body: "Definición de criterios y protocolos para garantizar el bienestar animal y la seguridad alimentaria en todas las actuaciones del proyecto.", status: "in-progress", progress: 60 },
   { id: "a3", code: "A3", title: "Pruebas intermedias de elementos y desarrollo de hardware", body: "Desarrollo y pruebas intermedias del hardware necesario para la aplicación y lectura del tatuaje porcino.", status: "in-progress", progress: 10 },
   { id: "a4", code: "A4", title: "Desarrollo de la tinta de tatuaje del Proyecto", body: "Investigación y formulación de la tinta específica para el tatuaje identificativo del ganado porcino.", status: "in-progress", progress: 30 },
   { id: "a5", code: "A5", title: "Sistema de codificación de animales", body: "Diseño del sistema de codificación que permitirá asignar e interpretar la identidad de cada animal.", status: "planned", progress: 0 },
