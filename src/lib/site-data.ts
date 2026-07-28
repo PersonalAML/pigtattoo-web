@@ -19,11 +19,11 @@ export type Partner = {
 
 export const PARTNERS: Partner[] = [
   { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", logo: iporcAsset.url },
-  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "Zaragoza (Aragón)", logo: geezarAsset.url },
-  { id: "p3", name: "CEVA Animal Health", short: "CEVA", role: "Barcelona (Cataluña)", logo: cevaAsset.url },
-  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sant Cugat (Cataluña)", logo: eqticAsset.url },
-  { id: "p5", name: "Agrocat", short: "Agrocat", role: "Sant Fruitós de Bages (Cataluña)", logo: agrocatAsset.url },
-  { id: "p6", name: "GUCO — Ganadería Unida Comarcal", short: "GUCO", role: "Valderrobres (Aragón)", logo: gucoAsset.url },
+  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", logo: geezarAsset.url },
+  { id: "p3", name: "CEVA", short: "CEVA", role: "CEVA Salud Animal S.A. — Barcelona (Cataluña)", logo: cevaAsset.url },
+  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", logo: eqticAsset.url },
+  { id: "p5", name: "AGROCAT", short: "AGROCAT", role: "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", logo: agrocatAsset.url },
+  { id: "p6", name: "GUCO", short: "GUCO", role: "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", logo: gucoAsset.url },
 ];
 
 export const SUBCONTRACTED: Partner[] = [
