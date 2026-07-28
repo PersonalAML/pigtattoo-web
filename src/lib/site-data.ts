@@ -44,13 +44,13 @@ export type Activity = {
 
 export const ACTIVITIES: Activity[] = [
   { id: "a1", code: "A1", title: "Pruebas iniciales de elementos", body: "Validación preliminar de los componentes tecnológicos que conforman el sistema de identificación por tatuaje.", status: "completed", progress: 100 },
-  { id: "a2", code: "A2", title: "Definición de requisitos, control y verificación de los sistemas", body: "Definición de criterios y protocolos para garantizar el bienestar animal y la seguridad alimentaria en todas las actuaciones del proyecto.", status: "in-progress", progress: 60 },
+  { id: "a2", code: "A2", title: "Definición de requisitos, control y verificación de los sistemas", body: "Definición de criterios y protocolos para garantizar viabilidad técnica, bienestar animal y seguridad alimentaria en el Proyecto.", status: "in-progress", progress: 60 },
   { id: "a3", code: "A3", title: "Pruebas intermedias de elementos y desarrollo de hardware", body: "Desarrollo y pruebas intermedias del hardware necesario para la aplicación y lectura del tatuaje porcino.", status: "in-progress", progress: 10 },
   { id: "a4", code: "A4", title: "Desarrollo de la tinta de tatuaje del Proyecto", body: "Investigación y formulación de la tinta específica para el tatuaje identificativo del ganado porcino.", status: "in-progress", progress: 30 },
   { id: "a5", code: "A5", title: "Sistema de codificación de información", body: "Diseño del sistema de codificación que permitirá asignar e interpretar la identidad de cada animal.", status: "planned", progress: 0 },
   { id: "a6", code: "A6", title: "Sistema físico de aplicación", body: "Desarrollo del dispositivo físico encargado de aplicar el tatuaje de forma precisa y segura.", status: "planned", progress: 0 },
   { id: "a7", code: "A7", title: "Sistema de visión artificial para identificación de animales", body: "Creación del sistema basado en visión artificial para la lectura automática de los tatuajes.", status: "planned", progress: 0 },
-  { id: "a8", code: "A8", title: "Pilotaje y pruebas finales del Proyecto", body: "Validación en campo en las instalaciones de los socios productores y ajuste de los diseños mediante realimentación.", status: "planned", progress: 0 },
+  { id: "a8", code: "A8", title: "Pilotaje y pruebas finales del Proyecto", body: "Validación en entorno real del conjunto de sistemas, mejoras finales y evaluación de bienestar animal.", status: "planned", progress: 0 },
 ];
 
 export type DocResource = {
