@@ -43,14 +43,14 @@ export type Activity = {
 };
 
 export const ACTIVITIES: Activity[] = [
-  { id: "a1", code: "A1", title: "Diseño técnico del sistema de tatuaje", body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diseño y especificación técnica del sistema de identificación.", status: "completed", progress: 100 },
-  { id: "a2", code: "A2", title: "Validación en granja piloto", body: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Validación en condiciones reales de explotación.", status: "in-progress", progress: 65 },
-  { id: "a3", code: "A3", title: "Estudios de bienestar animal", body: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.", status: "in-progress", progress: 45 },
-  { id: "a4", code: "A4", title: "Integración con sistemas de trazabilidad", body: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", status: "in-progress", progress: 30 },
-  { id: "a5", code: "A5", title: "Análisis técnico-económico", body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.", status: "planned", progress: 10 },
-  { id: "a6", code: "A6", title: "Formación a personal de granja y matadero", body: "Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae.", status: "planned", progress: 0 },
-  { id: "a7", code: "A7", title: "Difusión y transferencia de resultados", body: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.", status: "in-progress", progress: 25 },
-  { id: "a8", code: "A8", title: "Coordinación y gestión del proyecto", body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.", status: "in-progress", progress: 55 },
+  { id: "a1", code: "A1", title: "Pruebas iniciales de elementos", body: "Validación preliminar de los componentes tecnológicos que conforman el sistema de identificación por tatuaje.", status: "completed", progress: 100 },
+  { id: "a2", code: "A2", title: "Requisitos, control y verificación de las actuaciones en cuanto a bienestar animal y seguridad alimentaria", body: "Definición de criterios y protocolos para garantizar el bienestar animal y la seguridad alimentaria en todas las actuaciones del proyecto.", status: "in-progress", progress: 60 },
+  { id: "a3", code: "A3", title: "Pruebas intermedias de elementos y desarrollo de hardware", body: "Desarrollo y pruebas intermedias del hardware necesario para la aplicación y lectura del tatuaje porcino.", status: "in-progress", progress: 10 },
+  { id: "a4", code: "A4", title: "Desarrollo de la tinta de tatuaje del Proyecto", body: "Investigación y formulación de la tinta específica para el tatuaje identificativo del ganado porcino.", status: "in-progress", progress: 30 },
+  { id: "a5", code: "A5", title: "Sistema de codificación de animales", body: "Diseño del sistema de codificación que permitirá asignar e interpretar la identidad de cada animal.", status: "planned", progress: 0 },
+  { id: "a6", code: "A6", title: "Sistema físico de aplicación de tatuaje del Proyecto", body: "Desarrollo del dispositivo físico encargado de aplicar el tatuaje de forma precisa y segura.", status: "planned", progress: 0 },
+  { id: "a7", code: "A7", title: "Sistema de visión artificial para lectura de tatuajes", body: "Creación del sistema basado en visión artificial para la lectura automática de los tatuajes.", status: "planned", progress: 0 },
+  { id: "a8", code: "A8", title: "Pilotaje y pruebas en las instalaciones de los productores del consorcio y realimentación de los diseños desarrollados", body: "Validación en campo en las instalaciones de los socios productores y ajuste de los diseños mediante realimentación.", status: "planned", progress: 0 },
 ];
 
 export type DocResource = {
