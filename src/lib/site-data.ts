@@ -18,18 +18,18 @@ export type Partner = {
 };
 
 export const PARTNERS: Partner[] = [
-  { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", logo: iporcAsset.url },
-  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", logo: geezarAsset.url },
-  { id: "p3", name: "CEVA", short: "CEVA", role: "CEVA Salud Animal S.A. — Barcelona (Cataluña)", logo: cevaAsset.url },
-  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", logo: eqticAsset.url },
-  { id: "p5", name: "AGROCAT", short: "AGROCAT", role: "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", logo: agrocatAsset.url },
-  { id: "p6", name: "GUCO", short: "GUCO", role: "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", logo: gucoAsset.url },
+  { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", url: "https://www.imasporc.com", logo: iporcAsset.url },
+  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", url: "https://www.geezar.es", logo: geezarAsset.url },
+  { id: "p3", name: "CEVA", short: "CEVA", role: "CEVA Salud Animal S.A. — Barcelona (Cataluña)", url: "https://www.ceva.es/", logo: cevaAsset.url },
+  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", url: "https://eqtic.net/", logo: eqticAsset.url },
+  { id: "p5", name: "AGROCAT", short: "AGROCAT", role: "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", url: "https://www.agrocat.com/", logo: agrocatAsset.url },
+  { id: "p6", name: "GUCO", short: "GUCO", role: "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", url: "https://www.grupoarcoiris.com/es/", logo: gucoAsset.url },
 ];
 
 export const SUBCONTRACTED: Partner[] = [
-  { id: "s1", name: "IRTA", short: "IRTA", role: "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", logo: irtaAsset.url },
-  { id: "s2", name: "ITENE", short: "ITENE", role: "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", logo: iteneAsset.url },
-  { id: "s3", name: "ANPROGAPOR", short: "ANPROGAPOR", role: "Asociación Nacional de Productores de Ganado Porcino — Madrid", logo: anprogaporAsset.url },
+  { id: "s1", name: "IRTA", short: "IRTA", role: "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", url: "https://www.irta.cat/es/programa-de-recerca/bienestar-animal/", logo: irtaAsset.url },
+  { id: "s2", name: "ITENE", short: "ITENE", role: "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", url: "https://itene.com/", logo: iteneAsset.url },
+  { id: "s3", name: "ANPROGAPOR", short: "ANPROGAPOR", role: "Asociación Nacional de Productores de Ganado Porcino — Madrid", url: "http://www.anprogapor.es/asociacion-nacional-ganado-porcino/anprogapor/inicio_2_1_ap.html", logo: anprogaporAsset.url },
 ];
 
 export type ActivityStatus = "planned" | "in-progress" | "completed";
