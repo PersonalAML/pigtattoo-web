@@ -48,7 +48,7 @@ export default function Consorcio() {
             {PARTNERS.map((p) => (
               <article key={p.id} className="rounded-lg border border-border bg-card p-5 shadow-sm">
                 <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-3" />
-                <h3 className="mt-4 text-base">{p.name}</h3>
+                <h3 className="mt-4 text-base font-bold text-primary">{p.short}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
               </article>
             ))}
