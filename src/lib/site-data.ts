@@ -50,7 +50,7 @@ export const ACTIVITIES: Activity[] = [
   { id: "a5", code: "A5", title: "Sistema de codificación de animales", body: "Diseño del sistema de codificación que permitirá asignar e interpretar la identidad de cada animal.", status: "planned", progress: 0 },
   { id: "a6", code: "A6", title: "Sistema físico de aplicación de tatuaje del Proyecto", body: "Desarrollo del dispositivo físico encargado de aplicar el tatuaje de forma precisa y segura.", status: "planned", progress: 0 },
   { id: "a7", code: "A7", title: "Sistema de visión artificial para lectura de tatuajes", body: "Creación del sistema basado en visión artificial para la lectura automática de los tatuajes.", status: "planned", progress: 0 },
-  { id: "a8", code: "A8", title: "Pilotaje y pruebas en las instalaciones de los productores del consorcio y realimentación de los diseños desarrollados", body: "Validación en campo en las instalaciones de los socios productores y ajuste de los diseños mediante realimentación.", status: "planned", progress: 0 },
+  { id: "a8", code: "A8", title: "Pilotaje y pruebas finales del Proyecto", body: "Validación en campo en las instalaciones de los socios productores y ajuste de los diseños mediante realimentación.", status: "planned", progress: 0 },
 ];
 
 export type DocResource = {
