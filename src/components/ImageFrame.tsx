@@ -15,6 +15,8 @@ export type ImageFrameProps = {
   aspect?: string;
   className?: string;
   rounded?: string;
+  /** "cover" (por defecto) o "contain" para logotipos */
+  fit?: "cover" | "contain";
 };
 
 export function ImageFrame({
@@ -24,6 +26,7 @@ export function ImageFrame({
   aspect = "16/9",
   className = "",
   rounded = "rounded-xl",
+  fit = "cover",
 }: ImageFrameProps) {
   const style: CSSProperties = { aspectRatio: aspect };
   if (src) {
@@ -33,7 +36,7 @@ export function ImageFrame({
         alt={alt}
         loading="lazy"
         style={style}
-        className={`w-full object-cover ${rounded} ${className}`}
+        className={`w-full ${fit === "contain" ? "object-contain" : "object-cover"} ${rounded} ${className}`}
       />
     );
   }
@@ -82,6 +85,7 @@ export function LogoFrame({
   alt = "",
   label = "Logo pendiente",
   className = "",
+  fit = "contain",
 }: Omit<ImageFrameProps, "aspect">) {
   return (
     <ImageFrame
@@ -90,6 +94,7 @@ export function LogoFrame({
       label={label}
       aspect="1/1"
       rounded="rounded-lg"
+      fit={fit}
       className={className}
     />
   );
