@@ -22,6 +22,40 @@ const MapaDescription = () => (
   </ul>
 );
 
+function PartnerLogoLink({ partner }: { partner: (typeof PARTNERS)[number] }) {
+  if (!partner.url) {
+    return <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} className="p-3" />;
+  }
+  return (
+    <a
+      href={partner.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Web corporativa de ${partner.name}`}
+      className="block rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    >
+      <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} className="p-3" />
+    </a>
+  );
+}
+
+function SubcontractedLogoLink({ partner }: { partner: (typeof SUBCONTRACTED)[number] }) {
+  if (!partner.url) {
+    return <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} />;
+  }
+  return (
+    <a
+      href={partner.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={`Web corporativa de ${partner.name}`}
+      className="block rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+    >
+      <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} />
+    </a>
+  );
+}
+
 export default function Consorcio() {
   const lang = useLang();
   const d = getDict(lang);
@@ -47,7 +81,7 @@ export default function Consorcio() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PARTNERS.map((p) => (
               <article key={p.id} className="rounded-lg border border-border bg-card p-5 shadow-sm">
-                <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-3" />
+                <PartnerLogoLink partner={p} />
                 <h3 className="mt-4 text-base font-bold text-primary">{p.short}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
               </article>
@@ -61,7 +95,7 @@ export default function Consorcio() {
               <article key={p.id} className="rounded-lg border border-border bg-card p-4 shadow-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-16 shrink-0">
-                    <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} />
+                    <SubcontractedLogoLink partner={p} />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-primary">{p.name}</h3>
