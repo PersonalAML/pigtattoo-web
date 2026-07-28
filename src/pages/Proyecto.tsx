@@ -41,9 +41,11 @@ export default function Proyecto() {
           <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.timelineBody}</p>
           <ol className="mt-6 space-y-4 border-l-2 border-accent/40 pl-6">
             {[
-              { y: "2024", t: "Diseño técnico y arranque" },
-              { y: "2025", t: "Validación en campo y estudios de bienestar" },
-              { y: "2026", t: "Integración, análisis y transferencia" },
+              { y: "2025", t: "Convocatoria" },
+              { y: "1 de enero de 2026", t: "Inicio del Proyecto" },
+              { y: "30 de abril de 2027", t: "Fin de Periodo 1" },
+              { y: "2028 / inicio de 2029", t: "Pruebas finales" },
+              { y: "30 de abril de 2029", t: "Fin de Proyecto" },
             ].map((m) => (
               <li key={m.y} className="relative">
                 <span className="absolute -left-[31px] flex h-4 w-4 items-center justify-center rounded-full border-2 border-accent bg-background" />
