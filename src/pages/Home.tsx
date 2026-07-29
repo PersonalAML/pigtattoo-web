@@ -52,7 +52,7 @@ export default function Home() {
           <img
             src={heroHome.url}
             alt="Cerdos en una nave de cebo moderna"
-            fetchPriority="high"
+            fetchpriority="high"
             decoding="async"
             width={1400}
             height={1750}

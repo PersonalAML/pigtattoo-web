@@ -48,7 +48,7 @@ export default function Actividades() {
                   <p className="font-display text-xs font-semibold uppercase tracking-wider text-primary">
                     {a.code}
                   </p>
-                  <h3 className="mt-1 text-lg">{a.title}</h3>
+                  <h2 className="mt-1 text-lg">{a.title}</h2>
                 </div>
                 <StatusBadge status={a.status} dict={d} />
               </div>
