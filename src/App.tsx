@@ -67,7 +67,9 @@ export default function App() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
       </Helmet>
+      <ScrollToTop />
       <Routes>
+
         <Route path="/" element={<Navigate to="/es" replace />} />
         <Route
           path="/:lang/*"
