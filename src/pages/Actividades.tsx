@@ -1,5 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
+import headerActividades from "@/assets/header-actividades.webp.asset.json";
+
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 import { ACTIVITIES, type ActivityStatus } from "@/lib/site-data";
@@ -32,9 +34,10 @@ export default function Actividades() {
         kicker={d.activities.kicker}
         title={d.activities.title}
         intro={d.activities.intro}
-        imageLabel="Imagen actividades"
-        imageAlt="Actividades del proyecto"
+        imageSrc={headerActividades.url}
+        imageAlt="Dos técnicos con buzos blancos revisan datos en una tableta dentro de una nave porcina moderna"
       />
+
       <div className="container-narrow py-14">
         <div className="grid gap-6 md:grid-cols-2">
           {ACTIVITIES.map((a) => (

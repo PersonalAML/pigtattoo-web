@@ -1,5 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
+import headerResultados from "@/assets/header-resultados.webp.asset.json";
+
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 import { RESULTS_DOCS, MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
@@ -52,9 +54,10 @@ export default function Resultados() {
         kicker={d.results.kicker}
         title={d.results.title}
         intro={d.results.intro}
-        imageLabel="Imagen resultados"
-        imageAlt="Resultados y materiales de PIGTATTOO"
+        imageSrc={headerResultados.url}
+        imageAlt="Informes técnicos impresos con gráficos y un portátil mostrando un panel de datos del proyecto"
       />
+
       <div className="container-narrow space-y-16 py-14">
         <section>
           <h2 className="text-2xl">{d.results.materialsTitle}</h2>

@@ -1,5 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
+import headerContacto from "@/assets/header-contacto.webp.asset.json";
+
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 
@@ -17,7 +19,10 @@ export default function Contacto() {
         kicker={d.contact.kicker}
         title={d.contact.title}
         intro={d.contact.intro}
+        imageSrc={headerContacto.url}
+        imageAlt="Paisaje rural con casas blancas y campos de cultivo"
       />
+
       <div className="container-narrow py-14">
         <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_320px]">
           <form

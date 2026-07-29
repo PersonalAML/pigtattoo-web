@@ -1,5 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
+import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
+
 import { ImageFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
@@ -18,9 +20,10 @@ export default function Proyecto() {
         kicker={d.project.kicker}
         title={d.project.title}
         intro={d.project.intro}
-        imageLabel="Imagen del proyecto"
-        imageAlt="Diagrama o fotografía del sistema PIGTATTOO"
+        imageSrc={headerProyecto.url}
+        imageAlt="Primer plano de la oreja de un cerdo sujeta con guante de látex, con una marca de identificación en la piel"
       />
+
       <div className="container-narrow space-y-16 py-14">
         <section id="objetivos" className="grid gap-8 md:grid-cols-3 md:items-start">
           <div className="md:col-span-2">
