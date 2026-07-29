@@ -14,6 +14,7 @@ export default function Contacto() {
         path="/contacto"
         title={`${d.contact.title} — PIGTATTOO`}
         description={d.contact.intro}
+        breadcrumbs={[{ name: d.contact.title, path: "/contacto" }]}
       />
       <PageHeader
         kicker={d.contact.kicker}

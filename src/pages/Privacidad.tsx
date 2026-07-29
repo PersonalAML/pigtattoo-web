@@ -12,6 +12,7 @@ export default function Privacidad() {
         path="/privacidad"
         title={`${d.legal.privacyTitle} — PIGTATTOO`}
         description={d.legal.privacyBody.slice(0, 155)}
+        breadcrumbs={[{ name: d.legal.privacyTitle, path: "/privacidad" }]}
       />
       <PageHeader title={d.legal.privacyTitle} />
       <div className="container-narrow max-w-3xl py-14 text-muted-foreground">

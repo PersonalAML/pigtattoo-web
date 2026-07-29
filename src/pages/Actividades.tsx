@@ -29,6 +29,7 @@ export default function Actividades() {
         path="/actividades"
         title={`${d.activities.title} — PIGTATTOO`}
         description={d.activities.intro}
+        breadcrumbs={[{ name: d.activities.title, path: "/actividades" }]}
       />
       <PageHeader
         kicker={d.activities.kicker}

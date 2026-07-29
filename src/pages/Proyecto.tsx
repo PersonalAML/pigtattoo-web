@@ -15,6 +15,7 @@ export default function Proyecto() {
         path="/proyecto"
         title={`${d.project.title} — PIGTATTOO`}
         description={d.project.intro}
+        breadcrumbs={[{ name: d.project.title, path: "/proyecto" }]}
       />
       <PageHeader
         kicker={d.project.kicker}

@@ -12,6 +12,7 @@ export default function AvisoLegal() {
         path="/aviso-legal"
         title={`${d.legal.noticeTitle} — PIGTATTOO`}
         description={d.legal.noticeBody.slice(0, 155)}
+        breadcrumbs={[{ name: d.legal.noticeTitle, path: "/aviso-legal" }]}
       />
       <PageHeader title={d.legal.noticeTitle} />
       <div className="container-narrow max-w-3xl py-14 text-muted-foreground">
