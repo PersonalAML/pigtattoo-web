@@ -3,6 +3,8 @@ import { useState } from "react";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 import { Menu, X } from "lucide-react";
+import logoPigtattoo from "@/assets/logo-pigtattoo.jpg.asset.json";
+
 
 // Doc V2 §3: switcher de idioma implementado pero oculto en v1.
 const SHOW_LANG_SWITCHER = false;
