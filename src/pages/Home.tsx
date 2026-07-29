@@ -145,13 +145,14 @@ export default function Home() {
                 key={p.id}
                 to={`${base}/consorcio`}
                 title={p.role}
-                className="group block rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                className="group block rounded-lg border border-border bg-card p-3 shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-3" />
+                <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-2" />
                 <p className="mt-2 text-center text-sm font-bold text-primary group-hover:underline">{p.short}</p>
               </Link>
             ))}
           </div>
+
 
         </div>
       </section>
