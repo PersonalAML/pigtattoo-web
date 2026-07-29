@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
+import headerActualidad from "@/assets/header-actualidad.webp.asset.json";
+
 import { ImageFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
@@ -34,9 +36,10 @@ export default function ActualidadList() {
         kicker={d.news.kicker}
         title={d.news.title}
         intro={d.news.intro}
-        imageLabel="Imagen actualidad"
-        imageAlt="Actualidad de PIGTATTOO"
+        imageSrc={headerActualidad.url}
+        imageAlt="Ponente presentando ante el público en un auditorio durante una jornada técnica"
       />
+
       <div className="container-narrow py-14">
         {noticias === null && !error ? (
           <p className="text-muted-foreground">{d.misc.loading}</p>

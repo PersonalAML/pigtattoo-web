@@ -8,6 +8,9 @@ import { useEffect, useState } from "react";
 import { getNoticias, type Noticia } from "@/lib/contentful";
 import { PARTNERS } from "@/lib/site-data";
 import { LogoFrame } from "@/components/ImageFrame";
+import heroHome from "@/assets/header-home.webp.asset.json";
+import conceptoHome from "@/assets/home-concepto.webp.asset.json";
+
 
 export default function Home() {
   const lang = useLang();
@@ -46,7 +49,14 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <ImageFrame aspect="4/5" label="Hero pendiente" alt="Imagen principal PIGTATTOO" />
+          <img
+            src={heroHome.url}
+            alt="Cerdos en una nave de cebo moderna"
+            width={1400}
+            height={1750}
+            className="w-full rounded-2xl object-cover"
+          />
+
         </div>
       </section>
 
@@ -57,7 +67,15 @@ export default function Home() {
             <h2 className="text-3xl">{d.home.whatTitle}</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">{d.home.whatBody}</p>
           </div>
-          <ImageFrame aspect="4/3" label="Imagen concepto" alt="Concepto PIGTATTOO" />
+          <img
+            src={conceptoHome.url}
+            alt="Pasillo de una nave porcina moderna con una malla de datos superpuesta que representa la trazabilidad"
+            loading="lazy"
+            width={1600}
+            height={1200}
+            className="w-full rounded-xl object-cover"
+          />
+
         </div>
       </section>
 
