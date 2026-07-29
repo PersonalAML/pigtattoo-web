@@ -31,57 +31,62 @@ export default function Contacto() {
             data-netlify="true"
             netlify-honeypot="bot-field"
             className="space-y-5 rounded-lg border border-border bg-card p-6 shadow-sm"
+            aria-describedby="form-required-hint"
             onSubmit={(e) => e.preventDefault()}
           >
             <input type="hidden" name="form-name" value="contacto" />
             <p className="hidden">
               <label>
                 No rellenar: <input name="bot-field" />
-              </label>
+              </div>
             </p>
-            <p className="text-xs text-muted-foreground">{d.contact.requiredHint}</p>
+            <p id="form-required-hint" className="text-xs text-muted-foreground">{d.contact.requiredHint}</p>
             <div className="grid gap-4 md:grid-cols-2">
-              <label className="block text-sm">
+              <div className="block text-sm">
                 <span className="font-bold text-primary">{d.contact.name} *</span>
                 <input
                   required
                   type="text"
+                  id="campo-nombre"
                   name="nombre"
                   className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                 />
-              </label>
-              <label className="block text-sm">
+              </div>
+              <div className="block text-sm">
                 <span className="font-bold text-primary">{d.contact.email} *</span>
                 <input
                   required
                   type="email"
+                  id="campo-email"
                   name="email"
                   className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                 />
-              </label>
+              </div>
             </div>
-            <label className="block text-sm">
+            <div className="block text-sm">
               <span className="font-bold text-primary">{d.contact.subject} *</span>
               <input
                 required
                 type="text"
-                name="asunto"
+                id="campo-asunto"
+                  name="asunto"
                 className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               />
-            </label>
-            <label className="block text-sm">
+            </div>
+            <div className="block text-sm">
               <span className="font-bold text-primary">{d.contact.message} *</span>
               <textarea
                 required
                 rows={6}
-                name="mensaje"
+                id="campo-mensaje"
+                  name="mensaje"
                 className="mt-1 block w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
               />
-            </label>
+            </div>
             <label className="flex items-start gap-2 text-sm text-muted-foreground">
               <input type="checkbox" required name="consentimiento" className="mt-1" />
               <span>{d.contact.consent}</span>
-            </label>
+            </div>
             <button type="submit" className="cta">
               {d.contact.submit}
             </button>
