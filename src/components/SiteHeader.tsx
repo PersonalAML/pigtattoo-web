@@ -25,22 +25,19 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
       <div className="container-narrow flex items-center justify-between gap-4 py-3">
-        <Link to={base} className="flex items-center gap-3">
-          <span
-            aria-label="Logotipo PIGTATTOO (pendiente)"
-            className="flex h-10 w-10 items-center justify-center rounded-md border-2 border-dashed border-accent/50 bg-secondary font-display text-[9px] font-semibold uppercase tracking-tight text-accent"
-          >
-            LOGO
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-xl font-semibold tracking-tight text-primary">
-              PIGTATTOO
-            </span>
-            <span className="hidden text-[10px] uppercase tracking-wider text-muted-foreground sm:inline">
-              Grupo Operativo
-            </span>
+        <Link to={base} className="flex items-center gap-3" aria-label="PIGTATTOO — Inicio">
+          <img
+            src={logoPigtattoo.url}
+            alt="PIGTATTOO"
+            className="h-9 w-auto md:h-10"
+            width={1272}
+            height={387}
+          />
+          <span className="hidden text-[10px] uppercase leading-none tracking-wider text-muted-foreground sm:inline">
+            Grupo Operativo
           </span>
         </Link>
+
 
         <nav aria-label="Principal" className="hidden lg:block">
           <ul className="flex items-center gap-1">
