@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { CookieBanner } from "@/components/CookieBanner";
 import { LangGuard } from "@/components/LangGuard";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import Home from "@/pages/Home";
 import Proyecto from "@/pages/Proyecto";
 import Consorcio from "@/pages/Consorcio";
@@ -66,7 +67,9 @@ export default function App() {
       <Helmet>
         <script type="application/ld+json">{JSON.stringify(organizationJsonLd)}</script>
       </Helmet>
+      <ScrollToTop />
       <Routes>
+
         <Route path="/" element={<Navigate to="/es" replace />} />
         <Route
           path="/:lang/*"
