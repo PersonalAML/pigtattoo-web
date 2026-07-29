@@ -57,7 +57,9 @@ export function PageHeader({
                     src={imageSrc}
                     alt={imageAlt ?? imageLabel ?? "Imagen"}
                     aria-describedby={imageDescribedBy}
-                    loading="lazy"
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
                     className="w-full h-auto rounded-2xl object-contain bg-secondary/30"
                   />
 

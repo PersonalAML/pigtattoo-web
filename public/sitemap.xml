@@ -1,16 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- BASE_URL vacío hasta que el dominio pigtattoo.es esté activo. -->
+<!-- BASE_URL vacío hasta que el dominio pigtattoo.es esté activo.
+     Sólo se listan las URLs /es/ porque /ca/ y /en/ están marcadas noindex
+     mientras las traducciones estén incompletas; se añadirán al traducirlas. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url><loc>/es</loc></url>
-  <url><loc>/es/proyecto</loc></url>
-  <url><loc>/es/consorcio</loc></url>
-  <url><loc>/es/actividades</loc></url>
-  <url><loc>/es/actualidad</loc></url>
-  <url><loc>/es/resultados</loc></url>
-  <url><loc>/es/contacto</loc></url>
-  <url><loc>/es/accesibilidad</loc></url>
-  <url><loc>/es/aviso-legal</loc></url>
-  <url><loc>/es/privacidad</loc></url>
-  <url><loc>/es/cookies</loc></url>
+  <url>
+    <loc>/es</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>/es/proyecto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/proyecto"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/es/consorcio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/consorcio"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/es/actividades</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actividades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actividades"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/es/actualidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actualidad"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/es/resultados</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/resultados"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/resultados"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/es/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/contacto"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/es/accesibilidad</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/es/aviso-legal</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/es/privacidad</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/es/cookies</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

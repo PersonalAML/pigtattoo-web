@@ -52,6 +52,8 @@ export default function Home() {
           <img
             src={heroHome.url}
             alt="Cerdos en una nave de cebo moderna"
+            fetchpriority="high"
+            decoding="async"
             width={1400}
             height={1750}
             className="w-full rounded-2xl object-cover"

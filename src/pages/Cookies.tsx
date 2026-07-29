@@ -13,6 +13,7 @@ export default function Cookies() {
         path="/cookies"
         title={`${d.cookies.title} — PIGTATTOO`}
         description={d.cookies.body.slice(0, 155)}
+        breadcrumbs={[{ name: d.cookies.title, path: "/cookies" }]}
       />
       <PageHeader title={d.cookies.title} />
       <div className="container-narrow max-w-3xl space-y-6 py-14">

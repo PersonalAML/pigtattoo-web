@@ -49,6 +49,7 @@ export default function Resultados() {
         path="/resultados"
         title={`${d.results.title} — PIGTATTOO`}
         description={d.results.intro}
+        breadcrumbs={[{ name: d.results.title, path: "/resultados" }]}
       />
       <PageHeader
         kicker={d.results.kicker}

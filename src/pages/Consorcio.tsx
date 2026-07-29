@@ -65,6 +65,7 @@ export default function Consorcio() {
         path="/consorcio"
         title={`${d.consortium.title} — PIGTATTOO`}
         description={d.consortium.intro}
+        breadcrumbs={[{ name: d.consortium.title, path: "/consorcio" }]}
       />
       <PageHeader
         kicker={d.consortium.kicker}

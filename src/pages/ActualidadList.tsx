@@ -31,6 +31,7 @@ export default function ActualidadList() {
         path="/actualidad"
         title={`${d.news.title} — PIGTATTOO`}
         description={d.news.intro}
+        breadcrumbs={[{ name: d.news.title, path: "/actualidad" }]}
       />
       <PageHeader
         kicker={d.news.kicker}
