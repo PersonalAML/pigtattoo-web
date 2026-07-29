@@ -141,11 +141,18 @@ export default function Home() {
           <h2 className="text-3xl">{d.home.partnersTitle}</h2>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-6">
             {PARTNERS.map((p) => (
-              <div key={p.id} title={p.name}>
-                <LogoFrame label={p.short} />
-              </div>
+              <Link
+                key={p.id}
+                to={`${base}/consorcio`}
+                title={p.role}
+                className="group block rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+              >
+                <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-3" />
+                <p className="mt-2 text-center text-sm font-bold text-primary group-hover:underline">{p.short}</p>
+              </Link>
             ))}
           </div>
+
         </div>
       </section>
 
