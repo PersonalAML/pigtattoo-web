@@ -26,6 +26,7 @@ export function SEO({ path, title, description, ogImage, ogType = "website", bre
   const suffix = path === "/" ? "" : path;
   const canonical = `/${lang}${suffix}`;
   const noindex = PARTIAL_LANGS.includes(lang);
+  const image = ogImage ?? "/og-image.jpg";
 
   const breadcrumbJsonLd =
     breadcrumbs && breadcrumbs.length > 0
