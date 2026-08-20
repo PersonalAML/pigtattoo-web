@@ -57,12 +57,13 @@ export function SEO({ path, title, description, ogImage, ogType = "website", bre
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonical} />
       <meta property="og:locale" content={lang === "ca" ? "ca_ES" : lang === "en" ? "en_GB" : "es_ES"} />
-      {ogImage ? <meta property="og:image" content={ogImage} /> : null}
+      <meta property="og:image" content={image} />
 
-      <meta name="twitter:card" content={ogImage ? "summary_large_image" : "summary"} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      {ogImage ? <meta name="twitter:image" content={ogImage} /> : null}
+      <meta name="twitter:image" content={image} />
+
 
       <link rel="canonical" href={canonical} />
       {LANGS.map((l) => (
