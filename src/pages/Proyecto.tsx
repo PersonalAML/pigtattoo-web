@@ -4,6 +4,7 @@ import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
 import metodologiaImg from "@/assets/metodologia.png.asset.json";
 
 import { ImageFrame } from "@/components/ImageFrame";
+import { Timeline } from "@/components/Timeline";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 
@@ -37,7 +38,7 @@ export default function Proyecto() {
         <section id="metodologia">
           <h2 className="text-2xl">{d.project.methodologyTitle}</h2>
           <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{d.project.methodologyBody}</p>
-          <figure className="mt-8">
+          <figure className="mx-auto mt-8 max-w-3xl">
             <img
               src={metodologiaImg.url}
               alt="Esquema de metodología del Proyecto: actividades, hitos, periodos y fechas clave de un vistazo."
@@ -63,22 +64,8 @@ export default function Proyecto() {
         </section>
         <section id="cronograma">
           <h2 className="text-2xl">{d.project.timelineTitle}</h2>
-          <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.timelineBody}</p>
-          <ol className="mt-6 space-y-4 border-l-2 border-accent/40 pl-6">
-            {[
-              { y: "2025", t: "Convocatoria" },
-              { y: "1 de enero de 2026", t: "Inicio del Proyecto" },
-              { y: "30 de abril de 2027", t: "Fin de Periodo 1" },
-              { y: "2028 / inicio de 2029", t: "Pruebas finales" },
-              { y: "30 de abril de 2029", t: "Fin de Proyecto" },
-            ].map((m) => (
-              <li key={m.y} className="relative">
-                <span className="absolute -left-[31px] flex h-4 w-4 items-center justify-center rounded-full border-2 border-accent bg-background" />
-                <p className="font-display text-sm font-semibold text-primary">{m.y}</p>
-                <p className="text-sm text-muted-foreground">{m.t}</p>
-              </li>
-            ))}
-          </ol>
+          <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{d.project.timelineBody}</p>
+          <Timeline />
         </section>
       </div>
     </>
