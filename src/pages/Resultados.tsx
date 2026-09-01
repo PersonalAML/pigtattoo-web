@@ -68,14 +68,6 @@ export default function Resultados() {
             ))}
           </div>
         </section>
-        <section>
-          <h2 className="text-2xl">{d.results.deliverablesTitle}</h2>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {RESULTS_DOCS.map((doc) => (
-              <DocCard key={doc.id} doc={doc} dict={d} />
-            ))}
-          </div>
-        </section>
       </div>
     </>
   );
