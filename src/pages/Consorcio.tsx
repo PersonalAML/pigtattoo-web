@@ -85,7 +85,7 @@ export default function Consorcio() {
                 <PartnerLogoLink partner={p} />
                 <h3 className="mt-4 text-base font-bold text-primary">{p.short}</h3>
                 <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
-                {p.description && <p className="mt-2 text-sm font-medium text-primary/80">{p.description}</p>}
+                {p.description && <p className="mt-2 text-sm font-bold text-primary">{p.description}</p>}
               </article>
             ))}
           </div>
@@ -102,7 +102,7 @@ export default function Consorcio() {
                   <div>
                     <h3 className="text-sm font-bold text-primary">{p.name}</h3>
                     <p className="mt-1 text-xs text-muted-foreground">{p.role}</p>
-                    {p.description && <p className="mt-1 text-xs font-medium text-primary/80">{p.description}</p>}
+                    {p.description && <p className="mt-1 text-xs font-bold text-primary">{p.description}</p>}
                   </div>
                 </div>
               </article>
