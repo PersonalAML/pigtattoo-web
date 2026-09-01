@@ -1,6 +1,7 @@
 import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
 import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
+import metodologiaImg from "@/assets/metodologia.png.asset.json";
 
 import { ImageFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
@@ -46,7 +47,7 @@ export default function Proyecto() {
               className="w-full rounded-xl border border-border bg-card object-contain"
             />
             <figcaption className="mt-3 text-sm text-muted-foreground">
-              {d.project.methodologyFigcaption ?? "Diagrama de metodología: actividades (A1–A8), hitos de resultados (R1–R8), periodos y fechas clave del Proyecto."}
+              Diagrama de metodología: actividades (A1–A8), hitos de resultados (R1–R8), periodos y fechas clave del Proyecto.
             </figcaption>
             <div id="metodologia-desc" className="sr-only">
               <p>El diagrama muestra dos periodos de desarrollo y una fase final de pruebas y análisis.</p>
