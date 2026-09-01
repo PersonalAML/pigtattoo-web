@@ -38,7 +38,7 @@ export default function Proyecto() {
         <section id="metodologia">
           <h2 className="text-2xl">{d.project.methodologyTitle}</h2>
           <p className="mt-3 max-w-3xl leading-relaxed text-muted-foreground">{d.project.methodologyBody}</p>
-          <figure className="mt-8">
+          <figure className="mx-auto mt-8 max-w-3xl">
             <img
               src={metodologiaImg.url}
               alt="Esquema de metodología del Proyecto: actividades, hitos, periodos y fechas clave de un vistazo."
