@@ -5,6 +5,8 @@ import { SiteFooter } from "@/components/SiteFooter";
 import { CookieBanner } from "@/components/CookieBanner";
 import { LangGuard } from "@/components/LangGuard";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { useLang } from "@/components/LangGuard";
+import { getDict } from "@/i18n/dictionaries";
 import Home from "@/pages/Home";
 import Proyecto from "@/pages/Proyecto";
 import Consorcio from "@/pages/Consorcio";
@@ -29,13 +31,14 @@ const organizationJsonLd = {
 };
 
 function Layout() {
+  const d = getDict(useLang());
   return (
     <div className="flex min-h-screen flex-col">
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:fixed focus:left-2 focus:top-2 focus:z-50 focus:rounded-md focus:bg-primary focus:px-3 focus:py-2 focus:text-primary-foreground"
       >
-        <SkipLink />
+        {d.misc.skipToContent}
       </a>
       <SiteHeader />
       <main id="main" className="flex-1">
