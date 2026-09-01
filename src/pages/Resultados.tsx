@@ -4,7 +4,7 @@ import headerResultados from "@/assets/header-resultados.webp.asset.json";
 
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
-import { RESULTS_DOCS, MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
+import { MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
 import { FileText, Download } from "lucide-react";
 
 function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getDict> }) {
@@ -64,14 +64,6 @@ export default function Resultados() {
           <h2 className="text-2xl">{d.results.materialsTitle}</h2>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {MATERIALS_DOCS.map((doc) => (
-              <DocCard key={doc.id} doc={doc} dict={d} />
-            ))}
-          </div>
-        </section>
-        <section>
-          <h2 className="text-2xl">{d.results.deliverablesTitle}</h2>
-          <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-            {RESULTS_DOCS.map((doc) => (
               <DocCard key={doc.id} doc={doc} dict={d} />
             ))}
           </div>
