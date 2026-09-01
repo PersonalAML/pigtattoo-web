@@ -45,7 +45,7 @@ export function Timeline() {
         )}
         {/* Hitos */}
         <ol className="relative grid grid-cols-5 gap-4 pt-14">
-          {MILESTONES.map((m) => {
+          {MILESTONES.map((m, i) => {
             const done = new Date(m.date).getTime() <= now;
             return (
               <li key={m.label} role="listitem">
@@ -53,7 +53,7 @@ export function Timeline() {
                   className={`absolute top-[7px] h-4 w-4 -translate-x-1/2 rounded-full border-2 ${
                     done ? "border-accent bg-accent" : "border-accent/50 bg-background"
                   }`}
-                  style={{ left: `${pct(m.date)}%` }}
+                  style={{ left: `${((i + 0.5) / MILESTONES.length) * 100}%` }}
                   aria-hidden="true"
                 />
                 <div className="rounded-xl border border-border bg-card p-4 shadow-sm">
