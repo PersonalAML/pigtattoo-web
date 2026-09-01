@@ -4,6 +4,7 @@ import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
 import metodologiaImg from "@/assets/metodologia.png.asset.json";
 
 import { ImageFrame } from "@/components/ImageFrame";
+import { Timeline } from "@/components/Timeline";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 
