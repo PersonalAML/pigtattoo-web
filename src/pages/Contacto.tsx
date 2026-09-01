@@ -21,7 +21,7 @@ export default function Contacto() {
         title={d.contact.title}
         intro={d.contact.intro}
         imageSrc={headerContacto.url}
-        imageAlt="Paisaje rural con casas blancas y campos de cultivo"
+        imageAlt="Manos escribiendo en una libreta sobre un escritorio de madera, simbolizando la comunicación y el contacto con el equipo del proyecto"
       />
 
       <div className="container-narrow py-14">
