@@ -103,11 +103,12 @@ export default function Accesibilidad() {
             <a href="tel:+34613722505" className="text-primary underline">
               +34 613 72 25 05
             </a>
-            . Las comunicaciones serán atendidas por la coordinación técnica del Grupo Operativo
-            (GEEZAR Soluciones S.L.), que informará del resultado en un plazo máximo de veinte días
-            hábiles. Si no obtiene respuesta o esta se considera insatisfactoria, puede reiterar su
-            solicitud dirigiéndose a la entidad titular del sitio, Clúster Español de Productores de
-            Ganado Porcino (C/ María de Luna, 11 · 50017 Zaragoza).
+            . Las comunicaciones serán atendidas directamente o derivadas a la coordinación técnica
+            del Grupo Operativo (GEEZAR Soluciones S.L.), que informará del resultado en un plazo
+            máximo de veinte días hábiles. Si no obtiene respuesta o esta se considera
+            insatisfactoria, puede reiterar su solicitud dirigiéndose a la entidad titular del sitio,
+            Clúster Español de Productores de Ganado Porcino (C/ María de Luna, 11 · 50018
+            Zaragoza).
           </p>
 
         </section>

@@ -34,7 +34,7 @@ export default function AvisoLegal() {
               <strong className="text-primary">CIF:</strong> G99539363
             </li>
             <li>
-              <strong className="text-primary">Domicilio:</strong> C/ María de Luna, 11 · 50017
+              <strong className="text-primary">Domicilio:</strong> C/ María de Luna, 11 · 50018
               Zaragoza (España)
             </li>
             <li>
