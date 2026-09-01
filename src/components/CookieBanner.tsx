@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useLang } from "@/components/LangGuard";
+import { getDict } from "@/i18n/dictionaries";
 
 const CONSENT_KEY = "pigtattoo.consent.v1";
 const PRODUCTION_HOST = "pigtattoo.es";
@@ -44,6 +46,8 @@ function loadGA() {
 }
 
 export function CookieBanner() {
+  const lang = useLang();
+  const d = getDict(lang);
   const [consent, setConsent] = useState<Consent>(null);
   const [ready, setReady] = useState(false);
 
@@ -70,24 +74,23 @@ export function CookieBanner() {
     <div
       role="dialog"
       aria-live="polite"
-      aria-label="Aviso de cookies"
+      aria-label={d.cookies.title}
       className="fixed inset-x-0 bottom-0 z-50 border-t border-border bg-card/95 backdrop-blur"
     >
       <div className="container-narrow flex flex-col gap-3 py-4 text-sm text-foreground sm:flex-row sm:items-center sm:justify-between">
         <p className="max-w-3xl leading-relaxed">
-          Utilizamos cookies analíticas (Google Analytics 4) sólo si aceptas su uso. Puedes revisar
-          los detalles en la{" "}
-          <Link to="/es/cookies" className="underline underline-offset-2 hover:text-accent">
-            política de cookies
+          {d.cookies.banner}{" "}
+          <Link to={`/${lang}/cookies`} className="underline underline-offset-2 hover:text-accent">
+            {d.cookies.title}
           </Link>
           .
         </p>
         <div className="flex flex-wrap gap-2">
           <button type="button" onClick={reject} className="cta-outline text-xs">
-            Rechazar
+            {d.cookies.reject}
           </button>
           <button type="button" onClick={accept} className="cta text-xs">
-            Aceptar
+            {d.cookies.accept}
           </button>
         </div>
       </div>
@@ -96,6 +99,8 @@ export function CookieBanner() {
 }
 
 export function ConsentControls() {
+  const lang = useLang();
+  const d = getDict(lang);
   const [consent, setConsent] = useState<Consent>(null);
   useEffect(() => setConsent(readConsent()), []);
   const reset = () => {
@@ -108,9 +113,9 @@ export function ConsentControls() {
   return (
     <div className="rounded-lg border border-border bg-card p-4 text-sm">
       <p>
-        Preferencia actual:{" "}
+        {d.cookies.current}:{" "}
         <strong>
-          {consent === "granted" ? "Aceptadas" : consent === "denied" ? "Rechazadas" : "Sin decidir"}
+          {consent === "granted" ? d.cookies.granted : consent === "denied" ? d.cookies.denied : d.cookies.unset}
         </strong>
       </p>
       <button
@@ -118,7 +123,7 @@ export function ConsentControls() {
         onClick={reset}
         className="mt-3 inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-bold text-foreground transition-colors hover:bg-secondary"
       >
-        Restablecer preferencias
+        {d.cookies.resetButton}
       </button>
     </div>
   );
