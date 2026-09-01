@@ -4,7 +4,7 @@ import headerResultados from "@/assets/header-resultados.webp.asset.json";
 
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
-import { RESULTS_DOCS, MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
+import { MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
 import { FileText, Download } from "lucide-react";
 
 function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getDict> }) {
