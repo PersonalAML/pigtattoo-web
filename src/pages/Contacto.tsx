@@ -114,15 +114,6 @@ export default function Contacto() {
             </p>
 
           </form>
-          <aside className="space-y-4 text-sm">
-            <div className="rounded-lg border border-border bg-secondary/60 p-4">
-              <h2 className="text-base font-bold text-primary">PIGTATTOO</h2>
-              <p className="mt-1 text-muted-foreground">
-                Coordinación del Grupo Operativo. Datos de contacto pendientes de aportar por el
-                consorcio.
-              </p>
-            </div>
-          </aside>
         </div>
       </div>
     </>
