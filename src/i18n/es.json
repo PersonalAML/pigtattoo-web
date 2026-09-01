@@ -116,7 +116,16 @@
   },
   "footer": {
     "financingTitle": "Financiación",
-    "financingBody": "Proyecto financiado por el Ministerio de Agricultura, Pesca y Alimentación (MAPA) y por el Fondo Europeo Agrícola de Desarrollo Rural (FEADER) en el marco del Plan Estratégico de la PAC (PEPAC) 2023-2027. [Texto oficial pendiente de confirmar por el consorcio.]",
+    "financingBody": "Este proyecto se enmarca dentro del Plan Estratégico de la PAC 2023-2027 y está financiado en un 80% por el FEADER (Unión Europea) y en un 20% por el Ministerio de Agricultura, Pesca y Alimentación, con una ayuda total de 553.276,01 euros y una financiación del 92,2%.",
+    "financingFigures": [
+      "Importe total del proyecto: 599.973,36 €",
+      "Subvención total: 553.276,01 €",
+      "Importe FEADER: 442.620,79 €",
+      "Importe AGE: 110.655,22 €",
+      "Intensidad de ayuda: 92,2%",
+      "Nº Expediente: REGAGE25e00048121656",
+      "Convocatoria: Grupos Operativos Supraautonómicos de la AEI-Agri (2025)"
+    ],
     "linksTitle": "Enlaces",
     "socialTitle": "Síguenos",
     "rights": "Todos los derechos reservados."
