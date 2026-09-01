@@ -20,12 +20,15 @@ export default function Accesibilidad() {
       <PageHeader title={d.legal.accessibilityTitle} />
       <div className="container-narrow max-w-3xl space-y-8 py-14 text-muted-foreground">
         <p className="leading-relaxed">
-          El consorcio PIGTATTOO se ha comprometido a hacer accesible su sitio web de conformidad
-          con el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web
-          y aplicaciones para dispositivos móviles del sector público, que transpone la Directiva
-          (UE) 2016/2102 y toma como referencia la norma EN 301 549 (equivalente a las WCAG 2.1
-          nivel AA).
+          El consorcio PIGTATTOO se ha comprometido, con carácter voluntario, a hacer accesible su
+          sitio web tomando como referencia el Real Decreto 1112/2018, de 7 de septiembre, sobre
+          accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector
+          público, que transpone la Directiva (UE) 2016/2102, y la norma EN 301 549 (equivalente a
+          las WCAG 2.1 nivel AA). El sitio pertenece a una entidad privada y no está sujeto por sí
+          mismo a dicha norma, pero se adopta como estándar de calidad al tratarse de un proyecto
+          cofinanciado con fondos públicos.
         </p>
+
 
         <section className="space-y-3">
           <h2 className="font-display text-xl font-semibold text-primary">
