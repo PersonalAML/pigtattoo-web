@@ -25,7 +25,7 @@ export default function Contacto() {
       />
 
       <div className="container-narrow py-14">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="mx-auto max-w-2xl">
           <form
             name="contacto"
             method="POST"
@@ -114,15 +114,6 @@ export default function Contacto() {
             </p>
 
           </form>
-          <aside className="space-y-4 text-sm">
-            <div className="rounded-lg border border-border bg-secondary/60 p-4">
-              <h2 className="text-base font-bold text-primary">PIGTATTOO</h2>
-              <p className="mt-1 text-muted-foreground">
-                Coordinación del Grupo Operativo. Datos de contacto pendientes de aportar por el
-                consorcio.
-              </p>
-            </div>
-          </aside>
         </div>
       </div>
     </>
