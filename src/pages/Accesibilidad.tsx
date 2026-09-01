@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 
-const REVIEW_DATE = "29 de julio de 2026";
+const REVIEW_DATE = "1 de septiembre de 2026";
 
 export default function Accesibilidad() {
   const lang = useLang();
