@@ -3,7 +3,7 @@ import { PageHeader } from "@/components/PageHeader";
 import headerActividades from "@/assets/header-actividades.webp.asset.json";
 
 import { useLang } from "@/components/LangGuard";
-import { getDict } from "@/i18n/dictionaries";
+import { getDict, td } from "@/i18n/dictionaries";
 import { ACTIVITIES, type ActivityStatus } from "@/lib/site-data";
 
 function StatusBadge({ status, dict }: { status: ActivityStatus; dict: ReturnType<typeof getDict> }) {
@@ -36,7 +36,7 @@ export default function Actividades() {
         title={d.activities.title}
         intro={d.activities.intro}
         imageSrc={headerActividades.url}
-        imageAlt="Dos técnicos con buzos blancos revisan datos en una tableta dentro de una nave porcina moderna"
+        imageAlt={d.images.activities}
       />
 
       <div className="container-narrow py-14">
@@ -48,14 +48,14 @@ export default function Actividades() {
                   <p className="font-display text-xs font-semibold uppercase tracking-wider text-primary">
                     {a.code}
                   </p>
-                  <h2 className="mt-1 text-lg">{a.title}</h2>
+                  <h2 className="mt-1 text-lg">{td(lang, "activities", a.id, "title")}</h2>
                 </div>
                 <StatusBadge status={a.status} dict={d} />
               </div>
-              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{a.body}</p>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{td(lang, "activities", a.id, "body")}</p>
               <div className="mt-auto pt-4">
                 <div className="flex items-center justify-between text-xs text-muted-foreground">
-                  <span>Progreso</span>
+                  <span>{d.activities.progress}</span>
                   <span className="font-bold text-primary">{a.progress}%</span>
                 </div>
                 <div className="mt-1 h-2 w-full overflow-hidden rounded-full bg-secondary">

@@ -27,7 +27,7 @@ export function SiteFooter() {
             </ul>
             <img
               src={logosFinanciacion.url}
-              alt="Cofinanciado por la Unión Europea. Gobierno de España — Ministerio de Agricultura, Pesca y Alimentación"
+              alt={d.images.financing}
               loading="lazy"
               decoding="async"
               className="mt-4 w-full max-w-lg rounded-sm bg-card"

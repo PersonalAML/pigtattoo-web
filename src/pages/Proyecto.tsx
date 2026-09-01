@@ -24,7 +24,7 @@ export default function Proyecto() {
         title={d.project.title}
         intro={d.project.intro}
         imageSrc={headerProyecto.url}
-        imageAlt="Primer plano de la oreja de un cerdo sujeta con guante de látex, con una marca de identificación en la piel"
+        imageAlt={d.images.project}
       />
 
       <div className="container-narrow space-y-16 py-14">
@@ -33,7 +33,7 @@ export default function Proyecto() {
             <h2 className="text-2xl">{d.project.objectivesTitle}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.objectivesBody}</p>
           </div>
-          <ImageFrame aspect="1/1" label="Imagen objetivos" alt="Objetivos del proyecto" />
+          <ImageFrame aspect="1/1" label={d.images.objectivesFrame} alt={d.images.objectivesAlt} />
         </section>
         <section id="metodologia">
           <h2 className="text-2xl">{d.project.methodologyTitle}</h2>
@@ -41,7 +41,7 @@ export default function Proyecto() {
           <figure className="mx-auto mt-8 max-w-3xl">
             <img
               src={metodologiaImg.url}
-              alt="Esquema de metodología del Proyecto: actividades, hitos, periodos y fechas clave de un vistazo."
+              alt={d.images.methodologyAlt}
               aria-describedby="metodologia-desc"
               loading="lazy"
               decoding="async"

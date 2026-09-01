@@ -38,7 +38,7 @@ export default function ActualidadList() {
         title={d.news.title}
         intro={d.news.intro}
         imageSrc={headerActualidad.url}
-        imageAlt="Ponente presentando ante el público en un auditorio durante una jornada técnica"
+        imageAlt={d.images.news}
       />
 
       <div className="container-narrow py-14">
@@ -60,7 +60,7 @@ export default function ActualidadList() {
                 />
                 <div className="p-6 md:p-8">
                   <p className="text-xs uppercase tracking-wider font-semibold text-primary">
-                    Destacada · {destacada.categoria ?? "Noticia"}
+                    {d.news.featured} · {destacada.categoria ?? d.news.defaultCategory}
                   </p>
                   <h2 className="mt-2 text-2xl">{destacada.titulo}</h2>
                   <p className="mt-3 text-muted-foreground">{destacada.extracto}</p>
@@ -80,12 +80,12 @@ export default function ActualidadList() {
                     src={n.imagen?.url}
                     alt={n.imagen?.alt}
                     aspect="16/9"
-                    label="Imagen noticia"
+                    label={d.a11y.newsImage}
                     rounded="rounded-none"
                   />
                   <div className="p-5">
                     <p className="text-xs uppercase tracking-wider font-semibold text-primary">
-                      {n.categoria ?? "Noticia"}
+                      {n.categoria ?? d.news.defaultCategory}
                     </p>
                     <h3 className="mt-2 text-lg">{n.titulo}</h3>
                     <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
