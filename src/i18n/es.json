@@ -58,7 +58,8 @@
     "intro": "El plan de trabajo del Grupo Operativo se estructura en las siguientes actividades, con distinto grado de avance en el momento actual.",
     "statusPlanned": "Planificada",
     "statusInProgress": "En curso",
-    "statusCompleted": "Completada"
+    "statusCompleted": "Completada",
+    "progress": "Progreso"
   },
   "news": {
     "title": "Actualidad",
@@ -69,7 +70,9 @@
     "readMore": "Leer más",
     "backToList": "Volver a Actualidad",
     "byAuthor": "Por",
-    "notFound": "Noticia no encontrada"
+    "notFound": "Noticia no encontrada",
+    "featured": "Destacada",
+    "defaultCategory": "Noticia"
   },
   "results": {
     "title": "Resultados y materiales",
@@ -91,7 +94,8 @@
     "consent": "Acepto la política de privacidad y el tratamiento de mis datos con la finalidad de responder a mi consulta.",
     "submit": "Enviar mensaje",
     "successNote": "El formulario se activará tras la publicación del sitio en Netlify.",
-    "requiredHint": "Los campos marcados con * son obligatorios."
+    "requiredHint": "Los campos marcados con * son obligatorios.",
+    "honeypot": "No rellenar:"
   },
   "cookies": {
     "title": "Política de cookies",
@@ -108,11 +112,11 @@
   },
   "legal": {
     "noticeTitle": "Aviso legal",
-    "noticeBody": "En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se informa a los usuarios de los datos identificativos del titular del sitio web. [Datos pendientes de completar por el consorcio].",
+    "noticeBody": "En cumplimiento de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSICE), se informa a los usuarios de los datos identificativos del titular del sitio web.",
     "privacyTitle": "Política de privacidad",
-    "privacyBody": "En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la LOPDGDD, PIGTATTOO informa del tratamiento de los datos personales facilitados a través del formulario de contacto, cuya única finalidad es dar respuesta a la consulta remitida. [Detalles pendientes de completar por el consorcio].",
+    "privacyBody": "En cumplimiento del Reglamento (UE) 2016/679 (RGPD) y de la LOPDGDD, PIGTATTOO informa del tratamiento de los datos personales facilitados a través del formulario de contacto, cuya única finalidad es dar respuesta a la consulta remitida.",
     "accessibilityTitle": "Declaración de accesibilidad",
-    "accessibilityBody": "Este sitio web pretende cumplir con el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, y con el nivel AA de las Pautas de Accesibilidad para el Contenido Web (WCAG 2.1). El consorcio revisará periódicamente el sitio y publicará el resultado de las evaluaciones. Para comunicar cualquier problema de accesibilidad, dirígete a la sección de contacto."
+    "accessibilityBody": "Este sitio web pretende cumplir con el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público, y con el nivel AA de las Pautas de Accesibilidad para el Contenido Web (WCAG 2.1)."
   },
   "footer": {
     "financingTitle": "Financiación",
@@ -137,5 +141,97 @@
     "notFoundTitle": "Página no encontrada",
     "notFoundBody": "La dirección no existe o el contenido se ha movido. Puedes volver al inicio o ir directamente a una sección.",
     "notFoundLinks": "Secciones principales"
+  },
+  "a11y": {
+    "brandLine1": "Grupo Operativo",
+    "brandLine2": "Supraautonómico",
+    "homeLink": "PIGTATTOO — Inicio",
+    "navPrimary": "Principal",
+    "navMobile": "Móvil",
+    "openMenu": "Abrir menú",
+    "languageSwitcher": "Seleccionar idioma",
+    "languageEs": "Español",
+    "languageCa": "Català",
+    "languageEn": "English",
+    "imagePending": "Imagen pendiente",
+    "logoPending": "Logo pendiente",
+    "logoOf": "Logotipo de",
+    "websiteOf": "Web corporativa de",
+    "newsImage": "Imagen noticia",
+    "featuredImage": "Imagen destacada",
+    "timelineLabel": "Cronograma del proyecto",
+    "today": "Hoy"
+  },
+  "images": {
+    "home": "Cerdos en una nave de cebo moderna",
+    "concept": "Pasillo de una nave porcina moderna con una malla de datos superpuesta que representa la trazabilidad",
+    "project": "Primer plano de la oreja de un cerdo sujeta con guante de látex, con una marca de identificación en la piel",
+    "objectivesFrame": "Imagen objetivos",
+    "objectivesAlt": "Objetivos del proyecto",
+    "activities": "Dos técnicos con buzos blancos revisan datos en una tableta dentro de una nave porcina moderna",
+    "news": "Ponente presentando ante el público en un auditorio durante una jornada técnica",
+    "results": "Informes técnicos impresos con gráficos y un portátil mostrando un panel de datos del proyecto",
+    "contact": "Manos escribiendo en una libreta sobre un escritorio de madera, simbolizando la comunicación y el contacto con el equipo del proyecto",
+    "financing": "Cofinanciado por la Unión Europea. Gobierno de España — Ministerio de Agricultura, Pesca y Alimentación",
+    "map": "Mapa de España mostrando la distribución geográfica y las conexiones de las entidades del consorcio Pigtattoo.",
+    "mapItems": [
+      "i+Porc (Zaragoza, Aragón)",
+      "GEEZAR (Zaragoza, Aragón)",
+      "CEVA (Barcelona, Cataluña)",
+      "EQTIC (Sant Cugat, Cataluña)",
+      "AGROCAT (Sant Fruitós de Bages, Cataluña)",
+      "GUCO (Valderrobres, Aragón)",
+      "IRTA (Caldes de Montbui, Cataluña)",
+      "ITENE (Paterna, Comunidad Valenciana)",
+      "ANPROGAPOR (Madrid, Madrid)"
+    ],
+    "methodologyAlt": "Esquema de metodología del Proyecto: actividades, hitos, periodos y fechas clave de un vistazo.",
+    "methodologyCaption": "Diagrama de metodología: actividades (A1–A8), hitos de resultados (R1–R8), periodos y fechas clave del Proyecto.",
+    "methodologyIntro": "El diagrama muestra dos periodos de desarrollo y una fase final de pruebas y análisis.",
+    "methodologyItems": [
+      "Periodo 1 (inicio en febrero de 2026): trabajos iniciales de adquisición de conocimiento — A1 Pruebas iniciales (test malla) y A2 Requisitos de sistemas, bienestar animal, etc. — y desarrollos del Periodo 1: A4 Tinta PIGTATTOO, A3 Hardware de captación de imagen y A3 Pruebas intermedias.",
+      "Periodo 2: desarrollos — A5 Sistema de codificación de la información, A6 Sistema de aplicación de tatuaje y A7 Sistema de IA de visión artificial. Fin de desarrollos: septiembre de 2028.",
+      "Fase final: A8 Repercusión económica y replicabilidad, A8 Fase de pruebas y resultados y A8 Verificación de bienestar animal.",
+      "Hitos de divulgación: divulgación inicial de comienzo del Proyecto; divulgación de resultados (pruebas y requisitos); divulgación de resultados (fin de Periodo 1, abril de 2027); divulgación de resultados (desarrollos completados); divulgación de resultados (fin de Proyecto, abril de 2029).",
+      "Fechas clave: inicio febrero de 2026; fin de Periodo 1 abril de 2027; fin de desarrollos septiembre de 2028; fin de Proyecto abril de 2029."
+    ]
+  },
+  "data": {
+    "partners": {
+      "p1": { "role": "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", "description": "Representante del GOS y líder de acciones de divulgación" },
+      "p2": { "role": "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", "description": "Coordinador técnico y seguimiento de avances" },
+      "p3": { "role": "CEVA Salud Animal S.A. — Barcelona (Cataluña)", "description": "Principal promotor y comercialización futura" },
+      "p4": { "role": "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", "description": "Proveedor tecnológico de soluciones de visión artificial" },
+      "p5": { "role": "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", "description": "Producción porcina y alojamiento de pruebas" },
+      "p6": { "role": "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", "description": "Producción porcina y alojamiento de pruebas" },
+      "s1": { "role": "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", "description": "Protocolos de bienestar animal y seguridad alimentaria" },
+      "s2": { "role": "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", "description": "Desarrollo de tintas avanzadas" },
+      "s3": { "role": "Asociación Nacional de Productores de Ganado Porcino — Madrid", "description": "Colaborador en acciones de divulgación" }
+    },
+    "activities": {
+      "a1": { "title": "Pruebas iniciales de elementos", "body": "Validación preliminar de los componentes tecnológicos que conforman el sistema de identificación por tatuaje." },
+      "a2": { "title": "Definición de requisitos, control y verificación de los sistemas", "body": "Definición de criterios y protocolos para garantizar viabilidad técnica, bienestar animal y seguridad alimentaria en el Proyecto." },
+      "a3": { "title": "Pruebas intermedias de elementos y desarrollo de hardware", "body": "Desarrollo y pruebas intermedias del hardware necesario para la aplicación y lectura del tatuaje porcino." },
+      "a4": { "title": "Desarrollo de la tinta de tatuaje del Proyecto", "body": "Investigación y formulación de la tinta específica para el tatuaje identificativo del ganado porcino." },
+      "a5": { "title": "Sistema de codificación de información", "body": "Diseño del sistema de codificación que permitirá asignar e interpretar la identidad de cada animal." },
+      "a6": { "title": "Sistema físico de aplicación", "body": "Desarrollo del dispositivo físico encargado de aplicar el tatuaje de forma precisa y segura." },
+      "a7": { "title": "Sistema de visión artificial para identificación de animales", "body": "Creación del sistema basado en visión artificial para la lectura automática de los tatuajes." },
+      "a8": { "title": "Pilotaje y pruebas finales del Proyecto", "body": "Validación en entorno real del conjunto de sistemas, mejoras finales y evaluación de bienestar animal." }
+    },
+    "materials": {
+      "m1": { "title": "Folleto divulgativo del proyecto", "description": "Folleto general de presentación del proyecto PIGTATTOO." },
+      "m2": { "title": "Ficha técnica del sistema", "description": "Ficha técnica sintética del sistema de identificación." },
+      "m3": { "title": "Cartel institucional", "description": "Cartel institucional para eventos y jornadas del proyecto." },
+      "m4": { "title": "Presentación corporativa", "description": "Presentación general utilizada en jornadas de difusión." },
+      "m5": { "title": "Vídeo divulgativo", "description": "Vídeo de presentación del proyecto y sus objetivos." },
+      "m6": { "title": "Notas de prensa", "description": "Recopilación de notas de prensa emitidas durante el proyecto." }
+    },
+    "timeline": {
+      "t1": { "label": "2025", "title": "Convocatoria" },
+      "t2": { "label": "1 de enero de 2026", "title": "Inicio del Proyecto" },
+      "t3": { "label": "30 de abril de 2027", "title": "Fin de Periodo 1" },
+      "t4": { "label": "2028 / inicio de 2029", "title": "Pruebas finales" },
+      "t5": { "label": "30 de abril de 2029", "title": "Fin de Proyecto" }
+    }
   }
 }
