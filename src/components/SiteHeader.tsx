@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 import { Menu, X } from "lucide-react";
-import logoPigtattoo from "@/assets/logo-pigtattoo.jpg.asset.json";
+import logoPigtattoo from "@/assets/logo-pigtattoo.png.asset.json";
 
 
 // Doc V2 §3: switcher de idioma implementado pero oculto en v1.
@@ -32,11 +32,13 @@ export function SiteHeader() {
             src={logoPigtattoo.url}
             alt="PIGTATTOO"
             className="h-9 w-auto md:h-10"
-            width={1272}
-            height={387}
+            width={1200}
+            height={400}
           />
-          <span className="hidden text-[10px] uppercase leading-none tracking-wider text-muted-foreground sm:inline">
+          <span className="hidden text-[10px] uppercase leading-tight tracking-wider text-muted-foreground sm:block">
             Grupo Operativo
+            <br />
+            Supraautonómico
           </span>
         </Link>
 
