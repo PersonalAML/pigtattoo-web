@@ -30,26 +30,27 @@ export default function Privacidad() {
           </h2>
           <ul className="space-y-1 leading-relaxed">
             <li>
-              <strong className="text-primary">Entidad:</strong> GEEZAR Soluciones S.L.
+              <strong className="text-primary">Entidad:</strong> Clúster Español de Productores de
+              Ganado Porcino (i+Porc)
             </li>
             <li>
-              <strong className="text-primary">CIF:</strong> B99377160
+              <strong className="text-primary">CIF:</strong> G99539363
             </li>
             <li>
-              <strong className="text-primary">Domicilio:</strong> C/ J. G. Artigas, 3, 8.º E ·
-              50017 Zaragoza (España)
+              <strong className="text-primary">Domicilio:</strong> C/ María de Luna, 11 · 50018
+              Zaragoza (España)
             </li>
             <li>
               <strong className="text-primary">Teléfono:</strong>{" "}
-              <a href="tel:+34696504477" className="text-primary underline">
-                +34 696 50 44 77
+              <a href="tel:+34613722505" className="text-primary underline">
+                +34 613 72 25 05
               </a>
             </li>
           </ul>
           <p className="leading-relaxed">
-            GEEZAR Soluciones S.L. actúa como responsable del tratamiento de los datos recogidos a
-            través del sitio web, en su condición de coordinador técnico del Grupo Operativo
-            PIGTATTOO.
+            El Clúster Español de Productores de Ganado Porcino (i+Porc), como entidad titular del
+            sitio y representante del Grupo Operativo PIGTATTOO, actúa como responsable del
+            tratamiento de los datos recogidos a través del sitio web.
           </p>
         </section>
 
