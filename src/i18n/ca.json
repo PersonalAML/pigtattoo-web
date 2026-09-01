@@ -11,5 +11,227 @@
     "news": "Actualitat",
     "results": "Resultats i materials",
     "contact": "Contacte"
+  },
+  "home": {
+    "heroKicker": "Grup Operatiu Supraautonòmic",
+    "heroTitle": "Innovació en traçabilitat i identificació porcina",
+    "heroSubtitle": "PIGTATTOO desenvolupa solucions tecnològiques d'identificació per tatuatge per millorar la traçabilitat, el benestar animal i la sostenibilitat del sector porcí.",
+    "heroCta": "Coneix el projecte",
+    "heroCtaSecondary": "Veure activitats",
+    "whatTitle": "Què és PIGTATTOO?",
+    "whatBody": "PIGTATTOO és un Grup Operatiu Supraautonòmic emmarcat en l'Associació Europea per a la Innovació (AEI-AGRI) que reuneix productors, indústria, centres tecnològics i universitats per desenvolupar i validar un sistema innovador d'identificació porcina mitjançant tatuatge. L'objectiu és millorar la traçabilitat al llarg de tota la cadena, reduir l'estrès animal i oferir dades fiables a productors, escorxadors i consumidors.",
+    "pillarsTitle": "Eixos del projecte",
+    "pillar1Title": "Traçabilitat",
+    "pillar1Body": "Sistemes d'identificació fiables i verificables a cada baula de la cadena de valor porcina.",
+    "pillar2Title": "Benestar animal",
+    "pillar2Body": "Mètodes totalment respectuosos amb la salut i el benestar animal",
+    "pillar3Title": "Sostenibilitat",
+    "pillar3Body": "Nou paradigma amb menor ús de materials i millora de l'eficiència productiva",
+    "newsTitle": "Darreres notícies",
+    "newsCta": "Veure totes les notícies",
+    "partnersTitle": "Consorci",
+    "contactCtaTitle": "Interessat en el projecte?",
+    "contactCtaBody": "Posa't en contacte amb l'equip de PIGTATTOO per obtenir més informació.",
+    "contactCtaButton": "Contactar"
+  },
+  "project": {
+    "title": "El projecte",
+    "kicker": "Sobre PIGTATTOO",
+    "intro": "PIGTATTOO suposa un nou paradigma en la identificació d'animals cobrint tota la seva vida i permetent una major traçabilitat, millora genètica i eficiència productiva.",
+    "objectivesTitle": "Objectius",
+    "objectivesBody": "L'objectiu principal del Projecte és introduir en porcí un nou mètode d'identificació mitjançant tatuatge que substitueix els sistemes actuals d'una manera més econòmica, eficient i amb capacitat de digitalització per a la gestió i la traçabilitat",
+    "methodologyTitle": "Metodologia",
+    "methodologyBody": "La metodologia del Projecte passa per diferents fases de proves a mesura que es desenvolupen els innovadors sistemes que s'uneixen en la solució definitiva per a la identificació d'animals.",
+    "timelineTitle": "Cronograma",
+    "timelineBody": "El projecte es desenvolupa entre 2025 i 2029, des de la convocatòria fins al tancament final, passant pel desenvolupament tècnic, la validació al camp i les proves finals."
+  },
+  "consortium": {
+    "title": "Consorci",
+    "kicker": "Qui som",
+    "intro": "El consorci de PIGTATTOO reuneix socis beneficiaris i entitats subcontractades complementàries en l'àmbit de la producció, la tecnologia i la recerca aplicada.",
+    "partnersTitle": "Socis beneficiaris",
+    "subcontractedTitle": "Entitats subcontractades"
+  },
+  "activities": {
+    "title": "Activitats Tècniques",
+    "kicker": "Pla de treball",
+    "intro": "El pla de treball del Grup Operatiu s'estructura en les activitats següents, amb diferent grau d'avenç en el moment actual.",
+    "statusPlanned": "Planificada",
+    "statusInProgress": "En curs",
+    "statusCompleted": "Completada",
+    "progress": "Progrés"
+  },
+  "news": {
+    "title": "Actualitat",
+    "kicker": "Notícies i notes de premsa",
+    "intro": "Novetats, fites i comunicacions del projecte PIGTATTOO.",
+    "empty": "Encara no hi ha notícies publicades.",
+    "error": "No ha estat possible carregar les notícies en aquest moment.",
+    "readMore": "Llegir més",
+    "backToList": "Tornar a Actualitat",
+    "byAuthor": "Per",
+    "notFound": "Notícia no trobada",
+    "featured": "Destacada",
+    "defaultCategory": "Notícia"
+  },
+  "results": {
+    "title": "Resultats i materials",
+    "kicker": "Lliurables i difusió",
+    "intro": "Documentació tècnica i materials divulgatius generats per PIGTATTOO. Els enllaços s'aniran actualitzant a mesura que avancin les activitats.",
+    "download": "Descarregar",
+    "comingSoon": "Properament disponible",
+    "deliverablesTitle": "Lliurables tècnics",
+    "materialsTitle": "Materials de difusió"
+  },
+  "contact": {
+    "title": "Contacte",
+    "kicker": "Posa't en contacte",
+    "intro": "Escriu-nos per obtenir més informació sobre el projecte, col·laboració o difusió.",
+    "name": "Nom",
+    "email": "Correu electrònic",
+    "subject": "Assumpte",
+    "message": "Missatge",
+    "consent": "Accepto la política de privadesa i el tractament de les meves dades amb la finalitat de respondre la meva consulta.",
+    "submit": "Enviar missatge",
+    "successNote": "El formulari s'activarà després de la publicació del lloc a Netlify.",
+    "requiredHint": "Els camps marcats amb * són obligatoris.",
+    "honeypot": "No omplir:"
+  },
+  "cookies": {
+    "title": "Política de galetes",
+    "banner": "Aquest lloc utilitza galetes analítiques (Google Analytics 4) només si n'acceptes l'ús. Pots canviar la teva decisió en qualsevol moment des d'aquesta pàgina.",
+    "accept": "Acceptar",
+    "reject": "Rebutjar",
+    "manage": "Gestionar preferències",
+    "current": "Preferència actual",
+    "granted": "Acceptades",
+    "denied": "Rebutjades",
+    "unset": "Sense decidir",
+    "resetButton": "Restablir preferències",
+    "body": "PIGTATTOO utilitza galetes estrictament necessàries per al funcionament del lloc i, amb acceptació expressa prèvia, galetes analítiques de Google Analytics 4 amb finalitat estadística agregada. No s'utilitzen galetes publicitàries ni de perfilat. Pots revocar el teu consentiment en qualsevol moment mitjançant el botó situat en aquesta pàgina."
+  },
+  "legal": {
+    "noticeTitle": "Avís legal",
+    "noticeBody": "En compliment de la Llei 34/2002, d'11 de juliol, de Serveis de la Societat de la Informació i de Comerç Electrònic (LSSICE), s'informa els usuaris de les dades identificatives del titular del lloc web.",
+    "privacyTitle": "Política de privadesa",
+    "privacyBody": "En compliment del Reglament (UE) 2016/679 (RGPD) i de la LOPDGDD, PIGTATTOO informa del tractament de les dades personals facilitades a través del formulari de contacte, amb l'única finalitat de donar resposta a la consulta tramesa.",
+    "accessibilityTitle": "Declaració d'accessibilitat",
+    "accessibilityBody": "Aquest lloc web pretén complir el Reial decret 1112/2018, de 7 de setembre, sobre accessibilitat dels llocs web i aplicacions per a dispositius mòbils del sector públic, i el nivell AA de les Pautes d'Accessibilitat per al Contingut Web (WCAG 2.1)."
+  },
+  "footer": {
+    "financingTitle": "Finançament",
+    "financingBody": "Aquest projecte s'emmarca dins del Pla Estratègic de la PAC 2023-2027 i està finançat en un 80% pel FEADER (Unió Europea) i en un 20% pel Ministeri d'Agricultura, Pesca i Alimentació, amb un ajut total de 553.276,01 euros i un finançament del 92,2%.",
+    "financingFigures": [
+      "Import total del projecte: 599.973,36 €",
+      "Subvenció total: 553.276,01 €",
+      "Import FEADER: 442.620,79 €",
+      "Import AGE: 110.655,22 €",
+      "Intensitat de l'ajut: 92,2%",
+      "Núm. Expedient: REGAGE25e00048121656",
+      "Convocatòria: Grups Operatius Supraautonòmics de l'AEI-Agri (2025)"
+    ],
+    "linksTitle": "Enllaços",
+    "socialTitle": "Segueix-nos",
+    "rights": "Tots els drets reservats."
+  },
+  "misc": {
+    "backHome": "Tornar a l'inici",
+    "loading": "Carregant…",
+    "skipToContent": "Salta al contingut principal",
+    "notFoundTitle": "Pàgina no trobada",
+    "notFoundBody": "L'adreça no existeix o el contingut s'ha mogut. Pots tornar a l'inici o anar directament a una secció.",
+    "notFoundLinks": "Seccions principals"
+  },
+  "a11y": {
+    "brandLine1": "Grup Operatiu",
+    "brandLine2": "Supraautonòmic",
+    "homeLink": "PIGTATTOO — Inici",
+    "navPrimary": "Principal",
+    "navMobile": "Mòbil",
+    "openMenu": "Obrir menú",
+    "languageSwitcher": "Seleccionar idioma",
+    "languageEs": "Español",
+    "languageCa": "Català",
+    "languageEn": "English",
+    "imagePending": "Imatge pendent",
+    "logoPending": "Logo pendent",
+    "logoOf": "Logotip de",
+    "websiteOf": "Web corporativa de",
+    "newsImage": "Imatge notícia",
+    "featuredImage": "Imatge destacada",
+    "timelineLabel": "Cronograma del projecte",
+    "today": "Avui"
+  },
+  "images": {
+    "home": "Porcs en una nau d'engreix moderna",
+    "concept": "Passadís d'una nau porcina moderna amb una malla de dades superposada que representa la traçabilitat",
+    "project": "Primer pla de l'orella d'un porc subjectada amb guant de làtex, amb una marca d'identificació a la pell",
+    "objectivesFrame": "Imatge objectius",
+    "objectivesAlt": "Objectius del projecte",
+    "activities": "Dos tècnics amb granotes blanques revisen dades en una tauleta dins d'una nau porcina moderna",
+    "news": "Ponent presentant davant del públic en un auditori durant una jornada tècnica",
+    "results": "Informes tècnics impresos amb gràfics i un portàtil mostrant un tauler de dades del projecte",
+    "contact": "Mans escrivint en una llibreta sobre un escriptori de fusta, simbolitzant la comunicació i el contacte amb l'equip del projecte",
+    "financing": "Cofinançat per la Unió Europea. Govern d'Espanya — Ministeri d'Agricultura, Pesca i Alimentació",
+    "map": "Mapa d'Espanya que mostra la distribució geogràfica i les connexions de les entitats del consorci Pigtattoo.",
+    "mapItems": [
+      "i+Porc (Saragossa, Aragó)",
+      "GEEZAR (Saragossa, Aragó)",
+      "CEVA (Barcelona, Catalunya)",
+      "EQTIC (Sant Cugat, Catalunya)",
+      "AGROCAT (Sant Fruitós de Bages, Catalunya)",
+      "GUCO (Vall-de-roures, Aragó)",
+      "IRTA (Caldes de Montbui, Catalunya)",
+      "ITENE (Paterna, Comunitat Valenciana)",
+      "ANPROGAPOR (Madrid, Madrid)"
+    ],
+    "methodologyAlt": "Esquema de metodologia del Projecte: activitats, fites, períodes i dates clau d'un cop d'ull.",
+    "methodologyCaption": "Diagrama de metodologia: activitats (A1–A8), fites de resultats (R1–R8), períodes i dates clau del Projecte.",
+    "methodologyIntro": "El diagrama mostra dos períodes de desenvolupament i una fase final de proves i anàlisi.",
+    "methodologyItems": [
+      "Període 1 (inici el febrer de 2026): treballs inicials d'adquisició de coneixement — A1 Proves inicials (test malla) i A2 Requisits de sistemes, benestar animal, etc. — i desenvolupaments del Període 1: A4 Tinta PIGTATTOO, A3 Maquinari de captació d'imatge i A3 Proves intermèdies.",
+      "Període 2: desenvolupaments — A5 Sistema de codificació de la informació, A6 Sistema d'aplicació de tatuatge i A7 Sistema d'IA de visió artificial. Fi dels desenvolupaments: setembre de 2028.",
+      "Fase final: A8 Repercussió econòmica i replicabilitat, A8 Fase de proves i resultats i A8 Verificació de benestar animal.",
+      "Fites de divulgació: divulgació inicial d'inici del Projecte; divulgació de resultats (proves i requisits); divulgació de resultats (fi del Període 1, abril de 2027); divulgació de resultats (desenvolupaments completats); divulgació de resultats (fi del Projecte, abril de 2029).",
+      "Dates clau: inici febrer de 2026; fi del Període 1 abril de 2027; fi dels desenvolupaments setembre de 2028; fi del Projecte abril de 2029."
+    ]
+  },
+  "data": {
+    "partners": {
+      "p1": { "role": "Clúster espanyol de productors de bestiar porcí — Saragossa (Aragó)", "description": "Representant del GOS i líder d'accions de divulgació" },
+      "p2": { "role": "GEEZAR Soluciones S.L. — Saragossa (Aragó)", "description": "Coordinador tècnic i seguiment d'avenços" },
+      "p3": { "role": "CEVA Salud Animal S.A. — Barcelona (Catalunya)", "description": "Principal promotor i comercialització futura" },
+      "p4": { "role": "Sigma EQT Servei S.L. — Sant Cugat (Catalunya)", "description": "Proveïdor tecnològic de solucions de visió artificial" },
+      "p5": { "role": "Agropecuaria Catalana S.C.C.L. — Sant Fruitós (Catalunya)", "description": "Producció porcina i allotjament de proves" },
+      "p6": { "role": "Ganadería Unida Comarcal GUCO S.C. — Vall-de-roures (Aragó)", "description": "Producció porcina i allotjament de proves" },
+      "s1": { "role": "Institut de Recerca i Tecnologia Agroalimentàries — Caldes de Montbui (Catalunya)", "description": "Protocols de benestar animal i seguretat alimentària" },
+      "s2": { "role": "Packaging, Transport & Logistics Research Center — Paterna (Comunitat Valenciana)", "description": "Desenvolupament de tintes avançades" },
+      "s3": { "role": "Associació Nacional de Productors de Bestiar Porcí — Madrid", "description": "Col·laborador en accions de divulgació" }
+    },
+    "activities": {
+      "a1": { "title": "Proves inicials d'elements", "body": "Validació preliminar dels components tecnològics que conformen el sistema d'identificació per tatuatge." },
+      "a2": { "title": "Definició de requisits, control i verificació dels sistemes", "body": "Definició de criteris i protocols per garantir viabilitat tècnica, benestar animal i seguretat alimentària en el Projecte." },
+      "a3": { "title": "Proves intermèdies d'elements i desenvolupament de maquinari", "body": "Desenvolupament i proves intermèdies del maquinari necessari per a l'aplicació i lectura del tatuatge porcí." },
+      "a4": { "title": "Desenvolupament de la tinta de tatuatge del Projecte", "body": "Recerca i formulació de la tinta específica per al tatuatge identificatiu del bestiar porcí." },
+      "a5": { "title": "Sistema de codificació d'informació", "body": "Disseny del sistema de codificació que permetrà assignar i interpretar la identitat de cada animal." },
+      "a6": { "title": "Sistema físic d'aplicació", "body": "Desenvolupament del dispositiu físic encarregat d'aplicar el tatuatge de manera precisa i segura." },
+      "a7": { "title": "Sistema de visió artificial per a la identificació d'animals", "body": "Creació del sistema basat en visió artificial per a la lectura automàtica dels tatuatges." },
+      "a8": { "title": "Pilotatge i proves finals del Projecte", "body": "Validació en entorn real del conjunt de sistemes, millores finals i avaluació de benestar animal." }
+    },
+    "materials": {
+      "m1": { "title": "Fullet divulgatiu del projecte", "description": "Fullet general de presentació del projecte PIGTATTOO." },
+      "m2": { "title": "Fitxa tècnica del sistema", "description": "Fitxa tècnica sintètica del sistema d'identificació." },
+      "m3": { "title": "Cartell institucional", "description": "Cartell institucional per a esdeveniments i jornades del projecte." },
+      "m4": { "title": "Presentació corporativa", "description": "Presentació general utilitzada en jornades de difusió." },
+      "m5": { "title": "Vídeo divulgatiu", "description": "Vídeo de presentació del projecte i els seus objectius." },
+      "m6": { "title": "Notes de premsa", "description": "Recull de notes de premsa emeses durant el projecte." }
+    },
+    "timeline": {
+      "t1": { "label": "2025", "title": "Convocatòria" },
+      "t2": { "label": "1 de gener de 2026", "title": "Inici del Projecte" },
+      "t3": { "label": "30 d'abril de 2027", "title": "Fi del Període 1" },
+      "t4": { "label": "2028 / inici de 2029", "title": "Proves finals" },
+      "t5": { "label": "30 d'abril de 2029", "title": "Fi del Projecte" }
+    }
   }
 }

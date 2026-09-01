@@ -85,7 +85,7 @@ export default function ActualidadDetalle() {
             src={noticia.imagen?.url}
             alt={noticia.imagen?.alt}
             aspect="16/9"
-            label="Imagen destacada"
+            label={d.a11y.featuredImage}
           />
         </div>
         <div className="prose prose-neutral mt-8 max-w-none leading-relaxed text-foreground">

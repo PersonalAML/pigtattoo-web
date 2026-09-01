@@ -2,7 +2,7 @@ import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
 import { ImageFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
-import { getDict } from "@/i18n/dictionaries";
+import { getDict, td } from "@/i18n/dictionaries";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getNoticias, type Noticia } from "@/lib/contentful";
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <img
             src={heroHome.url}
-            alt="Cerdos en una nave de cebo moderna"
+            alt={d.images.home}
             {...({ fetchpriority: "high" } as Record<string, string>)}
             decoding="async"
             width={1400}
@@ -71,7 +71,7 @@ export default function Home() {
           </div>
           <img
             src={conceptoHome.url}
-            alt="Pasillo de una nave porcina moderna con una malla de datos superpuesta que representa la trazabilidad"
+            alt={d.images.concept}
             loading="lazy"
             width={1600}
             height={1200}
@@ -118,11 +118,11 @@ export default function Home() {
                 src={n.imagen?.url}
                 alt={n.imagen?.alt}
                 aspect="16/9"
-                label="Imagen noticia"
+                label={d.a11y.newsImage}
                 rounded="rounded-none"
               />
               <div className="p-5">
-                <p className="text-xs uppercase tracking-wider font-semibold text-primary">{n.categoria ?? "Noticia"}</p>
+                <p className="text-xs uppercase tracking-wider font-semibold text-primary">{n.categoria ?? d.news.defaultCategory}</p>
                 <h3 className="mt-2 text-lg">{n.titulo}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-muted-foreground">{n.extracto}</p>
                 <Link
@@ -146,10 +146,10 @@ export default function Home() {
               <Link
                 key={p.id}
                 to={`${base}/consorcio`}
-                title={p.role}
+                title={td(lang, "partners", p.id, "role")}
                 className="group block rounded-lg border border-border bg-card p-3 shadow-sm transition-shadow hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
               >
-                <LogoFrame src={p.logo} alt={`Logotipo de ${p.name}`} label={p.short} className="p-2" />
+                <LogoFrame src={p.logo} alt={`${d.a11y.logoOf} ${p.name}`} label={p.short} className="p-2" />
                 <p className="mt-2 text-center text-sm font-bold text-primary group-hover:underline">{p.short}</p>
               </Link>
             ))}

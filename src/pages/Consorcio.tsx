@@ -2,56 +2,50 @@ import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
 import { LogoFrame } from "@/components/ImageFrame";
 import { useLang } from "@/components/LangGuard";
-import { getDict } from "@/i18n/dictionaries";
+import { getDict, td, type Lang } from "@/i18n/dictionaries";
 import { PARTNERS, SUBCONTRACTED } from "@/lib/site-data";
 import mapaAsset from "@/assets/mapa-consorcio.png.asset.json";
 
 const MAPA_DESC_ID = "mapa-desc";
 
-const MapaDescription = () => (
+const MapaDescription = ({ items }: { items: readonly string[] }) => (
   <ul>
-    <li>i+Porc (Zaragoza, Aragón)</li>
-    <li>GEEZAR (Zaragoza, Aragón)</li>
-    <li>CEVA (Barcelona, Cataluña)</li>
-    <li>EQTIC (Sant Cugat, Cataluña)</li>
-    <li>AGROCAT (Sant Fruitós de Bages, Cataluña)</li>
-    <li>GUCO (Valderrobres, Aragón)</li>
-    <li>IRTA (Caldes de Montbui, Cataluña)</li>
-    <li>ITENE (Paterna, Comunidad Valenciana)</li>
-    <li>ANPROGAPOR (Madrid, Madrid)</li>
+    {items.map((item) => (
+      <li key={item}>{item}</li>
+    ))}
   </ul>
 );
 
-function PartnerLogoLink({ partner }: { partner: (typeof PARTNERS)[number] }) {
+function PartnerLogoLink({ partner, dict }: { partner: (typeof PARTNERS)[number]; dict: ReturnType<typeof getDict> }) {
   if (!partner.url) {
-    return <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} className="p-3" />;
+    return <LogoFrame src={partner.logo} alt={`${dict.a11y.logoOf} ${partner.name}`} label={partner.short} className="p-3" />;
   }
   return (
     <a
       href={partner.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Web corporativa de ${partner.name}`}
+      aria-label={`${dict.a11y.websiteOf} ${partner.name}`}
       className="block rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} className="p-3" />
+      <LogoFrame src={partner.logo} alt={`${dict.a11y.logoOf} ${partner.name}`} label={partner.short} className="p-3" />
     </a>
   );
 }
 
-function SubcontractedLogoLink({ partner }: { partner: (typeof SUBCONTRACTED)[number] }) {
+function SubcontractedLogoLink({ partner, dict }: { partner: (typeof SUBCONTRACTED)[number]; dict: ReturnType<typeof getDict> }) {
   if (!partner.url) {
-    return <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} />;
+    return <LogoFrame src={partner.logo} alt={`${dict.a11y.logoOf} ${partner.name}`} label={partner.short} />;
   }
   return (
     <a
       href={partner.url}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={`Web corporativa de ${partner.name}`}
+      aria-label={`${dict.a11y.websiteOf} ${partner.name}`}
       className="block rounded-md transition-opacity hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
     >
-      <LogoFrame src={partner.logo} alt={`Logotipo de ${partner.name}`} label={partner.short} />
+      <LogoFrame src={partner.logo} alt={`${dict.a11y.logoOf} ${partner.name}`} label={partner.short} />
     </a>
   );
 }
@@ -72,9 +66,9 @@ export default function Consorcio() {
         title={d.consortium.title}
         intro={d.consortium.intro}
         imageSrc={mapaAsset.url}
-        imageAlt="Mapa de España mostrando la distribución geográfica y las conexiones de las entidades del consorcio Pigtattoo."
+        imageAlt={d.images.map}
         imageDescribedBy={MAPA_DESC_ID}
-        imageDescription={<MapaDescription />}
+        imageDescription={<MapaDescription items={d.images.mapItems} />}
       />
       <div className="container-narrow space-y-16 py-14">
         <section>
@@ -82,10 +76,10 @@ export default function Consorcio() {
           <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {PARTNERS.map((p) => (
               <article key={p.id} className="rounded-lg border border-border bg-card p-5 shadow-sm">
-                <PartnerLogoLink partner={p} />
+                <PartnerLogoLink partner={p} dict={d} />
                 <h3 className="mt-4 text-base font-bold text-primary">{p.short}</h3>
-                <p className="mt-1 text-sm text-muted-foreground">{p.role}</p>
-                {p.description && <p className="mt-2 text-sm font-bold text-primary">{p.description}</p>}
+                <p className="mt-1 text-sm text-muted-foreground">{td(lang, "partners", p.id, "role")}</p>
+                <p className="mt-2 text-sm font-bold text-primary">{td(lang, "partners", p.id, "description")}</p>
               </article>
             ))}
           </div>
@@ -97,12 +91,12 @@ export default function Consorcio() {
               <article key={p.id} className="rounded-lg border border-border bg-card p-4 shadow-sm">
                 <div className="flex items-center gap-4">
                   <div className="w-16 shrink-0">
-                    <SubcontractedLogoLink partner={p} />
+                    <SubcontractedLogoLink partner={p} dict={d} />
                   </div>
                   <div>
                     <h3 className="text-sm font-bold text-primary">{p.name}</h3>
-                    <p className="mt-1 text-xs text-muted-foreground">{p.role}</p>
-                    {p.description && <p className="mt-1 text-xs font-bold text-primary">{p.description}</p>}
+                    <p className="mt-1 text-xs text-muted-foreground">{td(lang, "partners", p.id, "role")}</p>
+                    <p className="mt-1 text-xs font-bold text-primary">{td(lang, "partners", p.id, "description")}</p>
                   </div>
                 </div>
               </article>

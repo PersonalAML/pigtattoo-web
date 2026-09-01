@@ -27,7 +27,8 @@ const dicts: Record<Lang, Dict> = {
 };
 
 /** Idiomas cuya traducción aún está incompleta (se marcan noindex). */
-export const PARTIAL_LANGS: Lang[] = ["ca", "en"];
+export const PARTIAL_LANGS: Lang[] = [];
+
 
 export function isLang(v: string | undefined): v is Lang {
   return v === "es" || v === "ca" || v === "en";
@@ -56,3 +57,14 @@ export function t(lang: Lang, path: string): string {
   };
   return read(dicts[lang]) ?? read(dicts.es) ?? path;
 }
+
+/** Texto localizado de los datos estructurados (socios, actividades, materiales, hitos). */
+export function td(
+  lang: Lang,
+  group: "partners" | "activities" | "materials" | "timeline",
+  id: string,
+  field: string,
+): string {
+  return t(lang, `data.${group}.${id}.${field}`);
+}
+

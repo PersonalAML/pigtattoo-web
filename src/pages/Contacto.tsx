@@ -21,7 +21,7 @@ export default function Contacto() {
         title={d.contact.title}
         intro={d.contact.intro}
         imageSrc={headerContacto.url}
-        imageAlt="Manos escribiendo en una libreta sobre un escritorio de madera, simbolizando la comunicación y el contacto con el equipo del proyecto"
+        imageAlt={d.images.contact}
       />
 
       <div className="container-narrow py-14">
@@ -38,7 +38,7 @@ export default function Contacto() {
             <input type="hidden" name="form-name" value="contacto" />
             <p className="hidden">
               <label htmlFor="bot-field">
-                No rellenar: <input id="bot-field" name="bot-field" />
+                {d.contact.honeypot} <input id="bot-field" name="bot-field" />
               </label>
             </p>
             <p id="form-required-hint" className="text-xs text-muted-foreground">

@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "PIGTATTOO",
-    "tagline": "Pig traceability through tattoo identification"
+    "tagline": "Pig traceability through tattoo-based identification"
   },
   "nav": {
     "home": "Home",
@@ -9,7 +9,229 @@
     "consortium": "Consortium",
     "activities": "Activities",
     "news": "News",
-    "results": "Results & materials",
+    "results": "Results and materials",
     "contact": "Contact"
+  },
+  "home": {
+    "heroKicker": "Supra-regional Operational Group",
+    "heroTitle": "Innovation in pig traceability and identification",
+    "heroSubtitle": "PIGTATTOO develops tattoo-based identification technologies to improve traceability, animal welfare and sustainability in the pig sector.",
+    "heroCta": "Discover the project",
+    "heroCtaSecondary": "View activities",
+    "whatTitle": "What is PIGTATTOO?",
+    "whatBody": "PIGTATTOO is a Supra-regional Operational Group within the European Innovation Partnership (EIP-AGRI) that brings together producers, industry, technology centres and universities to develop and validate an innovative tattoo-based pig identification system. The goal is to improve traceability along the whole chain, reduce animal stress and provide reliable data to producers, slaughterhouses and consumers.",
+    "pillarsTitle": "Project pillars",
+    "pillar1Title": "Traceability",
+    "pillar1Body": "Reliable, verifiable identification systems at every link of the pig value chain.",
+    "pillar2Title": "Animal welfare",
+    "pillar2Body": "Methods fully respectful of animal health and welfare",
+    "pillar3Title": "Sustainability",
+    "pillar3Body": "A new paradigm with less material use and improved production efficiency",
+    "newsTitle": "Latest news",
+    "newsCta": "See all news",
+    "partnersTitle": "Consortium",
+    "contactCtaTitle": "Interested in the project?",
+    "contactCtaBody": "Get in touch with the PIGTATTOO team for more information.",
+    "contactCtaButton": "Contact us"
+  },
+  "project": {
+    "title": "The project",
+    "kicker": "About PIGTATTOO",
+    "intro": "PIGTATTOO represents a new paradigm in animal identification, covering the animal's entire life and enabling greater traceability, genetic improvement and production efficiency.",
+    "objectivesTitle": "Objectives",
+    "objectivesBody": "The main objective of the Project is to introduce a new tattoo-based identification method for pigs that replaces current systems in a more affordable and efficient way, with digitalisation capabilities for management and traceability",
+    "methodologyTitle": "Methodology",
+    "methodologyBody": "The Project methodology moves through successive testing phases as the innovative systems are developed and combined into the final animal identification solution.",
+    "timelineTitle": "Timeline",
+    "timelineBody": "The project runs from 2025 to 2029, from the call for proposals to final closure, covering technical development, field validation and final testing."
+  },
+  "consortium": {
+    "title": "Consortium",
+    "kicker": "Who we are",
+    "intro": "The PIGTATTOO consortium brings together beneficiary partners and subcontracted entities with complementary expertise in production, technology and applied research.",
+    "partnersTitle": "Beneficiary partners",
+    "subcontractedTitle": "Subcontracted entities"
+  },
+  "activities": {
+    "title": "Technical Activities",
+    "kicker": "Work plan",
+    "intro": "The Operational Group work plan is structured into the following activities, each at a different stage of progress.",
+    "statusPlanned": "Planned",
+    "statusInProgress": "In progress",
+    "statusCompleted": "Completed",
+    "progress": "Progress"
+  },
+  "news": {
+    "title": "News",
+    "kicker": "News and press releases",
+    "intro": "Updates, milestones and communications from the PIGTATTOO project.",
+    "empty": "No news published yet.",
+    "error": "News could not be loaded at this time.",
+    "readMore": "Read more",
+    "backToList": "Back to News",
+    "byAuthor": "By",
+    "notFound": "Article not found",
+    "featured": "Featured",
+    "defaultCategory": "News"
+  },
+  "results": {
+    "title": "Results and materials",
+    "kicker": "Deliverables and dissemination",
+    "intro": "Technical documentation and dissemination materials produced by PIGTATTOO. Links will be updated as the activities progress.",
+    "download": "Download",
+    "comingSoon": "Coming soon",
+    "deliverablesTitle": "Technical deliverables",
+    "materialsTitle": "Dissemination materials"
+  },
+  "contact": {
+    "title": "Contact",
+    "kicker": "Get in touch",
+    "intro": "Write to us for more information about the project, collaboration or dissemination.",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "consent": "I accept the privacy policy and the processing of my data for the purpose of answering my enquiry.",
+    "submit": "Send message",
+    "successNote": "The form will be activated once the site is published on Netlify.",
+    "requiredHint": "Fields marked with * are required.",
+    "honeypot": "Do not fill in:"
+  },
+  "cookies": {
+    "title": "Cookie policy",
+    "banner": "This site uses analytics cookies (Google Analytics 4) only if you accept them. You can change your decision at any time from this page.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "manage": "Manage preferences",
+    "current": "Current preference",
+    "granted": "Accepted",
+    "denied": "Rejected",
+    "unset": "Not set",
+    "resetButton": "Reset preferences",
+    "body": "PIGTATTOO uses strictly necessary cookies for the operation of the site and, subject to prior express acceptance, Google Analytics 4 analytics cookies for aggregated statistical purposes. No advertising or profiling cookies are used. You can withdraw your consent at any time using the button on this page."
+  },
+  "legal": {
+    "noticeTitle": "Legal notice",
+    "noticeBody": "In compliance with Spanish Law 34/2002 of 11 July on Information Society Services and Electronic Commerce (LSSICE), users are informed of the identifying details of the website owner.",
+    "privacyTitle": "Privacy policy",
+    "privacyBody": "In compliance with Regulation (EU) 2016/679 (GDPR) and the Spanish LOPDGDD, PIGTATTOO informs users about the processing of personal data submitted through the contact form, whose sole purpose is to respond to the enquiry received.",
+    "accessibilityTitle": "Accessibility statement",
+    "accessibilityBody": "This website aims to comply with Spanish Royal Decree 1112/2018 of 7 September on the accessibility of public sector websites and mobile applications, and with level AA of the Web Content Accessibility Guidelines (WCAG 2.1)."
+  },
+  "footer": {
+    "financingTitle": "Funding",
+    "financingBody": "This project falls within the CAP Strategic Plan 2023-2027 and is funded 80% by the EAFRD (European Union) and 20% by the Spanish Ministry of Agriculture, Fisheries and Food, with total aid of 553,276.01 euros and 92.2% funding.",
+    "financingFigures": [
+      "Total project amount: €599,973.36",
+      "Total grant: €553,276.01",
+      "EAFRD amount: €442,620.79",
+      "National (AGE) amount: €110,655.22",
+      "Aid intensity: 92.2%",
+      "File no.: REGAGE25e00048121656",
+      "Call: EIP-Agri Supra-regional Operational Groups (2025)"
+    ],
+    "linksTitle": "Links",
+    "socialTitle": "Follow us",
+    "rights": "All rights reserved."
+  },
+  "misc": {
+    "backHome": "Back to home",
+    "loading": "Loading…",
+    "skipToContent": "Skip to main content",
+    "notFoundTitle": "Page not found",
+    "notFoundBody": "This address does not exist or the content has moved. You can go back home or jump straight to a section.",
+    "notFoundLinks": "Main sections"
+  },
+  "a11y": {
+    "brandLine1": "Operational Group",
+    "brandLine2": "Supra-regional",
+    "homeLink": "PIGTATTOO — Home",
+    "navPrimary": "Primary",
+    "navMobile": "Mobile",
+    "openMenu": "Open menu",
+    "languageSwitcher": "Select language",
+    "languageEs": "Español",
+    "languageCa": "Català",
+    "languageEn": "English",
+    "imagePending": "Image pending",
+    "logoPending": "Logo pending",
+    "logoOf": "Logo of",
+    "websiteOf": "Corporate website of",
+    "newsImage": "News image",
+    "featuredImage": "Featured image",
+    "timelineLabel": "Project timeline",
+    "today": "Today"
+  },
+  "images": {
+    "home": "Pigs in a modern fattening barn",
+    "concept": "Aisle of a modern pig barn with an overlaid data mesh representing traceability",
+    "project": "Close-up of a pig's ear held with a latex glove, showing an identification mark on the skin",
+    "objectivesFrame": "Objectives image",
+    "objectivesAlt": "Project objectives",
+    "activities": "Two technicians in white overalls reviewing data on a tablet inside a modern pig barn",
+    "news": "Speaker presenting to an audience in an auditorium during a technical event",
+    "results": "Printed technical reports with charts and a laptop showing a project data dashboard",
+    "contact": "Hands writing in a notebook on a wooden desk, symbolising communication with the project team",
+    "financing": "Co-funded by the European Union. Government of Spain — Ministry of Agriculture, Fisheries and Food",
+    "map": "Map of Spain showing the geographic distribution and connections of the Pigtattoo consortium entities.",
+    "mapItems": [
+      "i+Porc (Zaragoza, Aragon)",
+      "GEEZAR (Zaragoza, Aragon)",
+      "CEVA (Barcelona, Catalonia)",
+      "EQTIC (Sant Cugat, Catalonia)",
+      "AGROCAT (Sant Fruitós de Bages, Catalonia)",
+      "GUCO (Valderrobres, Aragon)",
+      "IRTA (Caldes de Montbui, Catalonia)",
+      "ITENE (Paterna, Valencian Community)",
+      "ANPROGAPOR (Madrid, Madrid)"
+    ],
+    "methodologyAlt": "Project methodology diagram: activities, milestones, periods and key dates at a glance.",
+    "methodologyCaption": "Methodology diagram: activities (A1–A8), result milestones (R1–R8), periods and key Project dates.",
+    "methodologyIntro": "The diagram shows two development periods and a final testing and analysis phase.",
+    "methodologyItems": [
+      "Period 1 (starting February 2026): initial knowledge-acquisition work — A1 Initial tests (mesh test) and A2 System, animal welfare and other requirements — plus Period 1 developments: A4 PIGTATTOO ink, A3 Image capture hardware and A3 Intermediate tests.",
+      "Period 2: developments — A5 Information coding system, A6 Tattoo application system and A7 Computer vision AI system. End of developments: September 2028.",
+      "Final phase: A8 Economic impact and replicability, A8 Testing and results phase, and A8 Animal welfare verification.",
+      "Dissemination milestones: initial dissemination of the Project launch; dissemination of results (tests and requirements); dissemination of results (end of Period 1, April 2027); dissemination of results (completed developments); dissemination of results (end of Project, April 2029).",
+      "Key dates: start February 2026; end of Period 1 April 2027; end of developments September 2028; end of Project April 2029."
+    ]
+  },
+  "data": {
+    "partners": {
+      "p1": { "role": "Spanish Cluster of Pig Producers — Zaragoza (Aragon)", "description": "Operational Group representative and leader of dissemination actions" },
+      "p2": { "role": "GEEZAR Soluciones S.L. — Zaragoza (Aragon)", "description": "Technical coordinator and progress monitoring" },
+      "p3": { "role": "CEVA Salud Animal S.A. — Barcelona (Catalonia)", "description": "Main promoter and future commercialisation" },
+      "p4": { "role": "Sigma EQT Servei S.L. — Sant Cugat (Catalonia)", "description": "Technology provider of computer vision solutions" },
+      "p5": { "role": "Agropecuaria Catalana S.C.C.L. — Sant Fruitós (Catalonia)", "description": "Pig production and hosting of trials" },
+      "p6": { "role": "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragon)", "description": "Pig production and hosting of trials" },
+      "s1": { "role": "Institute of Agrifood Research and Technology — Caldes de Montbui (Catalonia)", "description": "Animal welfare and food safety protocols" },
+      "s2": { "role": "Packaging, Transport & Logistics Research Center — Paterna (Valencian Community)", "description": "Development of advanced inks" },
+      "s3": { "role": "National Association of Pig Producers — Madrid", "description": "Collaborator in dissemination actions" }
+    },
+    "activities": {
+      "a1": { "title": "Initial component testing", "body": "Preliminary validation of the technological components that make up the tattoo-based identification system." },
+      "a2": { "title": "Definition of requirements, control and verification of the systems", "body": "Definition of criteria and protocols to guarantee technical feasibility, animal welfare and food safety in the Project." },
+      "a3": { "title": "Intermediate component testing and hardware development", "body": "Development and intermediate testing of the hardware needed to apply and read the pig tattoo." },
+      "a4": { "title": "Development of the Project tattoo ink", "body": "Research and formulation of the specific ink for identifying tattoos in pigs." },
+      "a5": { "title": "Information coding system", "body": "Design of the coding system that will allow each animal's identity to be assigned and interpreted." },
+      "a6": { "title": "Physical application system", "body": "Development of the physical device responsible for applying the tattoo accurately and safely." },
+      "a7": { "title": "Computer vision system for animal identification", "body": "Creation of a computer vision based system for automatic tattoo reading." },
+      "a8": { "title": "Piloting and final Project testing", "body": "Real-environment validation of the full set of systems, final improvements and animal welfare assessment." }
+    },
+    "materials": {
+      "m1": { "title": "Project leaflet", "description": "General leaflet presenting the PIGTATTOO project." },
+      "m2": { "title": "System datasheet", "description": "Concise datasheet of the identification system." },
+      "m3": { "title": "Institutional poster", "description": "Institutional poster for project events and workshops." },
+      "m4": { "title": "Corporate presentation", "description": "General presentation used at dissemination events." },
+      "m5": { "title": "Dissemination video", "description": "Video presenting the project and its objectives." },
+      "m6": { "title": "Press releases", "description": "Collection of press releases issued during the project." }
+    },
+    "timeline": {
+      "t1": { "label": "2025", "title": "Call for proposals" },
+      "t2": { "label": "1 January 2026", "title": "Project start" },
+      "t3": { "label": "30 April 2027", "title": "End of Period 1" },
+      "t4": { "label": "2028 / early 2029", "title": "Final testing" },
+      "t5": { "label": "30 April 2029", "title": "Project end" }
+    }
   }
 }

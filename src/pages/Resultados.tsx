@@ -3,11 +3,11 @@ import { PageHeader } from "@/components/PageHeader";
 import headerResultados from "@/assets/header-resultados.webp.asset.json";
 
 import { useLang } from "@/components/LangGuard";
-import { getDict } from "@/i18n/dictionaries";
+import { getDict, td, type Lang } from "@/i18n/dictionaries";
 import { MATERIALS_DOCS, type DocResource } from "@/lib/site-data";
 import { FileText, Download } from "lucide-react";
 
-function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getDict> }) {
+function DocCard({ doc, dict, lang }: { doc: DocResource; dict: ReturnType<typeof getDict>; lang: Lang }) {
   const available = Boolean(doc.url);
   return (
     <article className="flex h-full flex-col rounded-lg border border-border bg-card p-5 shadow-sm">
@@ -16,7 +16,7 @@ function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getD
           <FileText className="h-5 w-5" />
         </div>
         <div className="min-w-0">
-          <h3 className="text-base leading-snug">{doc.title}</h3>
+          <h3 className="text-base leading-snug">{td(lang, "materials", doc.id, "title")}</h3>
           <p className="mt-1 text-xs text-muted-foreground">
             {doc.fileType ?? "PDF"}
             {doc.size ? ` · ${doc.size}` : ""}
@@ -24,7 +24,7 @@ function DocCard({ doc, dict }: { doc: DocResource; dict: ReturnType<typeof getD
           </p>
         </div>
       </div>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{doc.description}</p>
+      <p className="mt-3 flex-1 text-sm leading-relaxed text-muted-foreground">{td(lang, "materials", doc.id, "description")}</p>
       <div className="mt-4">
         {available ? (
           <a href={doc.url} className="cta text-xs" download>
@@ -56,7 +56,7 @@ export default function Resultados() {
         title={d.results.title}
         intro={d.results.intro}
         imageSrc={headerResultados.url}
-        imageAlt="Informes técnicos impresos con gráficos y un portátil mostrando un panel de datos del proyecto"
+        imageAlt={d.images.results}
       />
 
       <div className="container-narrow space-y-16 py-14">
@@ -64,7 +64,7 @@ export default function Resultados() {
           <h2 className="text-2xl">{d.results.materialsTitle}</h2>
           <div className="mt-6 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {MATERIALS_DOCS.map((doc) => (
-              <DocCard key={doc.id} doc={doc} dict={d} />
+              <DocCard key={doc.id} doc={doc} dict={d} lang={lang} />
             ))}
           </div>
         </section>
