@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/PageHeader";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
 
-const REVIEW_DATE = "29 de julio de 2026";
+const REVIEW_DATE = "1 de septiembre de 2026";
 
 export default function Accesibilidad() {
   const lang = useLang();
@@ -20,12 +20,15 @@ export default function Accesibilidad() {
       <PageHeader title={d.legal.accessibilityTitle} />
       <div className="container-narrow max-w-3xl space-y-8 py-14 text-muted-foreground">
         <p className="leading-relaxed">
-          El consorcio PIGTATTOO se ha comprometido a hacer accesible su sitio web de conformidad
-          con el Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web
-          y aplicaciones para dispositivos móviles del sector público, que transpone la Directiva
-          (UE) 2016/2102 y toma como referencia la norma EN 301 549 (equivalente a las WCAG 2.1
-          nivel AA).
+          El consorcio PIGTATTOO se ha comprometido, con carácter voluntario, a hacer accesible su
+          sitio web tomando como referencia el Real Decreto 1112/2018, de 7 de septiembre, sobre
+          accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector
+          público, que transpone la Directiva (UE) 2016/2102, y la norma EN 301 549 (equivalente a
+          las WCAG 2.1 nivel AA). El sitio pertenece a una entidad privada y no está sujeto por sí
+          mismo a dicha norma, pero se adopta como estándar de calidad al tratarse de un proyecto
+          cofinanciado con fondos públicos.
         </p>
+
 
         <section className="space-y-3">
           <h2 className="font-display text-xl font-semibold text-primary">
@@ -95,9 +98,18 @@ export default function Accesibilidad() {
             de accesibilidad a través del{" "}
             <Link to={`/${lang}/contacto`} className="text-primary underline">
               formulario de contacto
-            </Link>
-            . Las comunicaciones serán atendidas por la coordinación del Grupo Operativo.
+            </Link>{" "}
+            o por teléfono en el{" "}
+            <a href="tel:+34613722505" className="text-primary underline">
+              +34 613 72 25 05
+            </a>
+            . Las comunicaciones serán atendidas por la coordinación técnica del Grupo Operativo
+            (GEEZAR Soluciones S.L.), que informará del resultado en un plazo máximo de veinte días
+            hábiles. Si no obtiene respuesta o esta se considera insatisfactoria, puede reiterar su
+            solicitud dirigiéndose a la entidad titular del sitio, Clúster Español de Productores de
+            Ganado Porcino (C/ María de Luna, 11 · 50017 Zaragoza).
           </p>
+
         </section>
       </div>
     </>
