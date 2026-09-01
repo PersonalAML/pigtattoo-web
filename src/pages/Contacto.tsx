@@ -25,7 +25,7 @@ export default function Contacto() {
       />
 
       <div className="container-narrow py-14">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1fr)_320px]">
+        <div className="mx-auto max-w-2xl">
           <form
             name="contacto"
             method="POST"
