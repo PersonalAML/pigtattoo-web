@@ -13,23 +13,24 @@ export type Partner = {
   name: string;
   short: string;
   role: string;
+  description?: string;
   url?: string;
   logo?: string;
 };
 
 export const PARTNERS: Partner[] = [
-  { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", url: "https://www.imasporc.com", logo: iporcAsset.url },
-  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", url: "https://www.geezar.es", logo: geezarAsset.url },
-  { id: "p3", name: "CEVA", short: "CEVA", role: "CEVA Salud Animal S.A. — Barcelona (Cataluña)", url: "https://www.ceva.es/", logo: cevaAsset.url },
-  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", url: "https://eqtic.net/", logo: eqticAsset.url },
-  { id: "p5", name: "AGROCAT", short: "AGROCAT", role: "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", url: "https://www.agrocat.com/", logo: agrocatAsset.url },
-  { id: "p6", name: "GUCO", short: "GUCO", role: "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", url: "https://www.grupoarcoiris.com/es/", logo: gucoAsset.url },
+  { id: "p1", name: "i+Porc", short: "i+Porc", role: "Clúster español de productores de ganado porcino — Zaragoza (Aragón)", description: "Representante del GOS y líder de acciones de divulgación", url: "https://www.imasporc.com", logo: iporcAsset.url },
+  { id: "p2", name: "GEEZAR", short: "GEEZAR", role: "GEEZAR Soluciones S.L. — Zaragoza (Aragón)", description: "Coordinador técnico y seguimiento de avances", url: "https://www.geezar.es", logo: geezarAsset.url },
+  { id: "p3", name: "CEVA", short: "CEVA", role: "CEVA Salud Animal S.A. — Barcelona (Cataluña)", description: "Principal promotor y comercialización futura", url: "https://www.ceva.es/", logo: cevaAsset.url },
+  { id: "p4", name: "EQTIC", short: "EQTIC", role: "Sigma EQT Servei S.L. — Sant Cugat (Cataluña)", description: "Proveedor tecnológico de soluciones de visión artificial", url: "https://eqtic.net/", logo: eqticAsset.url },
+  { id: "p5", name: "AGROCAT", short: "AGROCAT", role: "Agropecuaria Catalana S.C.C.L. — Sant Fruitòs (Cataluña)", description: "Producción porcina y alojamiento de pruebas", url: "https://www.agrocat.com/", logo: agrocatAsset.url },
+  { id: "p6", name: "GUCO", short: "GUCO", role: "Ganadería Unida Comarcal GUCO S.C. — Valderrobres (Aragón)", description: "Producción porcina y alojamiento de pruebas", url: "https://www.grupoarcoiris.com/es/", logo: gucoAsset.url },
 ];
 
 export const SUBCONTRACTED: Partner[] = [
-  { id: "s1", name: "IRTA", short: "IRTA", role: "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", url: "https://www.irta.cat/es/programa-de-recerca/bienestar-animal/", logo: irtaAsset.url },
-  { id: "s2", name: "ITENE", short: "ITENE", role: "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", url: "https://itene.com/", logo: iteneAsset.url },
-  { id: "s3", name: "ANPROGAPOR", short: "ANPROGAPOR", role: "Asociación Nacional de Productores de Ganado Porcino — Madrid", url: "http://www.anprogapor.es/asociacion-nacional-ganado-porcino/anprogapor/inicio_2_1_ap.html", logo: anprogaporAsset.url },
+  { id: "s1", name: "IRTA", short: "IRTA", role: "Instituto de Investigación y Tecnología Agroalimentarias — Caldes de Montbui (Cataluña)", description: "Protocolos de bienestar animal y seguridad alimentaria", url: "https://www.irta.cat/es/programa-de-recerca/bienestar-animal/", logo: irtaAsset.url },
+  { id: "s2", name: "ITENE", short: "ITENE", role: "Packaging, Transport & Logistics Research Center — Paterna (Comunidad Valenciana)", description: "Desarrollo de tintas avanzadas", url: "https://itene.com/", logo: iteneAsset.url },
+  { id: "s3", name: "ANPROGAPOR", short: "ANPROGAPOR", role: "Asociación Nacional de Productores de Ganado Porcino — Madrid", description: "Colaborador en acciones de divulgación", url: "http://www.anprogapor.es/asociacion-nacional-ganado-porcino/anprogapor/inicio_2_1_ap.html", logo: anprogaporAsset.url },
 ];
 
 export type ActivityStatus = "planned" | "in-progress" | "completed";
