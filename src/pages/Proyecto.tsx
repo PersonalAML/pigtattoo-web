@@ -34,7 +34,15 @@ export default function Proyecto() {
             <h2 className="text-2xl">{d.project.objectivesTitle}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.objectivesBody}</p>
           </div>
-          <ImageFrame aspect="1/1" label={d.images.objectivesFrame} alt={d.images.objectivesAlt} />
+          <img
+            src={objetivosImg.url}
+            alt={d.images.objectivesAlt}
+            loading="lazy"
+            decoding="async"
+            width={1000}
+            height={1000}
+            className="w-full rounded-xl bg-secondary/30 object-contain"
+          />
         </section>
         <section id="metodologia">
           <h2 className="text-2xl">{d.project.methodologyTitle}</h2>
