@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLang } from "@/components/LangGuard";
 import { getDict, LANGS, type Lang } from "@/i18n/dictionaries";
 import { Menu, X } from "lucide-react";
-import logoPigtattoo from "@/assets/logo-pigtattoo.png.asset.json";
+import logoPigtattoo from "@/assets/logo-pigtattoo.svg";
 
 
 // Traducciones ca/en completas: el switcher de idioma ya está disponible.
