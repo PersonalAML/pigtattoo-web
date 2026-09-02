@@ -31,7 +31,7 @@ export default function Home() {
 
       {/* Hero */}
       <section className="border-b border-border bg-secondary/40">
-        <div className="container-narrow grid gap-10 py-16 md:grid-cols-[minmax(0,1fr)_minmax(0,460px)] md:items-center md:py-20">
+        <div className="container-narrow grid gap-10 py-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,460px)] lg:items-center lg:gap-16 lg:py-20">
           <div>
             <p className="mb-3 font-display text-xs font-semibold uppercase tracking-[0.2em] text-primary">
               {d.home.heroKicker}
@@ -64,7 +64,7 @@ export default function Home() {
 
       {/* Qué es */}
       <section className="container-narrow py-20">
-        <div className="grid gap-10 md:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] md:items-center">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:items-center lg:gap-14">
           <div>
             <h2 className="text-3xl">{d.home.whatTitle}</h2>
             <p className="mt-4 leading-relaxed text-muted-foreground">{d.home.whatBody}</p>

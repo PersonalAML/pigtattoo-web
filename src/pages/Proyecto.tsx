@@ -2,8 +2,8 @@ import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
 import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
 import metodologiaImg from "@/assets/metodologia.png.asset.json";
+import objetivosImg from "@/assets/objetivos.webp.asset.json";
 
-import { ImageFrame } from "@/components/ImageFrame";
 import { Timeline } from "@/components/Timeline";
 import { useLang } from "@/components/LangGuard";
 import { getDict } from "@/i18n/dictionaries";
@@ -28,12 +28,20 @@ export default function Proyecto() {
       />
 
       <div className="container-narrow space-y-16 py-14">
-        <section id="objetivos" className="grid gap-8 md:grid-cols-3 md:items-start">
+        <section id="objetivos" className="grid gap-10 md:grid-cols-3 md:items-start md:gap-12">
           <div className="md:col-span-2">
             <h2 className="text-2xl">{d.project.objectivesTitle}</h2>
             <p className="mt-3 leading-relaxed text-muted-foreground">{d.project.objectivesBody}</p>
           </div>
-          <ImageFrame aspect="1/1" label={d.images.objectivesFrame} alt={d.images.objectivesAlt} />
+          <img
+            src={objetivosImg.url}
+            alt={d.images.objectivesAlt}
+            loading="lazy"
+            decoding="async"
+            width={1000}
+            height={1000}
+            className="w-full rounded-xl bg-secondary/30 object-contain"
+          />
         </section>
         <section id="metodologia">
           <h2 className="text-2xl">{d.project.methodologyTitle}</h2>
