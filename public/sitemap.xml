@@ -1,75 +1,315 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- BASE_URL vacío hasta que el dominio pigtattoo.es esté activo.
-     Sólo se listan las URLs /es/ porque /ca/ y /en/ están marcadas noindex
-     mientras las traducciones estén incompletas; se añadirán al traducirlas. -->
+<!-- Las tres lenguas (es, ca, en) están indexables (PARTIAL_LANGS vacío).
+     BASE_URL se mantendrá relativo hasta que el dominio pigtattoo.es esté
+     activo; entonces se antepondrá https://pigtattoo.es a cada <loc> y se
+     añadirá la directiva Sitemap: en robots.txt. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Inicio -->
   <url>
     <loc>/es</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>/ca</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es"/>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <!-- Proyecto -->
+  <url>
     <loc>/es/proyecto</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/proyecto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/proyecto"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>/ca/proyecto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/proyecto"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/en/proyecto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/proyecto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/proyecto"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Consorcio -->
+  <url>
     <loc>/es/consorcio</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/consorcio"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/consorcio"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>/ca/consorcio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/consorcio"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/en/consorcio</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/consorcio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/consorcio"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Actividades -->
+  <url>
     <loc>/es/actividades</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/actividades"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actividades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actividades"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/actividades"/>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>/ca/actividades</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actividades"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actividades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actividades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actividades"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>/en/actividades</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actividades"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actividades"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actividades"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actividades"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Actualidad -->
+  <url>
     <loc>/es/actualidad</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actualidad"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/actualidad"/>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>/ca/actualidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actualidad"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/en/actualidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/actualidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/actualidad"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Resultados -->
+  <url>
     <loc>/es/resultados</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/resultados"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/resultados"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/resultados"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/resultados"/>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>/ca/resultados</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/resultados"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/resultados"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/resultados"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/resultados"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>/en/resultados</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/resultados"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/resultados"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/resultados"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/resultados"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <!-- Contacto -->
+  <url>
     <loc>/es/contacto</loc>
     <xhtml:link rel="alternate" hreflang="es" href="/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/contacto"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="/es/contacto"/>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>/ca/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/contacto"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>/en/contacto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/contacto"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/contacto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/contacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/contacto"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <!-- Accesibilidad -->
+  <url>
     <loc>/es/accesibilidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/accesibilidad"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>/ca/accesibilidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/accesibilidad"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/en/accesibilidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/accesibilidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/accesibilidad"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Aviso legal -->
   <url>
     <loc>/es/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/aviso-legal"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>/ca/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/aviso-legal"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/en/aviso-legal</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/aviso-legal"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/aviso-legal"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Privacidad -->
   <url>
     <loc>/es/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/privacidad"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
+    <loc>/ca/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/privacidad"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/en/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/privacidad"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <!-- Cookies -->
+  <url>
     <loc>/es/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/cookies"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/ca/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/cookies"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>/en/cookies</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="/es/cookies"/>
+    <xhtml:link rel="alternate" hreflang="ca" href="/ca/cookies"/>
+    <xhtml:link rel="alternate" hreflang="en" href="/en/cookies"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="/es/cookies"/>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
