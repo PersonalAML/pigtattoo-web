@@ -7,7 +7,9 @@
     "build": "vite build",
     "build:dev": "vite build --mode development",
     "preview": "vite preview --host 0.0.0.0 --port 8080",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prebuild": "node scripts/build-sitemap.mjs",
+    "sitemap": "node scripts/build-sitemap.mjs"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.22.11",
