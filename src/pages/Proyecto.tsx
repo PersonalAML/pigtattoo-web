@@ -2,6 +2,7 @@ import { SEO } from "@/components/SEO";
 import { PageHeader } from "@/components/PageHeader";
 import headerProyecto from "@/assets/header-proyecto.webp.asset.json";
 import metodologiaImg from "@/assets/metodologia.png.asset.json";
+import objetivosImg from "@/assets/objetivos.webp.asset.json";
 
 import { ImageFrame } from "@/components/ImageFrame";
 import { Timeline } from "@/components/Timeline";
