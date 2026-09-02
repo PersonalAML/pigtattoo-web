@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useLang } from "@/components/LangGuard";
 import { getDict, LANGS, type Lang } from "@/i18n/dictionaries";
 import { Menu, X } from "lucide-react";
-import logoPigtattoo from "@/assets/logo-pigtattoo.png.asset.json";
+import logoPigtattoo from "@/assets/logo-pigtattoo.svg";
 
 
 // Traducciones ca/en completas: el switcher de idioma ya está disponible.
@@ -38,7 +38,7 @@ export function SiteHeader() {
       <div className="container-narrow flex items-center justify-between gap-4 py-3">
         <Link to={base} className="flex items-center gap-3" aria-label={d.a11y.homeLink}>
           <img
-            src={logoPigtattoo.url}
+            src={logoPigtattoo}
             alt="PIGTATTOO"
             className="h-9 w-auto md:h-10"
             width={1200}
