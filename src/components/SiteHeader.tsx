@@ -61,7 +61,7 @@ export function SiteHeader() {
                   to={n.to}
                   end={n.end}
                   className={({ isActive }) =>
-                    `block rounded-md px-3 py-2 text-center text-sm font-bold leading-tight transition-colors ${
+                    `block whitespace-nowrap rounded-md px-2 py-2 text-center text-sm font-bold leading-tight transition-colors xl:px-3 ${
                       isActive
                         ? "bg-secondary text-foreground"
                         : "text-foreground/80 hover:bg-secondary hover:text-foreground"
