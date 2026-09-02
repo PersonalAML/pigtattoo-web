@@ -29,7 +29,7 @@ export function PageHeader({
         <div
           className={
             hasImage
-              ? "grid items-center gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,420px)] md:gap-12"
+              ? "grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,420px)] lg:gap-16"
               : ""
           }
         >
