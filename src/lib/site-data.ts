@@ -64,14 +64,6 @@ export type DocResource = {
   url?: string;
 };
 
-export const RESULTS_DOCS: DocResource[] = [
-  { id: "r1", title: "Entregable E1.1 — Especificaciones técnicas", description: "Documento con las especificaciones técnicas del sistema de identificación por tatuaje desarrollado en la Actividad 1.", fileType: "PDF", size: "1.2 MB", date: "2025-03-15" },
-  { id: "r2", title: "Entregable E2.1 — Protocolo de validación en campo", description: "Protocolo detallado para la validación del sistema en granjas piloto.", fileType: "PDF", size: "850 KB", date: "2025-05-10" },
-  { id: "r3", title: "Entregable E3.1 — Informe preliminar de bienestar animal", description: "Resultados iniciales del estudio comparativo de bienestar animal.", fileType: "PDF" },
-  { id: "r4", title: "Entregable E4.1 — Arquitectura de integración", description: "Documento técnico sobre integración con sistemas de trazabilidad existentes." },
-  { id: "r5", title: "Entregable E5.1 — Análisis técnico-económico" , description: "Estudio de viabilidad económica y técnica del sistema propuesto." },
-  { id: "r6", title: "Publicación científica 1", description: "Artículo científico revisado por pares sobre los resultados intermedios del proyecto." },
-];
 
 export const MATERIALS_DOCS: DocResource[] = [
   { id: "m1", title: "Folleto divulgativo del proyecto", description: "Folleto general de presentación del proyecto PIGTATTOO.", fileType: "PDF", size: "2.4 MB" },
